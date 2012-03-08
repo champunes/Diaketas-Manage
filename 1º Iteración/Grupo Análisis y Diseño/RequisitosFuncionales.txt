@@ -1,0 +1,33 @@
+Subsistema de gestión de Beneficiarios
+======================================
+- Crear beneficiario
+- Modificar beneficiario
+- Eliminar beneficiario
+- Consultar beneficiario
+- Crear nuevo tipo de ayuda
+- Modificar tipo de ayuda
+- Registrar ayuda (Si es una ayuda no tangible, además se hace el caso de uso Registrar gasto para registrar el gasto monetario de las cuentas de la asociacion)
+- Generar listado de actuaciones 
+
+--> Como las ayudas solo se registran en el caso de ke sean economicas (aportaciones de los socios) creo ke la gestion de ayudas no abria ke acerla.(ALBERTO)
+Yo pondria los siguientes
+- Asignar ayuda a beneficiario
+- Eliminar ayuda a beneficiario
+- Consultar ayudas de un beneficiario
+
+¿Subsistema de contabilidad?
+============================
+- Registrar gasto (Registrar un gasto de la asociacion para la contabilidad: materiales, ayudas, etc...) -->> en la entrevista se dijo ke no ai ke registrar los materiales, ni nada ke tenga ke ver con un almacen., solo ingresos de socios.(ALBERTO)
+Yo pondria los siguiente:
+
+- Obtener listado de gastos
+- Obtener contabilidad --> listado de gastos vs ingresos
+
+
+¿Subsistema de gestión de administrativos/voluntarios? (Para llevar el control de que persona realiza las cosas)
+======================================================
+- Crear nuevo administrativo/voluntario
+- Modificar administrativo/voluntario
+- Eliminar administrativo/voluntario
+- Consultar administrativo/voluntario
+- Identificar administrativo/voluntario

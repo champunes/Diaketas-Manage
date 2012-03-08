@@ -1,0 +1,35 @@
+ArgoUML 
+Es un software libre de diagramado de UML multi plataforma
+http://es.wikipedia.org/wiki/ArgoUML
+http://argouml.tigris.org/
+¿En Argo se puede realizar los diagramas de secuencia?
+Yo propongo mejor EnterpriseArchitect que es gratuito durante mas o menos 3 meses(Lo que duran las practicas).
+--> Se puede hacer diagrama de caso de uso, secuencia y mas, diagrama de clase y genera le código a partir de los diagramas y ademas normalmente tenemos que utilizar software libre.
+
+
+Wunderkit
+Es un herramienta  de colaboración donde se puede compartir un proyecto y asignar tareas a alguien y poner fecha. Si queréis podemos utilizarlo.
+http://get.wunderkit.com/
+
+
+Subversion
+Sistema centralizado de control de versiones
+http://es.wikipedia.org/wiki/Subversion
+Tutoriales:
+http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=svnSubversive
+
+GitHub
+He hablado con el profesor y me ha comentado que tampoco importa mucho si el repositorio es publico mientras no le demos mucho bombo. Así que entonces sería mejor utilizar git, ya que todos tendríamos una copia del repositorio completo, así si a alguien se le rompe el repositorio no pasa nada. Haré una guía de manejo básico. (Netbeans 7.0 en adelante tiene soporte a Git).
+https://github.com/
+Mi cuenta git por si quereis mirar proyectos creados y que pinta tiene y como funciona: https://github.com/champunes/
+
+Pencil Proyect
+Para realizar los bocetos he visto un programa bastante bueno, el único problema es que solo va en linux y en window, se llama pencil proyect
+(en la web esta el dmg para mac os x)
+
+JustInMind 
+Un otro herramienta para hacer los bocetos que he utilizado en la asignatura de diseño de interfaces de usuario
+http://www.justinmind.com/
+
+Netbeans
+La última versión es español es la 7.1 (la 7.1.1 está aún en inglés). Para los que queramos mantenerlo en español, podemos quedarnos en la 7.1 Haremos pruebas de compatibilidad con la 7.1.1 por si acaso.

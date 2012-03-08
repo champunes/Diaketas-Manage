@@ -1,0 +1,20 @@
+Tal y como comenté antes, servidores gratuitos de Subversion que funcionen en condiciones hay pocos. Uno de ellos lo ofrece
+google dentro del servicio "Google Project", que permite alojar proyectos de software con la condición de que sea de código
+abierto. Para poder añadiros al proyecto y que por lo tanto podais utilizar el servidor de Subversion con permisos de escritura
+debeis tener una cuenta de google. Aquellos que ya la tienen, los he añadido directamente y para los que no podeis crearos
+una en http://www.google.com/accounts/NewAccount aunque sea solo para el proyecto. Cuando hagais esto, por favor comunicadmelo 
+para que os añada y tengais permisos en el servidor.
+
+Una vez añadidos al proyecto, en la siguiente dirección se explica como acceder al servidor de Subversion: http://code.google.com/p/pract-is3-ugr/source/checkout
+En resumidas cuentas, se trata de introducir https://pract-is3-ugr.googlecode.com/svn/trunk/ como dirección del repositorio, donde el usuario será el email
+de vuestra cuenta google (gmail) y el password el que os aparezca cuando entreis aqui: https://code.google.com/hosting/settings bajo el apartado "GoogleCode.com Password".
+
+EN cualquier caso, el proximo miércoles en prácticas, a los que no tengais claro aún como funciona esto del SVN, os lo puedo explicar
+así rapidamente y cual es el funcionamiento básico. También puedo ayudaros a configurar todo el tema este de Google Project.
+
+
+
+Direccion de Google Project: http://code.google.com/p/pract-is3-ugr/
+Direccion del servidor SVN: https://pract-is3-ugr.googlecode.com/svn/trunk/
+Usuario: Vuestro email de google
+Password: El generado aleatoriamente en https://code.google.com/hosting/settings

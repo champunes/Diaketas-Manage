@@ -1,0 +1,46 @@
+PLANTILLA
+
+-Portada
+-Como identificar el documento
+-Como vamos a nombrar las distintas versiones (hay  que entregarlas todas)
+	segunda pagina, historia del docuemnto 
+		fecha 	versión 	comentario(de por qué se genera la nueva versión)
+		8-3-12	 v0.1  		blablabla
+	
+	-Documentos de control de cambios
+		Para cada una de las versiones indicar extensamente las causas de las modificaciones.
+
+
+DOCUMENTOS PRINCIPALES:
+	-Planificación
+	-Modelado de requisitos (casos de uso, diagrama de paquetes, diagramas de secuencia)
+	-Análisis (diagramas de clase, contratos, diagramas de secuencia)
+	-Diseño (diseño de interfaz de usuarios, diseño bases de datos, diagramas finales)
+
+	-Implementación.
+
+
+Hay que entregarlo todo, si en la planificación pone que una cosa se entrega un día hay que mandarsela al profesor ese día.
+
+
+	
+IMPORTANTE
+
+Lenguaje orientado a objetos. Base de datos relacional. MVC.
+
+Capa de abastracción entre los objetos y el mundo de SQL.
+
+	Socio 	Modelo
+agregar una nueva clase Socio_BD que tenga métodos para todas las operaciones necesarias a nivel de base de datos (guardar,recuperar, etc)
+
+	SBD.save(socio)
+
+Tener una clase comun JDBC(conexiones) para aplicarla sobre SOCIO_BD y PREST_BD
+
+
+BaseDatos -> 	Concurrencia entre varios usuarios que utilicen la aplicación, utilizar transacciones.
+		Decidir cuando se abren y se cierran las conexiones.
+
+
+
+

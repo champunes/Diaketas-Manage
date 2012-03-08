@@ -1,0 +1,31 @@
+Consideraciones a tener en cuenta con la plantilla
+
+Cada vez que se termine un capítulo es necesario introducir un salto de sección
+Para ello, en word, en Insertar->Salto de sección (pagina siguiente) se puede hacer. Ojo, algunas veces no inserta el salto
+para ello si se pica en el encabezado aparece (Sección X), hay que ver que de verdad haya cambiado. Es mas, algunas veces al 
+insertarlo parece que no lo ha hecho, pero si escribimos algo, ya aparece la nueva sección.
+
+Como veréis existe un índice de ilustración y figuras. ¿Como sabe word que cosa es una tabla o una ilustración?
+
+Al insertar una tabla, normalmente inserta al pie Tabla 1.1, 1.1 por decir algo, depende de en qué capítulo estemos pondrá 2,3,4...
+Lo mismo con las ilustraciones.
+
+Algunas veces... como bien sabréis word no sigue un patrón fijo para hacer determinada cosa, por lo que al insertar alguna de las
+dos cosas, no pondrá el nombre al pié. Para hacerlo manualmente, no seáis cafres, que no vale ponerlo escrito y pegarlo muy juntito
+a la tabla o la figura. Con el botón derecho sobre la ilustración o en la esquina superior izquierda de la tabla (donde aparece ese '+')
+pone, Insertar Título, nos saldrá un menú, donde nos dará a seleccionar el tipo de 'cosa' que queremos nombrar. Las tablas se llaman
+Tablas y las ilustraciones se llaman Ilustración (no figura).
+
+Para los títulos de estas dos cosas, si os fijáis word, automáticamente cree que es la primera línea de un párrafo, entonces mete
+un poco de sangría, si por ejemplo queremos poner una imagen centrada y el título justo debajo, veremos que al centrar también el titulo
+al pie, este está un poco descentrado respecto a la imagen o la tabla, es por esto, la sangría que introduce el maldito word (muy majo él).
+
+Para los índices, picáis con el botón derecho a cualquier elemento del índice y pone actualizar indice y os da a elegir, si queréis
+sólamente actualizar los números, o actualizar el índice entero (no hace falta que explique para que sirve cada una de las opciones)
+
+
+Espero que no se me escape nada, si tenéis alguna duda con esto, me lo decís. (Mario)
+
+PD: El documento es de un PFC, he visto que tenéis por ahí la plantilla que propone la ieee, este está hecho según la PDS (Product Design Specification)
+
+

@@ -1,0 +1,36 @@
+- Software libre. La aplicación debe desarrollarse usando software libre
+- Usabilidad. El sistema deberá ofrecer una interfaz sencilla e intuitiva que permita a un usuario sin conocimientos específicos de la aplicación manejarse en esta de forma fluida, facilitando el acceso a la información crítica.
+- Tolerancia a fallos. El sistema deberá ser capaz de recuperarse de fallos durante la manipulación de los datos, garantizando el estado coherente de la base de datos.
+- Seguridad. El sistema deberá articular los mecanismos necesarios para garantizar la seguridad de los datos de socios y beneficiarios en arreglo a la ley de protección de datos.
+
+En requisitos no funcionales, yo (Alberto) siempre e puesto los mismos
+
+Facilidad de uso
+	Experiencia del socio, ninguna
+	Experiencia del administrativo, ninguna
+	Documentación, manual de ayuda
+Fiabilidad
+	El sistema podrá reiniciarse en caso de fallo
+	No se permite pérdida de datos, implementar mecanismos de recuperación
+Rendimiento
+	La respuesta del sistema no debe ser más lenta que el tiempo de acceso medio a una web, aunque el tiempo no es crítico
+	Debe soportar al menos 100 usuarios accediendo de forma concurrente
+	Se espera una base de datos de no más de 1TB
+Soporte
+	Una posible extensión del sistema es que maneje varias asociaciones
+	El sistema será mantenido por el administrador
+Implementación
+	El sistema deberá funcionar correctamente en hardware de antigüedad media-alta
+Interfaz
+	Una parte del sistema tiene que poder ajustarse a la tecnología de un movil.
+Operaciones
+	El administrativo/voluntario es el encargado de interactuar con el sistema 
+Empaquetamiento
+	El sistema podrá instalarlo el administrador mediante la utilización de soporte físico tipo DVD
+	Se prevé una instalación
+	La instalación no tardará más de 20 minutos
+Legales
+	La licencia será de pago
+	Los fallos derivados del uso incorrecto del sistema son problema del usuario
+	No se incurre en derechos de autor
+
