@@ -1,3 +1,41 @@
+================================
+LISTADO COMPLETO DE CASOS DE USO
+================================
+Subsistema de ayudas
+- Crear nuevo tipo de ayuda
+- Modificar tipo de ayuda
+- Registrar ayuda
+- Generar listado de actuaciones 
+- Consultar ayuda
+- Modificar ayuda
+
+Subsistema de contabilidad
+- Registrar gasto
+- ¿Registrar Ingreso? (PACO) - Habra algunos ingresos que sea de pantalones y demas cosas, esos no se registrarán pero los de donaciones de dinero si nO?
+							 Por eso deberia de poder registrarse una donacion de dinero en el sistema. O eso va a ir en la parte del Socio??
+- Obtener listado de gastos
+- Obtener listado de ingresos
+- Obtener contabilidad
+
+Subsistema de beneficiarios
+- Crear beneficiario
+- Modificar beneficiario
+- Eliminar beneficiario
+- Consultar beneficiario
+
+Subsistema de voluntarios
+- Crear nuevo administrativo/voluntario
+- Modificar administrativo/voluntario
+- Eliminar administrativo/voluntario
+- Consultar administrativo/voluntario
+- Identificar administrativo/voluntario
+
+
+
+===========================================================================
+===========================================================================
+
+
 Subsistema de gestión de Beneficiarios
 ======================================
 - Crear beneficiario
@@ -10,6 +48,10 @@ Subsistema de gestión de Beneficiarios
 - Generar listado de actuaciones 
 
 --> Como las ayudas solo se registran en el caso de ke sean economicas (aportaciones de los socios) creo ke la gestion de ayudas no abria ke acerla.(ALBERTO)
+	Ojo. Las ayudas son las "actuaciones" sobre los beneficiarios, que si que hay que registrar todo. A lo que te refieres son a las aportaciones de los socios,
+	que efectivamente solo se registran en caso de ser monetarias.
+	
+	
 Yo pondria los siguientes
 - Asignar ayuda a beneficiario
 - Eliminar ayuda a beneficiario
@@ -18,6 +60,8 @@ Yo pondria los siguientes
 ¿Subsistema de contabilidad?
 ============================
 - Registrar gasto (Registrar un gasto de la asociacion para la contabilidad: materiales, ayudas, etc...) -->> en la entrevista se dijo ke no ai ke registrar los materiales, ni nada ke tenga ke ver con un almacen., solo ingresos de socios.(ALBERTO)
+																												Con gastos me refiero a gastos tipo "2 Cajas de 1000 folios de impresora", etc.. Eso si que hay que almacenarlo
+																												para llevar la contabilidad de la asociacion
 Yo pondria los siguiente:
 
 - Obtener listado de gastos

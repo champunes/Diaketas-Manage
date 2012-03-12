@@ -1,0 +1,9 @@
+Voy a ir subiendo poco a poco varios bocetos de cada una de las funcionalidades para los beneficiarios, he creado dos tipos,
+opinad por facebook cual os gusta mas y asi podremos ir viendo los gustos de cada uno y sobre todo para ponernos de acuerdo 
+para el diseño final, faltan muchos bocetos, pero cuando tengamos mas diagramas y vayamos avanzando en el proyecto supongo que antes
+de que se implemente ya el diseño final estarán todos los bocetos terminados de todas las posibles ventanas que se generen en la aplicacion.
+Opinad y no seais cabrones y paseis del tema XD
+
+Un saludo, Webah!
+
+(Me falta el Registrar Beneficiario en la segunda opcion)

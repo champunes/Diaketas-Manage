@@ -1,7 +1,0 @@
-(PACO)Aqui cada uno subirá los archivos (.doc, .pdf, lo que sea) con su respectivo nombre de las tareas que vaya haciendo,
-por ejemplo: DiagramaCasosUso_PacoLegaza.pdf asi cuando hagamos la documentación completa con las cosas de cada uno, 
-sabemos quién lo ha hecho.
-
-Una buena idea seria no subir el archivo hasta que no este 'casi' o completamente terminado, para que nadie intente abrirlo 
-ni para que alguien pueda modificarlo, y otra idea es si teneis varios archivos de una misma tarea (aunque se pueden mirar 
-las fechas) seria conveniente que pusieseis PrimeraVersion, SegundaVersion, ... algo asi.

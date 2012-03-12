@@ -1,0 +1,59 @@
+PASOS PARA CONFIGURAR GITHUB
+
+1: Entrais en https://github.com y os creais una cuenta. Vuestra dirección sera https://github.com/nombre
+
+2: Teniendo NetBeans 7.0.1 o superior, vais al menu Equipo->Git->Clone
+
+3: En Repository URL poneis : https://github.com/champunes/Diaketas-Manage.git
+
+4: En user y password pues poneis vuestra cuenta de github (os tengo que haber metido, aseguraos de que os he dicho que estais dentro antes de probar)
+
+5: Le dais a siguiente, y eligis la rama (branche) Master. Solo tendremos una (seguramente) asi que no creo que haya mucho problema.
+
+6: Elegis donde quereis que os mantenga vuestra copia local del repositorio (lo mas normal es que os venga puesta la carpeta donde se guardan los proyectos de NetBeans, esa esta bien para hacer el clone)
+
+7: Mirad que este marcada la opción "Scan for NetBeans Projects After Clone", sirve para que os enlace todo el repositorio y el proyecto.
+
+8: Le dais a terminar.
+
+NOTAS:
+
+1-No estoy seguro de si con solo netbeans podemos sincronizar todo. El codigo lo sincroniza de lujo, pero voy a probar si funciona con lo demás.
+2-Confirmado, netbeans solo maneja lo que esta dentro de la carpeta de cada proyecto. 
+		Todo lo que hay dentro de /Diaketas-Manage/NetBeansProjects/Diaketas-ManageIT1 se sincroniza con netbeans, lo demás hay que hacerlo con el cliente.
+		Asi que los unicos que tienen ke manejar el netbeans para sincronizar son el equipo de implementación en cada momento. Los equipos de Gestion y Diseño usaran el cliente github para sincronizar los documentos.
+		
+		Para facilitar la tarea podeis configurar que la carpeta del cliente de github sea la misma que la del proyecto netbeans, asi no teneis dos copias. Pero es a gusto. Yo prefiero tener dos copias ya que netbeans no actualizara la documentación, solo el codigo. Asi en una carpeta tengo todo al dia, y en otra solo el codigo. 
+		
+	Por cierto, ANOTACION IMPORTANTE: antes de hacer nada con netbeans o en los documentos, bajaros la ultima versión que haya del repositorio. Y siempre que termineis de trabajar, pushear (subir) el repositorio a online. Os explico todo ello más abajo
+	
+INSTALAR Y USAR CLIENTE GITHUB
+
+
+1: Bajaros el cliente. Los enlaces según el sistema operativo son:
+
+	Windows: http://code.google.com/p/tortoisegit/ (yo recomiendo este, pero podeis usar otros que hay por ahi si quereis)
+	Linux: Hay muchos, los más usados son http://live.gnome.org/giggle, https://github.com/davvid/git-cola y http://www.syntevo.com/smartgit/download.html?all=true
+	Mac: http://mac.github.com/
+
+	Siempre podeis usar comandos si quereis, pero es un engorro.
+	
+2: Como cada programa es distinto, os explico los conceptos básicos de git que seguro tienen todos los programas. Cualquier duda me preguntais.
+
+	Clone: Es la función que crea un volcado local del repositorio que está online en vuestro disco duro.
+	Commit: Hace un commit de forma local en el repositorio, creando una nueva revisión: (Ójo, el commit es solo local, no está subido online)
+	Pull: Actualiza vuestro repositorio local con las diferencias que pueda haber en el repositorio online. (No es lo mismo que clone, para esto teneis que tener ya el repositorio en vuestro pc)
+	Push: Actualiza el repositorio online con las diferencias que pueda haber en vuestro repositorio local (esto a veces se llama Sync tambien)
+	Diff: Analizador de diferencias entre versiones (revisiones) distintas.
+	Show history: Permite ver toda la historia del repositorio.
+	Checkout: Vuelve el repositorio a nueva revisión anterior. Se usa por si haceis commit y os dais cuenta que la habeis liado parda y podeis volver atras. 
+	
+3: Los procesos básicos serían:
+	1 Clonar el repositorio en vuestro pc.
+	2 Antes de comenzar a trabajar, lo primero pull del repositorio por si algun compañero a cambiado algo.
+	3 Cada vez que hagais un cambio importante, commit.
+	4 Cuando termineis de trabajar ese dia, push (No haigas un push por cada commit, hacedlo por ejemplo cuando vayais a dejar de trabajar ese dia despues de echarle las horas que sea, podeis pushear 20 commits sin problema)
+	5 Si hay conflictos, usad el diff para ver que diferencias hay y corregidlas; no suele ser complicado.
+	6 Paciencia, este programa es muy fácil pero como todos necesita tiempo. Las cosas que os rayen ahora os pareceran tonterias despues.
+	
+		

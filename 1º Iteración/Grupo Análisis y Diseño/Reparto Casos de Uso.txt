@@ -1,0 +1,31 @@
+REPARTO DE CASOS DE USO
+=======================
+Jose A.:
+Subsistema de ayudas
+- Crear nuevo tipo de ayuda
+- Modificar tipo de ayuda
+- Registrar ayuda (Si es una ayuda no tangible, además se hace el caso de uso Registrar gasto para registrar el gasto monetario de las cuentas de la asociacion)
+- Generar listado de actuaciones 
+- Consultar ayuda
+- Modificar ayuda
+
+Subsistema de contabilidad
+- Registrar gasto
+- Obtener listado de gastos
+- Obtener listado de ingresos
+- Obtener contabilidad
+
+Raphael:
+Subsistema de beneficiarios
+- Crear beneficiario
+- Modificar beneficiario
+- Eliminar beneficiario
+- Consultar beneficiario
+- Consultar la lista de ayudas recibidas par el beneficiario
+
+Subsistema de voluntarios
+- Crear nuevo administrativo/voluntario
+- Modificar administrativo/voluntario
+- Eliminar administrativo/voluntario
+- Consultar administrativo/voluntario
+- Identificar administrativo/voluntario

@@ -7,8 +7,7 @@ insertarlo parece que no lo ha hecho, pero si escribimos algo, ya aparece la nue
 
 Como veréis existe un índice de ilustración y figuras. ¿Como sabe word que cosa es una tabla o una ilustración?
 
-Al insertar una tabla, normalmente inserta al pie Tabla 1.1, 1.1 por decir algo, depende de en qué capítulo estemos pondrá 2,3,4...
-Lo mismo con las ilustraciones.
+Al insertar una tabla, normalmente inserta al pie Tabla 1.1, 1.1 por decir algo, depende de en qué capítulo estemos pondrá 2,3,4... Lo mismo con las ilustraciones.
 
 Algunas veces... como bien sabréis word no sigue un patrón fijo para hacer determinada cosa, por lo que al insertar alguna de las
 dos cosas, no pondrá el nombre al pié. Para hacerlo manualmente, no seáis cafres, que no vale ponerlo escrito y pegarlo muy juntito

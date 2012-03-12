@@ -33,3 +33,12 @@ http://www.justinmind.com/
 
 Netbeans
 La última versión es español es la 7.1 (la 7.1.1 está aún en inglés). Para los que queramos mantenerlo en español, podemos quedarnos en la 7.1 Haremos pruebas de compatibilidad con la 7.1.1 por si acaso.
+
+EDIT (adolfo): Recomiendo la 7.1 (basicamente porque esta en espa�ol y asi nos quitamos problemas de compatibilidad). Dejo el link del netbeans con Java SE (el mas basico ya que solo usaremos java y JDBC que es un plugin que luego hay que insertar).
+
+NETBEANS: http://netbeans.org/downloads/7.1/
+
+JDK ALL PLATAFORM: http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u3-download-1501626.html
+
+
+Los plugins para JDBC interfaz grafica hacre un mini manual en cuanto ponga a punto mi netbeans.

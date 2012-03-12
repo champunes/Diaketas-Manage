@@ -1,0 +1,32 @@
+/**
+ ** NOMBRE CLASE: 
+ **	  DataSet.java
+ **
+ ** DESCRIPCION:
+ **       Descripción
+ **
+ **          ,,,,,,,
+ **
+ ** DESARROLLADO POR:
+ **         Pepe García Gomez (PGG)
+ **         Juan Perez Lopez (JPL)
+ **
+ ** SUPERVISADO POR:
+ **          PEPITO 
+ **          JUANITO
+ **
+ ** HISTORIA:
+ ** 	000 - Feb 11, 2011 - PGG - Creacion
+ **     001 - Feb 12, 2011 - JPL - Añadido el metodo foo()
+ **     002 - Feb 13, 2011 - PGG - Añadido el metodo bar() -->Cuales son los parametros de entrada de este método?? y los de salida???
+ **
+ ** NOTAS:
+ **   
+ **
+ */
+
+Así con la historia sabemos quien hace cada cosa ;)
+
+(Jose Angel: Si documentamos con javadoc las clases (lo de /**@param, etc*/ facilitaremos a los que tengan que corregir errores en la siguiente iteración) 
+
+(Mario: pensaba que lo de javadoc se sobreentendía)
