@@ -24,8 +24,9 @@ Subsistema de beneficiarios
 - Consultar la lista de ayudas recibidas par el beneficiario
 
 Subsistema de voluntarios
-- Crear nuevo administrativo/voluntario
-- Modificar administrativo/voluntario
-- Eliminar administrativo/voluntario
-- Consultar administrativo/voluntario
-- Identificar administrativo/voluntario
+- Crear nuevo voluntario
+- Modificar voluntario
+- Eliminar voluntario
+- Consultar voluntario
+- Identificar voluntario
+- Desidentificar voluntario
