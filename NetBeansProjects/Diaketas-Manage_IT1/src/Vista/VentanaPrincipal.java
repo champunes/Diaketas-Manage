@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
  *
  * @author champunes
  */
-public class VentanaPrincipal extends javax.swing.JFrame implements InterfazVista {
+public class VentanaPrincipal extends javax.swing.JFrame {
 
 	
 	/**
@@ -25,65 +25,177 @@ public class VentanaPrincipal extends javax.swing.JFrame implements InterfazVist
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        pIdent = new javax.swing.JPanel();
+        imgIdent = new javax.swing.JLabel();
+        labBienvenido = new javax.swing.JLabel();
+        labUsuario = new javax.swing.JLabel();
+        labContr = new javax.swing.JLabel();
+        textFUsuario = new javax.swing.JTextField();
+        textFContr = new javax.swing.JPasswordField();
+        bIdent = new javax.swing.JButton();
+        pMain = new javax.swing.JPanel();
+        imgSocios = new javax.swing.JLabel();
+        imgBenef = new javax.swing.JLabel();
+        imgVolunt = new javax.swing.JLabel();
+        imgBolsa = new javax.swing.JLabel();
+        labSocios = new javax.swing.JLabel();
+        labBenef = new javax.swing.JLabel();
+        labVolunt = new javax.swing.JLabel();
+        labBolsa = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(super.getToolkit().getScreenSize());
+        setTitle("Diaketas Manage");
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(135, 170, 235));
+        setPreferredSize(new java.awt.Dimension(900, 500));
+        setResizable(false);
 
-        jTextField1.setText("jTextField1");
+        pIdent.setBackground(new java.awt.Color(255, 254, 254));
+        pIdent.setPreferredSize(new java.awt.Dimension(888, 450));
 
-        jButton1.setText("jButton1");
+        imgIdent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgIdent.jpg"))); // NOI18N
+        imgIdent.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, java.awt.Color.lightGray));
 
-        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton1)
-                .add(43, 43, 43))
-            .add(jPanel2Layout.createSequentialGroup()
-                .add(96, 96, 96)
-                .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(208, Short.MAX_VALUE))
+        labBienvenido.setFont(new java.awt.Font("Times New Roman", 1, 26)); // NOI18N
+        labBienvenido.setForeground(new java.awt.Color(255, 0, 0));
+        labBienvenido.setText("BIENVENIDO A DIAKETAS");
+
+        labUsuario.setText("USUARIO");
+
+        labContr.setText("CONTRASEÑA");
+
+        textFUsuario.setText("Usuario");
+
+        bIdent.setText("Entrar");
+
+        org.jdesktop.layout.GroupLayout pIdentLayout = new org.jdesktop.layout.GroupLayout(pIdent);
+        pIdent.setLayout(pIdentLayout);
+        pIdentLayout.setHorizontalGroup(
+            pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pIdentLayout.createSequentialGroup()
+                .add(53, 53, 53)
+                .add(imgIdent)
+                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(pIdentLayout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 92, Short.MAX_VALUE)
+                        .add(labBienvenido)
+                        .add(104, 104, 104))
+                    .add(pIdentLayout.createSequentialGroup()
+                        .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(pIdentLayout.createSequentialGroup()
+                                .add(131, 131, 131)
+                                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(labUsuario)
+                                    .add(labContr))
+                                .add(25, 25, 25)
+                                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                    .add(textFUsuario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                    .add(textFContr)))
+                            .add(pIdentLayout.createSequentialGroup()
+                                .add(200, 200, 200)
+                                .add(bIdent)))
+                        .addContainerGap())))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .add(106, 106, 106)
-                .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 58, Short.MAX_VALUE)
-                .add(jButton1)
-                .add(20, 20, 20))
+        pIdentLayout.setVerticalGroup(
+            pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pIdentLayout.createSequentialGroup()
+                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(pIdentLayout.createSequentialGroup()
+                        .add(112, 112, 112)
+                        .add(imgIdent))
+                    .add(pIdentLayout.createSequentialGroup()
+                        .add(88, 88, 88)
+                        .add(labBienvenido)
+                        .add(106, 106, 106)
+                        .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(labUsuario)
+                            .add(textFUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(textFContr, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(labContr))
+                        .add(18, 18, 18)
+                        .add(bIdent)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        pMain.setBackground(new java.awt.Color(255, 255, 255));
+        pMain.setPreferredSize(new java.awt.Dimension(888, 450));
 
-        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
-                .add(64, 64, 64)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
+        imgSocios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgSocios.png"))); // NOI18N
+
+        imgBenef.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgBenef.png"))); // NOI18N
+
+        imgVolunt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgVolunt.jpg"))); // NOI18N
+
+        imgBolsa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgBolsa.jpg"))); // NOI18N
+
+        labSocios.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labSocios.setText("SOCIOS");
+
+        labBenef.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labBenef.setText("BENEFICIARIOS");
+
+        labVolunt.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labVolunt.setText("VOLUNTARIOS");
+
+        labBolsa.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labBolsa.setText("BOLSA DE TRABAJO");
+
+        org.jdesktop.layout.GroupLayout pMainLayout = new org.jdesktop.layout.GroupLayout(pMain);
+        pMain.setLayout(pMainLayout);
+        pMainLayout.setHorizontalGroup(
+            pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pMainLayout.createSequentialGroup()
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(pMainLayout.createSequentialGroup()
+                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, imgBolsa)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, labBolsa)))
+                    .add(pMainLayout.createSequentialGroup()
+                        .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(pMainLayout.createSequentialGroup()
+                                .add(170, 170, 170)
+                                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(imgVolunt)
+                                    .add(imgSocios)
+                                    .add(pMainLayout.createSequentialGroup()
+                                        .add(6, 6, 6)
+                                        .add(labVolunt))))
+                            .add(pMainLayout.createSequentialGroup()
+                                .add(206, 206, 206)
+                                .add(labSocios)))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 281, Short.MAX_VALUE)
+                        .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(pMainLayout.createSequentialGroup()
+                                .add(6, 6, 6)
+                                .add(labBenef))
+                            .add(imgBenef))))
+                .add(181, 181, 181))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
-                .add(26, 26, 26)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+        pMainLayout.setVerticalGroup(
+            pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pMainLayout.createSequentialGroup()
+                .add(46, 46, 46)
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(pMainLayout.createSequentialGroup()
+                        .add(imgBenef)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(labBenef)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(imgBolsa))
+                    .add(pMainLayout.createSequentialGroup()
+                        .add(imgSocios)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(labSocios)
+                        .add(48, 48, 48)
+                        .add(imgVolunt)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(labVolunt)
+                    .add(labBolsa))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -92,58 +204,78 @@ public class VentanaPrincipal extends javax.swing.JFrame implements InterfazVist
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(pIdent, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(pMain, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(53, 53, 53)
-                .add(jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .add(pIdent, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(layout.createSequentialGroup()
-                    .add(60, 60, 60)
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(44, Short.MAX_VALUE)
+                    .add(pMain, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
         pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        java.awt.Dimension dialogSize = getSize();
+        setLocation((screenSize.width-dialogSize.width)/2,(screenSize.height-dialogSize.height)/2);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JList jList1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton bIdent;
+    private javax.swing.JLabel imgBenef;
+    private javax.swing.JLabel imgBolsa;
+    private javax.swing.JLabel imgIdent;
+    private javax.swing.JLabel imgSocios;
+    private javax.swing.JLabel imgVolunt;
+    private javax.swing.JLabel labBenef;
+    private javax.swing.JLabel labBienvenido;
+    private javax.swing.JLabel labBolsa;
+    private javax.swing.JLabel labContr;
+    private javax.swing.JLabel labSocios;
+    private javax.swing.JLabel labUsuario;
+    private javax.swing.JLabel labVolunt;
+    private javax.swing.JPanel pIdent;
+    private javax.swing.JPanel pMain;
+    private javax.swing.JTextField textFContr;
+    private javax.swing.JTextField textFUsuario;
     // End of variables declaration//GEN-END:variables
-
-	public void mostrarVistaPrincipal(){
-		
-		jPanel1.setVisible(false);
-		jPanel2.setVisible(true);
-		
-		
-		this.setVisible(true);
+	
+	/**
+	 * @post Muestra la vista de identificación
+	 */
+	public void mostrarVistaIdentificacion(){
+		pIdent.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pMain.setVisible(false);
 	}
 	
-	public void mostrarVistaSecundaria(){
+	/**
+	 * @post Muestra la vista principal
+	 */
+	public void mostrarVistaPrincipal(){
 		
-		jPanel1.setVisible(true);
-		jPanel2.setVisible(false);		
+		pMain.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pIdent.setVisible(false);
 		
 	}
-
-	@Override
-	public void setControlador(ActionListener c) {
-		jButton1.setActionCommand(BOTON);
-		jButton1.addActionListener(c);
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerBIdent(ActionListener listener){
+		bIdent.addActionListener(listener);
 	}
 }

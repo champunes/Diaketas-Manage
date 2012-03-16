@@ -1,7 +1,7 @@
 package Controlador;
 
-import Vista.InterfazVista;
-import Vista.VentanaPrincipal;
+import Vista.*;
+import Modelo.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,20 +9,26 @@ import java.awt.event.ActionListener;
  *
  * @author champunes
  */
-public class ControladorPrincipal implements ActionListener{
+public class ControladorPrincipal {
 	
 	public VentanaPrincipal vista;
+	
+	//Clase para controlar los eventos del boton identificacion	
+	class ListenerBIdent implements ActionListener{
 
-	public void crearVistaPrincipal(){
-		vista = new VentanaPrincipal();
-		vista.mostrarVistaPrincipal();
-		vista.setControlador(this);
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaPrincipal();
+		}
+		
 	}
 	
-	@Override
-	public void actionPerformed(ActionEvent evento) {
-		if(evento.getActionCommand().equals(InterfazVista.BOTON))
-			vista.mostrarVistaSecundaria();
-	}
+	//Constructor por defecto	
+	public ControladorPrincipal(){
+		vista = new VentanaPrincipal();
+		vista.mostrarVistaIdentificacion();
+		vista.anadirListenerBIdent(new ListenerBIdent());
+		vista.setVisible(true);
+	}	
 	
 }
