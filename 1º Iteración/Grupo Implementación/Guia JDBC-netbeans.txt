@@ -1,0 +1,9 @@
+TUTORIAL CONECTAR PROJECTO NETBEANS A MYSQL
+
+Todo lo necesario para conectarte con la base de datos desde el proyecto viene ya con netbeans (al menos con la 7.1 viene)
+
+Paso 1- En la carpeta Bibliotecas, damos boton derecho->Agregar biblioteca
+
+Paso 2- Buscamos una que se llama "Driver MySQL JDBC" y la añadimos
+
+Paso 3- Importamos las clases que necesitemos y usamos lo que haga falta (fijaros en el codigo de JDBC.java que hay ya en el proyecto)

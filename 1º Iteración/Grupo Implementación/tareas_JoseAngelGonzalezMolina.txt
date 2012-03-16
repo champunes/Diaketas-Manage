@@ -11,3 +11,6 @@ Jose Angel:
 Aun más tareas XD (por cierto, aqui esta el tiempo real, no el planificado. esto es lo que he tardado en hacer cada cosa y cuando lo he hecho)
 
 - Codigos de ejemplo JDBC en el codigo para facilitar al encargado de gestionar la DB su trabajo: 12/3/2012 1 hora
+- Codigos de ejemplo Swing para facilitar al encargado de diseñar la interfaz su trabajo: 12/3/2012 2 horas (que llevo, aun me falta más rato xD)
+																							13/03/2012 2 horas
+- Codigo de ejemplo arquitectura MVC: 14/03/2012 1 hora
