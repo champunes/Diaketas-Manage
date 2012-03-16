@@ -1,0 +1,9 @@
+(Alberto Bailón)
+
+Muy xulis los bocetos... xDDD pro... no es dieketas... es DIAKETAS Xd y en el boceto de identificacion.. as puesto deiketas
+
+
+Raphael : creo que no es necesario de hacer tres paginas de datos y solamente una donde se puede bajar o subir. Es mas facil navigar asi
+
+
+Raphael : en la pagina de modificacion de los datos de un beneficiario o voluntario, podemos anadir una image a lado de cada campo de datos para mostrar al usuario si el dato esta correcto o no y asi gestionar facilamente los errores
