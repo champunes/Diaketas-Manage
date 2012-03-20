@@ -1,6 +1,7 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 
 /**
  *
@@ -42,19 +43,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labBenef = new javax.swing.JLabel();
         labVolunt = new javax.swing.JLabel();
         labBolsa = new javax.swing.JLabel();
+        pSocios = new javax.swing.JPanel();
+        pBenef = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        labBMain = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        labSBenef = new javax.swing.JLabel();
+        imgNBenef = new javax.swing.JLabel();
+        labNBenef = new javax.swing.JLabel();
+        imgBBuscar = new javax.swing.JLabel();
+        labBBuscar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diaketas Manage");
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(135, 170, 235));
-        setPreferredSize(new java.awt.Dimension(900, 500));
         setResizable(false);
 
         pIdent.setBackground(new java.awt.Color(255, 254, 254));
         pIdent.setPreferredSize(new java.awt.Dimension(888, 450));
 
-        imgIdent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgIdent.jpg"))); // NOI18N
-        imgIdent.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, java.awt.Color.lightGray));
+        imgIdent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/Acceso_Usuarios.jpg"))); // NOI18N
 
         labBienvenido.setFont(new java.awt.Font("Times New Roman", 1, 26)); // NOI18N
         labBienvenido.setForeground(new java.awt.Color(255, 0, 0));
@@ -73,28 +82,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pIdentLayout.setHorizontalGroup(
             pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(pIdentLayout.createSequentialGroup()
-                .add(53, 53, 53)
-                .add(imgIdent)
+                .addContainerGap(515, Short.MAX_VALUE)
+                .add(labBienvenido)
+                .add(104, 104, 104))
+            .add(pIdentLayout.createSequentialGroup()
                 .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(pIdentLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 92, Short.MAX_VALUE)
-                        .add(labBienvenido)
-                        .add(104, 104, 104))
-                    .add(pIdentLayout.createSequentialGroup()
+                        .add(476, 476, 476)
                         .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(pIdentLayout.createSequentialGroup()
-                                .add(131, 131, 131)
-                                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(labUsuario)
-                                    .add(labContr))
-                                .add(25, 25, 25)
-                                .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(textFUsuario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                    .add(textFContr)))
-                            .add(pIdentLayout.createSequentialGroup()
-                                .add(200, 200, 200)
-                                .add(bIdent)))
-                        .addContainerGap())))
+                            .add(labUsuario)
+                            .add(labContr))
+                        .add(25, 25, 25)
+                        .add(pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(textFUsuario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .add(textFContr)))
+                    .add(pIdentLayout.createSequentialGroup()
+                        .add(545, 545, 545)
+                        .add(bIdent)))
+                .addContainerGap())
+            .add(pIdentLayout.createSequentialGroup()
+                .add(53, 53, 53)
+                .add(imgIdent)
+                .addContainerGap())
         );
         pIdentLayout.setVerticalGroup(
             pIdentLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -116,15 +125,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .add(labContr))
                         .add(18, 18, 18)
                         .add(bIdent)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pMain.setBackground(new java.awt.Color(255, 255, 255));
         pMain.setPreferredSize(new java.awt.Dimension(888, 450));
 
-        imgSocios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgSocios.png"))); // NOI18N
+        imgSocios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/socio.png"))); // NOI18N
 
-        imgBenef.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgBenef.png"))); // NOI18N
+        imgBenef.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/bene.png"))); // NOI18N
 
         imgVolunt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/imgVolunt.jpg"))); // NOI18N
 
@@ -147,32 +156,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pMainLayout.setHorizontalGroup(
             pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(pMainLayout.createSequentialGroup()
-                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, labBolsa)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(labBenef)
+                        .add(imgBolsa)))
+                .add(181, 181, 181))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, pMainLayout.createSequentialGroup()
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(pMainLayout.createSequentialGroup()
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(170, 170, 170)
                         .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, imgBolsa)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, labBolsa)))
-                    .add(pMainLayout.createSequentialGroup()
-                        .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(pMainLayout.createSequentialGroup()
-                                .add(170, 170, 170)
-                                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(imgVolunt)
-                                    .add(imgSocios)
-                                    .add(pMainLayout.createSequentialGroup()
-                                        .add(6, 6, 6)
-                                        .add(labVolunt))))
-                            .add(pMainLayout.createSequentialGroup()
-                                .add(206, 206, 206)
-                                .add(labSocios)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 281, Short.MAX_VALUE)
-                        .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(imgVolunt)
                             .add(pMainLayout.createSequentialGroup()
                                 .add(6, 6, 6)
-                                .add(labBenef))
-                            .add(imgBenef))))
-                .add(181, 181, 181))
+                                .add(labVolunt))))
+                    .add(pMainLayout.createSequentialGroup()
+                        .add(206, 206, 206)
+                        .add(labSocios))
+                    .add(pMainLayout.createSequentialGroup()
+                        .add(160, 160, 160)
+                        .add(imgSocios)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 290, Short.MAX_VALUE)
+                .add(imgBenef)
+                .add(155, 155, 155))
         );
         pMainLayout.setVerticalGroup(
             pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -192,10 +200,97 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .add(48, 48, 48)
                         .add(imgVolunt)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(pMainLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labVolunt)
                     .add(labBolsa))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+
+        pSocios.setBackground(new java.awt.Color(255, 255, 255));
+        pSocios.setPreferredSize(new java.awt.Dimension(560, 341));
+
+        org.jdesktop.layout.GroupLayout pSociosLayout = new org.jdesktop.layout.GroupLayout(pSocios);
+        pSocios.setLayout(pSociosLayout);
+        pSociosLayout.setHorizontalGroup(
+            pSociosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 954, Short.MAX_VALUE)
+        );
+        pSociosLayout.setVerticalGroup(
+            pSociosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 477, Short.MAX_VALUE)
+        );
+
+        pBenef.setBackground(new java.awt.Color(255, 255, 255));
+
+        labBMain.setFont(new java.awt.Font("Lucida Sans", 0, 13)); // NOI18N
+        labBMain.setForeground(new java.awt.Color(0, 0, 255));
+        labBMain.setText("DIAKETAS");
+
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel1.setText(">");
+
+        labSBenef.setText("Beneficiarios");
+
+        imgNBenef.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/usu.png"))); // NOI18N
+
+        labNBenef.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labNBenef.setText("NUEVO BENEFICIARIO");
+
+        imgBBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/lupa (1).png"))); // NOI18N
+
+        labBBuscar.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        labBBuscar.setText("BUSCAR");
+
+        org.jdesktop.layout.GroupLayout pBenefLayout = new org.jdesktop.layout.GroupLayout(pBenef);
+        pBenef.setLayout(pBenefLayout);
+        pBenefLayout.setHorizontalGroup(
+            pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pBenefLayout.createSequentialGroup()
+                .add(pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(pBenefLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jSeparator1))
+                    .add(pBenefLayout.createSequentialGroup()
+                        .add(16, 16, 16)
+                        .add(labBMain)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabel1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(labSBenef)
+                        .add(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .add(pBenefLayout.createSequentialGroup()
+                .add(166, 166, 166)
+                .add(imgNBenef)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 310, Short.MAX_VALUE)
+                .add(imgBBuscar)
+                .add(148, 148, 148))
+            .add(pBenefLayout.createSequentialGroup()
+                .add(149, 149, 149)
+                .add(labNBenef)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(labBBuscar)
+                .add(217, 217, 217))
+        );
+        pBenefLayout.setVerticalGroup(
+            pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(pBenefLayout.createSequentialGroup()
+                .add(11, 11, 11)
+                .add(pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(labBMain)
+                    .add(jLabel1)
+                    .add(labSBenef))
+                .add(8, 8, 8)
+                .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(95, 95, 95)
+                .add(pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(imgNBenef)
+                    .add(imgBBuscar))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(pBenefLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(labNBenef)
+                    .add(labBBuscar))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -204,24 +299,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(pIdent, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(pIdent, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .addContainerGap()
-                    .add(pMain, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(pMain, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(pSocios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(pBenef, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
-                .add(pIdent, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE)
+                .add(pIdent, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 476, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(44, Short.MAX_VALUE)
-                    .add(pMain, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(65, Short.MAX_VALUE)
+                    .add(pMain, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 476, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(64, Short.MAX_VALUE)
+                    .add(pSocios, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 477, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(65, Short.MAX_VALUE)
+                    .add(pBenef, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
@@ -233,20 +348,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bIdent;
+    private javax.swing.JLabel imgBBuscar;
     private javax.swing.JLabel imgBenef;
     private javax.swing.JLabel imgBolsa;
     private javax.swing.JLabel imgIdent;
+    private javax.swing.JLabel imgNBenef;
     private javax.swing.JLabel imgSocios;
     private javax.swing.JLabel imgVolunt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel labBBuscar;
+    private javax.swing.JLabel labBMain;
     private javax.swing.JLabel labBenef;
     private javax.swing.JLabel labBienvenido;
     private javax.swing.JLabel labBolsa;
     private javax.swing.JLabel labContr;
+    private javax.swing.JLabel labNBenef;
+    private javax.swing.JLabel labSBenef;
     private javax.swing.JLabel labSocios;
     private javax.swing.JLabel labUsuario;
     private javax.swing.JLabel labVolunt;
+    private javax.swing.JPanel pBenef;
     private javax.swing.JPanel pIdent;
     private javax.swing.JPanel pMain;
+    private javax.swing.JPanel pSocios;
     private javax.swing.JTextField textFContr;
     private javax.swing.JTextField textFUsuario;
     // End of variables declaration//GEN-END:variables
@@ -258,6 +383,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		pIdent.setVisible(true);
 		//Todos los demas paneles se ponen a false
 		pMain.setVisible(false);
+		pSocios.setVisible(false);
+		pBenef.setVisible(false);
 	}
 	
 	/**
@@ -268,6 +395,60 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		pMain.setVisible(true);
 		//Todos los demas paneles se ponen a false
 		pIdent.setVisible(false);
+		pSocios.setVisible(false);
+		pBenef.setVisible(false);
+		
+	}
+	
+	/**
+	 * @post Muestra la vista de los socios
+	 */
+	public void mostrarVistaSocios(){
+		
+		pSocios.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pMain.setVisible(false);
+		pIdent.setVisible(false);
+		pBenef.setVisible(false);
+		
+	}
+	
+	/**
+	 * @post Muestra la vista de los beneficiarios
+	 */
+	public void mostrarVistaBenef(){
+		
+		pBenef.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pMain.setVisible(false);
+		pIdent.setVisible(false);
+		pSocios.setVisible(false);
+		
+	}
+	
+	/**
+	 * @post Muestra la vista de crear nuevos beneficiarios
+	 */
+	public void mostrarVistaNBenef(){
+		
+		pBenef.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pMain.setVisible(false);
+		pIdent.setVisible(false);
+		pSocios.setVisible(false);
+		
+	}
+	
+	/**
+	 * @post Muestra la vista de buscar beneficiarios
+	 */
+	public void mostrarVistaBBuscar(){
+		
+		pBenef.setVisible(true);
+		//Todos los demas paneles se ponen a false
+		pMain.setVisible(false);
+		pIdent.setVisible(false);
+		pSocios.setVisible(false);
 		
 	}
 	
@@ -278,4 +459,45 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	public void anadirListenerBIdent(ActionListener listener){
 		bIdent.addActionListener(listener);
 	}
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerImgSocios(MouseListener listener){
+		imgSocios.addMouseListener(listener);
+	}
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerImgBenef(MouseListener listener){
+		imgBenef.addMouseListener(listener);
+	}
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerLabBMain(MouseListener listener){
+		labBMain.addMouseListener(listener);
+	}
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerImgNBenef(MouseListener listener){
+		imgNBenef.addMouseListener(listener);
+	}
+	
+	/**
+	 * @post Añade listener al boton indicado
+	 * @param listener
+	 */
+	public void anadirListenerImgBBuscar(MouseListener listener){
+		imgBBuscar.addMouseListener(listener);
+	}
+	
 }
