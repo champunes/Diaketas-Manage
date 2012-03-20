@@ -5,38 +5,23 @@ import Vista.VentanaPrincipal;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 /**
- *
+ * @see ControladorBenef es una clase singleton
  * @author Jose Angel Gonzalez Molina
  */
 public class ControladorBenef {
 
-	private VentanaPrincipal vista;
+	//Atributo para singleton
+	private static ControladorBenef instancia = null;
 	
-	//Clase para controlar los eventos de la etiqueta main
-	class ListenerLabBMain implements MouseListener{
-
-		@Override
-		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaPrincipal();
-		}
-
-		@Override
-		public void mousePressed(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseExited(MouseEvent me) {
-		}
+	public static ControladorBenef getInstance(VentanaPrincipal v){
+		
+		if(instancia == null)
+			instancia = new ControladorBenef(v);
+		return instancia;
 		
 	}
+	
+	private VentanaPrincipal vista;
 	
 	//Clase para controlar los eventos de la imagen Nuevo Beneficiario
 	class ListenerImgNBenef implements MouseListener{
@@ -89,14 +74,16 @@ public class ControladorBenef {
 		
 	}
 	
-	public ControladorBenef(VentanaPrincipal v){
+	private ControladorBenef(VentanaPrincipal v){
 		
 		vista = v;
-		vista.mostrarVistaBenef();
-		vista.anadirListenerLabBMain(new ListenerLabBMain());
 		vista.anadirListenerImgNBenef(new ListenerImgNBenef());
 		vista.anadirListenerImgBBuscar(new ListenerImgBBuscar());
 		
+	}
+	
+	public void mostrar(){
+		vista.mostrarVistaBenef();
 	}
 	
 }
