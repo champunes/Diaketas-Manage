@@ -10,15 +10,15 @@ import java.awt.event.MouseListener;
  * @author Jose Angel Gonzalez Molina
  */
 
-public class ControladorVolunt implements Controlador{
+public class ControladorVoluntarios implements Controlador{
 
 	//Atributo para singleton
-	private static ControladorVolunt instancia = null;
+	private static ControladorVoluntarios instancia = null;
 	
-	public static ControladorVolunt getInstance(VentanaPrincipal v){
+	public static ControladorVoluntarios getInstance(VentanaPrincipal v){
 		
 		if(instancia == null)
-			instancia = new ControladorVolunt(v);
+			instancia = new ControladorVoluntarios(v);
 		return instancia;
 		
 	}
@@ -133,7 +133,7 @@ public class ControladorVolunt implements Controlador{
 		
 	}	
 	
-	private ControladorVolunt(VentanaPrincipal v){
+	private ControladorVoluntarios(VentanaPrincipal v){
 		vista = v;
 		vista.anadirListenerImgNVolunt(new ListenerImgNVolunt());
 		vista.anadirListenerImgVBuscar(new ListenerImgVBuscar());

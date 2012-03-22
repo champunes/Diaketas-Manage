@@ -66,7 +66,7 @@ public class ControladorPrincipal implements Controlador{
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			C = ControladorBenef.getInstance(vista);
+			C = ControladorBeneficiario.getInstance(vista);
 			C.mostrarVista();
 		}
 
@@ -93,7 +93,7 @@ public class ControladorPrincipal implements Controlador{
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			C = ControladorVolunt.getInstance(vista);
+			C = ControladorVoluntarios.getInstance(vista);
 			C.mostrarVista();
 		}
 

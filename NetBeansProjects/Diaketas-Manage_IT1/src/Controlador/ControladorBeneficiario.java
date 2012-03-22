@@ -8,15 +8,15 @@ import java.awt.event.MouseListener;
  * @see ControladorBenef es una clase singleton
  * @author Jose Angel Gonzalez Molina
  */
-public class ControladorBenef implements Controlador{
+public class ControladorBeneficiario implements Controlador{
 
 	//Atributo para singleton
-	private static ControladorBenef instancia = null;
+	private static ControladorBeneficiario instancia = null;
 	
-	public static ControladorBenef getInstance(VentanaPrincipal v){
+	public static ControladorBeneficiario getInstance(VentanaPrincipal v){
 		
 		if(instancia == null)
-			instancia = new ControladorBenef(v);
+			instancia = new ControladorBeneficiario(v);
 		return instancia;
 		
 	}
@@ -74,7 +74,7 @@ public class ControladorBenef implements Controlador{
 		
 	}
 	
-	private ControladorBenef(VentanaPrincipal v){
+	private ControladorBeneficiario(VentanaPrincipal v){
 		
 		vista = v;
 		vista.anadirListenerImgNBenef(new ListenerImgNBenef());

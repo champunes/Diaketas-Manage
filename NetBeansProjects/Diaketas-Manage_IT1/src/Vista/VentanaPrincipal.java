@@ -150,7 +150,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelIdentificacionLayout.setHorizontalGroup(
             PanelIdentificacionLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(PanelIdentificacionLayout.createSequentialGroup()
-                .addContainerGap(527, Short.MAX_VALUE)
+                .addContainerGap(449, Short.MAX_VALUE)
                 .add(labelTitulo)
                 .add(104, 104, 104))
             .add(PanelIdentificacionLayout.createSequentialGroup()
@@ -192,7 +192,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .add(labelContrasena))
                         .add(18, 18, 18)
                         .add(btConectarse)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         PanelInicio.setBackground(new java.awt.Color(255, 255, 255));
@@ -245,7 +245,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelInicioLayout.createSequentialGroup()
                         .add(160, 160, 160)
                         .add(imgSocio)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 302, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 224, Short.MAX_VALUE)
                 .add(imgBeneficiario)
                 .add(155, 155, 155))
         );
@@ -270,7 +270,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labelVoluntario)
                     .add(labelBolsaTrabajo))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         PanelSocio.setBackground(new java.awt.Color(255, 255, 255));
@@ -280,11 +280,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelSocio.setLayout(PanelSocioLayout);
         PanelSocioLayout.setHorizontalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 966, Short.MAX_VALUE)
+            .add(0, 560, Short.MAX_VALUE)
         );
         PanelSocioLayout.setVerticalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 477, Short.MAX_VALUE)
+            .add(0, 341, Short.MAX_VALUE)
         );
 
         PanelBeneficiario.setBackground(new java.awt.Color(255, 255, 255));
@@ -587,7 +587,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                     .add(PanelDatosVoluntarioLayout.createSequentialGroup()
                                         .add(2, 2, 2)
                                         .add(btnDatosVolLimpiar)))))
-                        .add(0, 90, Short.MAX_VALUE)))
+                        .add(0, 78, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -651,7 +651,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btnDatosVolGuardar)
                     .add(btnDatosVolLimpiar))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8}, org.jdesktop.layout.GroupLayout.VERTICAL);
@@ -793,7 +793,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(jLabel14))
                 .add(8, 8, 8)
                 .add(separadorContabilidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(PanelContabilidadLayout.createSequentialGroup()
                         .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
