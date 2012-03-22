@@ -30,7 +30,8 @@ public class ControladorVolunt implements Controlador{
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaNVolunt();
+			vista.mostrarVistaDatosVoluntarios();
+                        
 		}
 
 		@Override
