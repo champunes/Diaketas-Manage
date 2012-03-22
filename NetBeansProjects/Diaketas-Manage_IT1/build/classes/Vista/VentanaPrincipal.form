@@ -32,20 +32,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="PanelIdentificacion" pref="954" max="32767" attributes="0"/>
+              <Component id="PanelIdentificacion" pref="966" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelInicio" pref="954" max="32767" attributes="0"/>
+                  <Component id="PanelInicio" pref="966" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelSocio" pref="954" max="32767" attributes="0"/>
+                  <Component id="PanelSocio" pref="966" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -66,7 +66,7 @@
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="PanelDatosVoluntario" max="32767" attributes="0"/>
+                  <Component id="PanelDatosVoluntario" pref="966" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -82,27 +82,27 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="77" max="32767" attributes="0"/>
+              <EmptySpace pref="88" max="32767" attributes="0"/>
               <Component id="PanelIdentificacion" min="-2" pref="476" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
                   <Component id="PanelInicio" min="-2" pref="476" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <EmptySpace pref="87" max="32767" attributes="0"/>
                   <Component id="PanelSocio" min="-2" pref="477" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
                   <Component id="PanelBeneficiario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -117,7 +117,7 @@
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="PanelDatosVoluntario" pref="488" max="32767" attributes="0"/>
+                  <Component id="PanelDatosVoluntario" pref="499" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -146,7 +146,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="515" max="32767" attributes="0"/>
+                  <EmptySpace pref="527" max="32767" attributes="0"/>
                   <Component id="labelTitulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
               </Group>
@@ -298,7 +298,7 @@
                           <Component id="imgSocio" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="290" max="32767" attributes="0"/>
+                  <EmptySpace pref="302" max="32767" attributes="0"/>
                   <Component id="imgBeneficiario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
               </Group>
@@ -410,7 +410,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="954" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -451,7 +451,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
                   <Component id="imgNBenef" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="310" max="32767" attributes="0"/>
+                  <EmptySpace pref="322" max="32767" attributes="0"/>
                   <Component id="imgBBuscar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
               </Group>
@@ -582,7 +582,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                   <Component id="labContab" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="236" max="32767" attributes="0"/>
+                                  <EmptySpace pref="248" max="32767" attributes="0"/>
                                   <Component id="labAyuda" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="331" max="-2" attributes="0"/>
                               </Group>
@@ -641,7 +641,7 @@
                       <Component id="labAyuda" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="labContab" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="98" max="32767" attributes="0"/>
+                  <EmptySpace pref="109" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -745,11 +745,11 @@
                               <Component id="separadorDatosVoluntario" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="labVDatos" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labMainVDatos" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="senalaVoluntarioDatos" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblBuscarDatosVol" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labVVDatos" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="senalaVoluntarioDatos1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -776,7 +776,7 @@
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnDatosVolGuardar" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jTextField6" linkSize="6" min="-2" max="-2" attributes="0"/>
@@ -823,12 +823,12 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnDatosVolLimpiar" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="78" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="90" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -840,10 +840,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labVDatos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labMainVDatos" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="senalaVoluntarioDatos" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="labSVolunt1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblBuscarDatosVol" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labVVDatos" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="senalaVoluntarioDatos1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -897,10 +897,10 @@
                   </Group>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDatosVolGuardar" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDatosVolLimpiar" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -908,7 +908,7 @@
       <SubComponents>
         <Component class="javax.swing.JSeparator" name="separadorDatosVoluntario">
         </Component>
-        <Component class="javax.swing.JLabel" name="labVDatos">
+        <Component class="javax.swing.JLabel" name="labMainVDatos">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -929,7 +929,7 @@
             <Property name="text" type="java.lang.String" value="Datos Voluntario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblBuscarDatosVol">
+        <Component class="javax.swing.JLabel" name="labVVDatos">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -1050,14 +1050,14 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnDatosVolGuardar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/images/save_f2.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnDatosVolLimpiar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/images/limpiar.png"/>
@@ -1087,11 +1087,11 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="labBMain1" min="-2" max="-2" attributes="0"/>
+                          <Component id="labVContMain" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="senalaBeneficiario1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labSVoluntContabilidad" min="-2" max="-2" attributes="0"/>
+                          <Component id="labVContVoluntarios" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="senalaBeneficiario2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1114,7 +1114,7 @@
                               <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="fieldFechaFin" alignment="0" max="32767" attributes="0"/>
                               <Component id="fieldFechaInicio" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButton4" alignment="0" pref="191" max="32767" attributes="0"/>
+                              <Component id="btnObtenerContabilidad" alignment="0" pref="191" max="32767" attributes="0"/>
                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                               <Component id="cuadroBalance" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -1134,9 +1134,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labBMain1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labVContMain" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="senalaBeneficiario1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="labSVoluntContabilidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labVContVoluntarios" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="senalaBeneficiario2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -1163,14 +1163,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="fieldFechaFin" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnObtenerContabilidad" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="cuadroBalance" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1185,7 +1185,7 @@
       <SubComponents>
         <Component class="javax.swing.JSeparator" name="separadorContabilidad">
         </Component>
-        <Component class="javax.swing.JLabel" name="labBMain1">
+        <Component class="javax.swing.JLabel" name="labVContMain">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Sans" size="13" style="0"/>
@@ -1204,12 +1204,12 @@
             <Property name="text" type="java.lang.String" value="&gt;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="labSVoluntContabilidad">
+        <Component class="javax.swing.JLabel" name="labVContVoluntarios">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Beneficiarios"/>
+            <Property name="text" type="java.lang.String" value="Voluntarios"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="senalaBeneficiario2">
@@ -1306,7 +1306,7 @@
             <Property name="text" type="java.lang.String" value="Listado de gastos"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnObtenerContabilidad">
           <Properties>
             <Property name="text" type="java.lang.String" value="Obtener Contabilidad"/>
           </Properties>

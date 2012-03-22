@@ -24,12 +24,14 @@ public class ControladorVolunt implements Controlador{
 	}
 	
 	private VentanaPrincipal vista;
-	
+        private Controlador C;
+
 	//Clase para controlar los eventos de la imagen Nuevo Voluntario
 	class ListenerImgNVolunt implements MouseListener{
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
+                        // HAY QUE LLAMAR AL CONTROLADOR DE LOS DATOS DE VOLUNTARIOS
 			vista.mostrarVistaDatosVoluntarios();
                         
 		}
@@ -83,7 +85,8 @@ public class ControladorVolunt implements Controlador{
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaContab();
+                        C = ControladorContabilidad.getInstance(vista);
+			C.mostrarVista();
 		}
 
 		@Override
