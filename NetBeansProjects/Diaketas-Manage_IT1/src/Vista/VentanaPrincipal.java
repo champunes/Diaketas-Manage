@@ -100,6 +100,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        PanelContabilidad = new javax.swing.JPanel();
+        separadorContabilidad = new javax.swing.JSeparator();
+        labBMain1 = new javax.swing.JLabel();
+        senalaBeneficiario1 = new javax.swing.JLabel();
+        labSVoluntContabilidad = new javax.swing.JLabel();
+        senalaBeneficiario2 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel15 = new javax.swing.JLabel();
+        fieldFechaInicio = new javax.swing.JFormattedTextField();
+        fieldFechaFin = new javax.swing.JFormattedTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        cuadroBalance = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diaketas Manage");
@@ -129,7 +150,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelIdentificacionLayout.setHorizontalGroup(
             PanelIdentificacionLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(PanelIdentificacionLayout.createSequentialGroup()
-                .addContainerGap(449, Short.MAX_VALUE)
+                .addContainerGap(515, Short.MAX_VALUE)
                 .add(labelTitulo)
                 .add(104, 104, 104))
             .add(PanelIdentificacionLayout.createSequentialGroup()
@@ -171,7 +192,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .add(labelContrasena))
                         .add(18, 18, 18)
                         .add(btConectarse)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         PanelInicio.setBackground(new java.awt.Color(255, 255, 255));
@@ -224,7 +245,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelInicioLayout.createSequentialGroup()
                         .add(160, 160, 160)
                         .add(imgSocio)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 224, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 290, Short.MAX_VALUE)
                 .add(imgBeneficiario)
                 .add(155, 155, 155))
         );
@@ -249,7 +270,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labelVoluntario)
                     .add(labelBolsaTrabajo))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         PanelSocio.setBackground(new java.awt.Color(255, 255, 255));
@@ -259,11 +280,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelSocio.setLayout(PanelSocioLayout);
         PanelSocioLayout.setHorizontalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 560, Short.MAX_VALUE)
+            .add(0, 954, Short.MAX_VALUE)
         );
         PanelSocioLayout.setVerticalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 341, Short.MAX_VALUE)
+            .add(0, 477, Short.MAX_VALUE)
         );
 
         PanelBeneficiario.setBackground(new java.awt.Color(255, 255, 255));
@@ -336,7 +357,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelBeneficiarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labNBenef)
                     .add(labBBuscar))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         PanelVoluntario.setBackground(new java.awt.Color(255, 255, 255));
@@ -435,7 +456,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(labAyuda)
                     .add(labContab))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         PanelDatosVoluntario.setBackground(new java.awt.Color(255, 255, 255));
@@ -630,10 +651,181 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jButton1)
                     .add(jButton2))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
+        PanelContabilidad.setBackground(new java.awt.Color(255, 255, 255));
+        PanelContabilidad.setPreferredSize(new java.awt.Dimension(954, 476));
+
+        labBMain1.setFont(new java.awt.Font("Lucida Sans", 0, 13)); // NOI18N
+        labBMain1.setForeground(new java.awt.Color(0, 0, 255));
+        labBMain1.setText("DIAKETAS");
+
+        senalaBeneficiario1.setForeground(new java.awt.Color(153, 153, 153));
+        senalaBeneficiario1.setText(">");
+
+        labSVoluntContabilidad.setForeground(new java.awt.Color(0, 0, 255));
+        labSVoluntContabilidad.setText("Beneficiarios");
+
+        senalaBeneficiario2.setForeground(new java.awt.Color(153, 153, 153));
+        senalaBeneficiario2.setText(">");
+
+        jLabel14.setText("Contabilidad");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Fecha", "Ingreso", "Dni", ""
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Fecha", "Gasto", "Dni", ""
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+
+        jLabel15.setText("Contabilidad");
+
+        fieldFechaInicio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        fieldFechaFin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        jLabel16.setText("Fecha inicio");
+
+        jLabel17.setText("Fecha fin");
+
+        jLabel18.setText("Listado de ingresos");
+
+        jLabel19.setText("Listado de gastos");
+
+        jButton4.setText("Obtener Contabilidad");
+
+        jLabel20.setText("Balance");
+
+        org.jdesktop.layout.GroupLayout PanelContabilidadLayout = new org.jdesktop.layout.GroupLayout(PanelContabilidad);
+        PanelContabilidad.setLayout(PanelContabilidadLayout);
+        PanelContabilidadLayout.setHorizontalGroup(
+            PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(PanelContabilidadLayout.createSequentialGroup()
+                .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(PanelContabilidadLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(separadorContabilidad))
+                    .add(PanelContabilidadLayout.createSequentialGroup()
+                        .add(16, 16, 16)
+                        .add(labBMain1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(senalaBeneficiario1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(labSVoluntContabilidad)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(senalaBeneficiario2)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabel14)
+                        .add(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .add(PanelContabilidadLayout.createSequentialGroup()
+                .add(14, 14, 14)
+                .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel18)
+                    .add(PanelContabilidadLayout.createSequentialGroup()
+                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 332, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jLabel15)
+                            .add(jLabel17)
+                            .add(jLabel16)
+                            .add(fieldFechaFin)
+                            .add(fieldFechaInicio)
+                            .add(jButton4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                            .add(jLabel20)
+                            .add(cuadroBalance))))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 22, Short.MAX_VALUE)
+                .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 345, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel19))
+                .add(19, 19, 19))
+        );
+
+        PanelContabilidadLayout.linkSize(new java.awt.Component[] {jScrollPane1, jScrollPane2}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
+        PanelContabilidadLayout.setVerticalGroup(
+            PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(PanelContabilidadLayout.createSequentialGroup()
+                .add(11, 11, 11)
+                .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(labBMain1)
+                    .add(senalaBeneficiario1)
+                    .add(labSVoluntContabilidad)
+                    .add(senalaBeneficiario2)
+                    .add(jLabel14))
+                .add(8, 8, 8)
+                .add(separadorContabilidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(PanelContabilidadLayout.createSequentialGroup()
+                        .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabel18)
+                            .add(jLabel19))
+                        .add(9, 9, 9)
+                        .add(PanelContabilidadLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 373, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(PanelContabilidadLayout.createSequentialGroup()
+                                .add(jLabel15)
+                                .add(18, 18, 18)
+                                .add(jLabel16)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(fieldFechaInicio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(12, 12, 12)
+                                .add(jLabel17)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(fieldFechaFin, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(49, 49, 49)
+                                .add(jButton4)
+                                .add(47, 47, 47)
+                                .add(jLabel20)
+                                .add(18, 18, 18)
+                                .add(cuadroBalance, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(0, 0, Short.MAX_VALUE))
+                    .add(PanelContabilidadLayout.createSequentialGroup()
+                        .add(0, 0, Short.MAX_VALUE)
+                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 388, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        PanelContabilidadLayout.linkSize(new java.awt.Component[] {jScrollPane1, jScrollPane2}, org.jdesktop.layout.GroupLayout.VERTICAL);
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -668,21 +860,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(6, 6, 6)
                     .add(PanelDatosVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(6, 6, 6)))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(12, 12, 12)
+                    .add(PanelContabilidad, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(12, 12, 12)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(77, Short.MAX_VALUE)
                 .add(PanelIdentificacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 476, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(65, Short.MAX_VALUE)
+                    .addContainerGap(77, Short.MAX_VALUE)
                     .add(PanelInicio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 476, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(64, Short.MAX_VALUE)
+                    .addContainerGap(76, Short.MAX_VALUE)
                     .add(PanelSocio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 477, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -698,8 +895,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(layout.createSequentialGroup()
                     .add(55, 55, 55)
-                    .add(PanelDatosVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(PanelDatosVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
                     .add(16, 16, 16)))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(35, 35, 35)
+                    .add(PanelContabilidad, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                    .addContainerGap(47, Short.MAX_VALUE)))
         );
 
         pack();
@@ -710,12 +912,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBeneficiario;
+    private javax.swing.JPanel PanelContabilidad;
     private javax.swing.JPanel PanelDatosVoluntario;
     private javax.swing.JPanel PanelIdentificacion;
     private javax.swing.JPanel PanelInicio;
     private javax.swing.JPanel PanelSocio;
     private javax.swing.JPanel PanelVoluntario;
     private javax.swing.JButton btConectarse;
+    private javax.swing.JTextField cuadroBalance;
+    private javax.swing.JFormattedTextField fieldFechaFin;
+    private javax.swing.JFormattedTextField fieldFechaInicio;
     private javax.swing.JLabel imgAyuda;
     private javax.swing.JLabel imgBBuscar;
     private javax.swing.JLabel imgBeneficiario;
@@ -729,6 +935,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel imgVoluntario;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
@@ -736,7 +943,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -744,6 +958,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -758,11 +976,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labAyuda;
     private javax.swing.JLabel labBBuscar;
     private javax.swing.JLabel labBMain;
+    private javax.swing.JLabel labBMain1;
     private javax.swing.JLabel labContab;
     private javax.swing.JLabel labNBenef;
     private javax.swing.JLabel labSBenef;
     private javax.swing.JLabel labSVolunt;
     private javax.swing.JLabel labSVolunt1;
+    private javax.swing.JLabel labSVoluntContabilidad;
     private javax.swing.JLabel labVBuscar;
     private javax.swing.JLabel labVDatos;
     private javax.swing.JLabel labVMain;
@@ -775,10 +995,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelVoluntario;
     private javax.swing.JLabel lblBuscarDatosVol;
     private javax.swing.JLabel senalaBeneficiario;
+    private javax.swing.JLabel senalaBeneficiario1;
+    private javax.swing.JLabel senalaBeneficiario2;
     private javax.swing.JLabel senalaVoluntario;
     private javax.swing.JLabel senalaVoluntarioDatos;
     private javax.swing.JLabel senalaVoluntarioDatos1;
     private javax.swing.JSeparator separadorBeneficiario;
+    private javax.swing.JSeparator separadorContabilidad;
     private javax.swing.JSeparator separadorDatosVoluntario;
     private javax.swing.JSeparator separadorVoluntario;
     private javax.swing.JTextField textFieldContrasena;
@@ -796,6 +1019,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelBeneficiario.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
+                PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -810,7 +1034,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelBeneficiario.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -825,7 +1049,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelBeneficiario.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -840,7 +1064,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -855,7 +1079,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -870,7 +1094,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -885,7 +1109,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelBeneficiario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-		
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -900,7 +1124,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
 		PanelDatosVoluntario.setVisible(false);
-
+                PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -914,7 +1138,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelIdentificacion.setVisible(false);
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
-		
+                PanelDatosVoluntario.setVisible(false);
+		PanelContabilidad.setVisible(false);
 	}
 	
 	/**
@@ -922,14 +1147,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	 */
 	public void mostrarVistaContab(){
 		
-		PanelBeneficiario.setVisible(true);
+		 PanelContabilidad.setVisible(true);
 		//Todos los demas paneles se ponen a false
+                PanelDatosVoluntario.setVisible(false); 
+                PanelBeneficiario.setVisible(false);
 		PanelInicio.setVisible(false);
 		PanelIdentificacion.setVisible(false);
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
-                PanelDatosVoluntario.setVisible(false);
-		
 	}
 	
 	/**
@@ -944,11 +1169,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
                 PanelDatosVoluntario.setVisible(false);
-
+                PanelContabilidad.setVisible(false);
 	}
         
         /**
-	 * @post Muestra la vista de ayudas
+	 * @post Muestra la vista de datos de Voluntarios
 	 */
 	public void mostrarVistaDatosVoluntarios(){
 		
@@ -959,10 +1184,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		PanelIdentificacion.setVisible(false);
 		PanelSocio.setVisible(false);
 		PanelVoluntario.setVisible(false);
-                
-
+                PanelContabilidad.setVisible(false);
 	}
-	
+        
+          
+   
 	/**
 	 * @post Añade listener al boton indicado
 	 * @param listener
