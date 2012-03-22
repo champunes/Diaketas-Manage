@@ -65,6 +65,41 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labVBuscar = new javax.swing.JLabel();
         labAyuda = new javax.swing.JLabel();
         labContab = new javax.swing.JLabel();
+        PanelDatosVoluntario = new javax.swing.JPanel();
+        separadorDatosVoluntario = new javax.swing.JSeparator();
+        labVDatos = new javax.swing.JLabel();
+        senalaVoluntarioDatos = new javax.swing.JLabel();
+        labSVolunt1 = new javax.swing.JLabel();
+        lblBuscarDatosVol = new javax.swing.JLabel();
+        senalaVoluntarioDatos1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diaketas Manage");
@@ -87,7 +122,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         textFieldUsuario.setText("Usuario");
 
-        btConectarse.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
         btConectarse.setText("Entrar");
 
         org.jdesktop.layout.GroupLayout PanelIdentificacionLayout = new org.jdesktop.layout.GroupLayout(PanelIdentificacion);
@@ -404,6 +438,203 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
+        PanelDatosVoluntario.setBackground(new java.awt.Color(255, 255, 255));
+        PanelDatosVoluntario.setPreferredSize(new java.awt.Dimension(954, 476));
+
+        labVDatos.setForeground(new java.awt.Color(0, 0, 255));
+        labVDatos.setText("DIAKETAS");
+
+        senalaVoluntarioDatos.setForeground(new java.awt.Color(153, 153, 153));
+        senalaVoluntarioDatos.setText(">");
+
+        labSVolunt1.setText("Datos Voluntario");
+
+        lblBuscarDatosVol.setForeground(new java.awt.Color(0, 0, 255));
+        lblBuscarDatosVol.setText("Buscar");
+
+        senalaVoluntarioDatos1.setForeground(new java.awt.Color(153, 153, 153));
+        senalaVoluntarioDatos1.setText(">");
+
+        jLabel2.setText("Nombre");
+
+        jLabel3.setText("NIF/DNI/Pasaporte");
+
+        jLabel4.setText("Nacionalidad");
+
+        jLabel5.setText("Nivel de estudios");
+
+        jLabel6.setText("Domicilio");
+
+        jLabel7.setText("Localidad");
+
+        jLabel8.setText("Observaciones");
+
+        jLabel1.setText("Apellidos");
+
+        jLabel9.setText("Nacido el");
+
+        jLabel10.setText("Estado Civil");
+
+        jLabel11.setText("Profesión");
+
+        jLabel12.setText("CP");
+
+        jLabel13.setText("Teléfono");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Casado", "Soltero", "NS/NC" }));
+
+        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/save_f2.png"))); // NOI18N
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images/limpiar.png"))); // NOI18N
+
+        org.jdesktop.layout.GroupLayout PanelDatosVoluntarioLayout = new org.jdesktop.layout.GroupLayout(PanelDatosVoluntario);
+        PanelDatosVoluntario.setLayout(PanelDatosVoluntarioLayout);
+        PanelDatosVoluntarioLayout.setHorizontalGroup(
+            PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(separadorDatosVoluntario)
+                            .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                .add(10, 10, 10)
+                                .add(labVDatos)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(senalaVoluntarioDatos)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(lblBuscarDatosVol)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(senalaVoluntarioDatos1)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(labSVolunt1)
+                                .add(0, 0, Short.MAX_VALUE))))
+                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                        .add(80, 80, 80)
+                        .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel2)
+                            .add(jLabel3)
+                            .add(jLabel4)
+                            .add(jLabel5)
+                            .add(jLabel6)
+                            .add(jLabel7)
+                            .add(jLabel8))
+                        .add(60, 60, 60)
+                        .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                    .add(org.jdesktop.layout.GroupLayout.LEADING, PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(68, 68, 68)
+                                        .add(jButton1))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jLabel13))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jLabel12))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jLabel11))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jLabel10))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jLabel9))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 172, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(68, 68, 68)
+                                        .add(jLabel1)))
+                                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(119, 119, 119)
+                                        .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                            .add(jTextField8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                                            .add(jFormattedTextField1)
+                                            .add(jTextField9)
+                                            .add(jTextField10)
+                                            .add(jTextField11)
+                                            .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 139, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                    .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                                        .add(2, 2, 2)
+                                        .add(jButton2)))))
+                        .add(0, 78, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
+        PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jFormattedTextField1, jTextField1, jTextField10, jTextField11, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6, jTextField7, jTextField8, jTextField9}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
+        PanelDatosVoluntarioLayout.setVerticalGroup(
+            PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(PanelDatosVoluntarioLayout.createSequentialGroup()
+                .add(12, 12, 12)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(labVDatos)
+                    .add(senalaVoluntarioDatos)
+                    .add(labSVolunt1)
+                    .add(lblBuscarDatosVol)
+                    .add(senalaVoluntarioDatos1))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(separadorDatosVoluntario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(61, 61, 61)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel1)
+                    .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(12, 12, 12)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel9)
+                    .add(jFormattedTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(9, 9, 9)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel10)
+                    .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel5)
+                    .add(jLabel11)
+                    .add(jTextField9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel12)
+                    .add(jTextField10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel13)
+                    .add(jTextField11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(39, 39, 39)
+                .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButton1)
+                    .add(jButton2))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -432,6 +663,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addContainerGap()
                     .add(PanelVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(6, 6, 6)
+                    .add(PanelDatosVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(6, 6, 6)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -459,6 +695,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(65, 65, 65)
                     .add(PanelVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(55, 55, 55)
+                    .add(PanelDatosVoluntario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(16, 16, 16)))
         );
 
         pack();
@@ -469,6 +710,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBeneficiario;
+    private javax.swing.JPanel PanelDatosVoluntario;
     private javax.swing.JPanel PanelIdentificacion;
     private javax.swing.JPanel PanelInicio;
     private javax.swing.JPanel PanelSocio;
@@ -485,6 +727,34 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel imgSocio;
     private javax.swing.JLabel imgVBuscar;
     private javax.swing.JLabel imgVoluntario;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel labAyuda;
     private javax.swing.JLabel labBBuscar;
     private javax.swing.JLabel labBMain;
@@ -492,7 +762,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labNBenef;
     private javax.swing.JLabel labSBenef;
     private javax.swing.JLabel labSVolunt;
+    private javax.swing.JLabel labSVolunt1;
     private javax.swing.JLabel labVBuscar;
+    private javax.swing.JLabel labVDatos;
     private javax.swing.JLabel labVMain;
     private javax.swing.JLabel labelBeneficiario;
     private javax.swing.JLabel labelBolsaTrabajo;
@@ -501,9 +773,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelTitulo;
     private javax.swing.JLabel labelUsuario;
     private javax.swing.JLabel labelVoluntario;
+    private javax.swing.JLabel lblBuscarDatosVol;
     private javax.swing.JLabel senalaBeneficiario;
     private javax.swing.JLabel senalaVoluntario;
+    private javax.swing.JLabel senalaVoluntarioDatos;
+    private javax.swing.JLabel senalaVoluntarioDatos1;
     private javax.swing.JSeparator separadorBeneficiario;
+    private javax.swing.JSeparator separadorDatosVoluntario;
     private javax.swing.JSeparator separadorVoluntario;
     private javax.swing.JTextField textFieldContrasena;
     private javax.swing.JTextField textFieldUsuario;
