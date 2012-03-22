@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package Modelo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,10 +14,7 @@ import java.util.Vector;
 public class Beneficiario extends Persona {
     
     
-    private int CP;
-    private String domicilio;
     private String estadoCivil;
-    private String localidad;
     private String nacionalidad;
     private int nivelDeEstudio;
     private String observaciones;
@@ -27,6 +25,8 @@ public class Beneficiario extends Persona {
     private float viviendaAlquiler;
     private String viviendaObservaciones;
     
-    private Vector familiares;
+    private ArrayList<Familiar>  familiares;
+    private ArrayList<Ayuda> ayudasPrestadas;
+  
     
 }

@@ -4,7 +4,7 @@
  */
 package Modelo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,6 +13,8 @@ import java.util.Vector;
  public class Voluntario extends Persona {
     
     private String password;
-    private Vector modificaciones;
+    
+    private ArrayList<Modificacion> modificaciones;
+    private ArrayList<Ayuda> ayudasDadas;
     
 }

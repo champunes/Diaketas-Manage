@@ -4,6 +4,8 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jobero
@@ -14,5 +16,7 @@ public class TipoAyuda {
     private boolean monetaria;
     private String OID;
     private String titulo;
+    
+    private ArrayList<Ayuda> ayudas;
     
 }

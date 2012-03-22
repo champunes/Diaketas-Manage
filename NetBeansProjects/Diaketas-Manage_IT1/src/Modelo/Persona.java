@@ -13,9 +13,17 @@ import java.util.Date;
 public abstract class Persona {
     
     private String apellidos;
+    private int CP;
+    private String domicilio;
     private Date fechaDENacimiento;
+    private String localidad;
     private String NIF;
     private String nombre;
+    private int telefonoFijo;
+    private int telefonoMovil;
+    
+    private Asociacion asociacion;
+    
     
     
 }

@@ -4,7 +4,7 @@
  */
 package Modelo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,7 +15,9 @@ public class Asociacion {
     private String nombre;
     private String direccion;
     
-    private Vector personas;
-    private Vector movimientos;
-    private Vector ayudas;
+    private ArrayList<Persona> personas;
+    private ArrayList<Movimiento> movimientosGenerados;
+    private ArrayList<Ayuda> ayudas;
+    
+    
 }
