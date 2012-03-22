@@ -1,12 +1,13 @@
-DROP TABLE IF EXISTS Asociacion ;
-DROP TABLE IF EXISTS Beneficiario ;
-DROP TABLE IF EXISTS Familiar;
-DROP TABLE IF EXISTS Voluntario ;
-DROP TABLE IF EXISTS Ayuda ;
-DROP TABLE IF EXISTS TipoAyuda ;
+DROP TABLE IF EXISTS FamiliarBeneficiario ;
 DROP TABLE IF EXISTS BeneficiarioAyuda ;
 DROP TABLE IF EXISTS ModificacionAyuda ;
 DROP TABLE IF EXISTS Movimiento ;
+DROP TABLE IF EXISTS Ayuda ;
+DROP TABLE IF EXISTS Beneficiario ;
+DROP TABLE IF EXISTS Voluntario ;
+DROP TABLE IF EXISTS Asociacion ;
+DROP TABLE IF EXISTS TipoAyuda ;
+DROP TABLE IF EXISTS Familiar ;
 
 CREATE TABLE Asociacion (
       AsociacionID INTEGER DEFAULT '1' NOT NULL PRIMARY KEY
@@ -40,14 +41,22 @@ CREATE TABLE Beneficiario (
 );
 
 CREATE TABLE Familiar (
-      PersonaNIF VARCHAR(9) NOT NULL
-    , FamiliarNIF VARCHAR (9) NOT NULL
+      NIF VARCHAR(9) NOT NULL PRIMARY KEY
+    , Nombre VARCHAR (15)
+    , Apellidos VARCHAR (15)
+    , FechaNacimiento DATE
+    , Ocupacion VARCHAR (15)
     , Parentesco VARCHAR (20)
-    , PRIMARY KEY (PersonaNIF, FamiliarNIF)
-    , CONSTRAINT FkFamiliar1 FOREIGN KEY (PersonaNIF)
+);
+
+CREATE TABLE FamiliarBeneficiario (
+      BeneficiarioNIF VARCHAR (9) NOT NULL
+    , FamiliarNIF VARCHAR (9) NOT NULL
+    , PRIMARY KEY (BeneficiarioNIF, FamiliarNIF)
+    , CONSTRAINT FkFamiliarBeneficiario1 FOREIGN KEY (BeneficiarioNIF)
                   REFERENCES Beneficiario (NIF)
-    , CONSTRAINT FkFamiliar2 FOREIGN KEY (FamiliarNIF)
-                  REFERENCES Beneficiario (NIF)
+    , CONSTRAINT FkFamiliarBeneficiario2 FOREIGN KEY (FamiliarNIF)
+                  REFERENCES Familiar (NIF)
 );
 
 CREATE TABLE Voluntario (
