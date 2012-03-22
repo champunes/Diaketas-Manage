@@ -1,10 +1,10 @@
 
-package Modelo;
+package Controlador;
 
 /**
  *
  * @author Jose Angel Gonzalez Molina
  */
-public class Dato {
+public class ControladorSocios {
 
 }
