@@ -8,7 +8,7 @@ import java.awt.event.MouseListener;
  * @see ControladorBenef es una clase singleton
  * @author Jose Angel Gonzalez Molina
  */
-public class ControladorBenef {
+public class ControladorBenef implements Controlador{
 
 	//Atributo para singleton
 	private static ControladorBenef instancia = null;
@@ -82,7 +82,12 @@ public class ControladorBenef {
 		
 	}
 	
-	public void mostrar(){
+	@Override
+	public void actualizarVista() {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}	
+	
+	public void mostrarVista(){
 		vista.mostrarVistaBenef();
 	}
 	

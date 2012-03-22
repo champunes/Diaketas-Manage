@@ -2,7 +2,7 @@ package Controlador;
 
 /**
  *
- * @author champunes
+ * @author Jose Angel Gonzalez Molina
  */
 public class Main {
 

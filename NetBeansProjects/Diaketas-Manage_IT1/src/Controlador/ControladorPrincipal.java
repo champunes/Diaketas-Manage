@@ -8,9 +8,9 @@ import java.awt.event.MouseListener;
 
 /**
  * @see Clase singleton
- * @author champunes
+ * @author Jose Angel Gonzalez Molina
  */
-public class ControladorPrincipal {
+public class ControladorPrincipal implements Controlador{
 	
 	private static ControladorPrincipal instancia = null;
 	
@@ -23,15 +23,14 @@ public class ControladorPrincipal {
 	}
 	
 	private VentanaPrincipal vista;
-	private ControladorSocios CS;
-	private ControladorBenef CB;
+	private Controlador C;
 	
 	//Clase para controlar los eventos del boton identificacion	
 	class ListenerBIdent implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent ae) {
-			vista.mostrarVistaPrincipal();
+			mostrarVista();
 		}
 		
 	}
@@ -67,9 +66,35 @@ public class ControladorPrincipal {
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			System.err.println("Hola");
-			CB = ControladorBenef.getInstance(vista);
-			CB.mostrar();
+			C = ControladorBenef.getInstance(vista);
+			C.mostrarVista();
+		}
+
+		@Override
+		public void mousePressed(MouseEvent me) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent me) {
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent me) {
+		}
+
+		@Override
+		public void mouseExited(MouseEvent me) {
+		}
+		
+	}
+	
+	//Clase para controlar los eventos de la imagen de Beneficiarios
+	class ListenerImgVolunt implements MouseListener{
+
+		@Override
+		public void mouseClicked(MouseEvent me) {
+			C = ControladorVolunt.getInstance(vista);
+			C.mostrarVista();
 		}
 
 		@Override
@@ -95,7 +120,7 @@ public class ControladorPrincipal {
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaPrincipal();
+			mostrarVista();
 		}
 
 		@Override
@@ -123,8 +148,19 @@ public class ControladorPrincipal {
 		vista.anadirListenerBIdent(new ListenerBIdent());
 		vista.anadirListenerImgSocios(new ListenerImgSocios());
 		vista.anadirListenerImgBenef(new ListenerImgBenef());
+		vista.anadirListenerImgVolunt(new ListenerImgVolunt());
 		vista.anadirListenerLabBMain(new ListenerLabBMain());
 		vista.setVisible(true);
+	}
+	
+	@Override
+	public void actualizarVista() {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}	
+	
+	@Override
+	public void mostrarVista() {
+		vista.mostrarVistaPrincipal();
+	}
 	
 }
