@@ -1,4 +1,0 @@
-- Desidentificarse existe?
-- En la lista global de casos de uso aparace un "identificarse" general no aparece ni "identificar voluntario" ni "desidentificar voluntario".
-- "Consultar la lista de ayudas recibidas por el beneficiario" no aparece tmp en el apartado 2 "Requisitos funcionales".
-- Las ayudas de un beneficiario se podrían obetner tanto mediante el caso de uso "obtener listado de ayudas" como con "Consultar la lista de ayudas recibidas por el beneficiario", aunque eso no se si importa.

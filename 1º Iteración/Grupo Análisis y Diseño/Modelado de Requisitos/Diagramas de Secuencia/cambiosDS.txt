@@ -1,0 +1,66 @@
+CONSULTAR AYUDA
+===============
+- Se devuelve un objeto "ayuda", que son los datos en si de la ayuda, no "Existe". En caso de que no exista, el objeto será nulo.
+- "comprobarExisteAyuda" -> "obtenerAyuda"
+
+LISTADO AYUDAS
+==============
+- la llamada "Criterio de busqueda" devuelve una lista de ayudas. 
+- Cambiar "CriterioBusqueda" a "BuscarAyudas"
+- Falta llamada del sistema a si mismo para obtener las ayudas.
+
+MODIFICAR TIPO AYUDA
+====================
+- Quitar el cancelar
+- Quitar el loop
+- En la llamada "ComprobarDatos", quitar el parámetro boolean
+- Cambiar nombre "DatosACambiar" por "modificarTipoAyuda"
+- Cambiar nombre "ModificarDatos" por "ModificarDatosTipoAyuda"
+
+MODIFICAR AYUDA
+====================
+- El diagrama está equivocado. Es el mismo que el de "Modificar tipo de ayuda". 
+- Quitar el cancelar
+- Quitar el loop
+- A la accion de guardar la modificacion, hay que pasar como parámetro también el voluntario.
+- Quitar comprobar si existe la ayuda (no es necesario)
+- Sustituir el opt de "Existe ayuda"/"No existe ayuda" por un alt con dos opciones
+- Cambiar nombres: "DatosACambiar" -> "Modificar Ayuda"
+					"ModificarDatos -> "ModificarDatosAyuda"
+					
+ELIMINAR AYUDA
+==============
+- "EliminarAyuda" no devuelve si los datos son validos, sino el eliminar ha tenido exito o no
+- "EliminarRegistroAyuda", devuelve "exito", que es lo que recibe la primera llamada del voluntario
+- "DatosValidos" si es correcto
+- El loop está mal puesto. Si te das cuenta no abarca el recoger los datos por los que el usuario los meteria una vez, estarian mal y el programa
+se meteria en un bucle infinito puesto que nunca se vuelven a pedir los datos
+
+
+OBTENER LISTADO DE AYUDAS
+=========================
+- Cambiar el nombre "CriterioBusqueda" por "buscarAyudas"
+
+OBTENER CONTABILIDAD
+====================
+- ¿Que se devuelve? ¿El numero de ingresos - gastos? Hay que indicarlo. Si es asi, poner que devuelve variable "balance"
+- Cambiar nombre "ListadoContabilidad" por "obtenerContabilidad"
+
+OBTENER LISTADO INGRESOS
+========================
+- Indicar que devuelve la llamada al sistema
+- Cambiar nombre "ListadoIngresos" por "obtenerIngresos"
+
+OBTENER LISTADO INGRESOS
+========================
+- Indicar que devuelve la llamada al sistema
+- Cambiar nombre "ListadoGastos" por "obtenerGastos"
+
+REGISTRAR GASTO
+===============
+- Quitar cancelar
+- Quitar loop
+
+REGISTRAR AYUDA
+===============
+- 

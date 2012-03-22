@@ -1,0 +1,4 @@
+En la interfaz Controlador
+
+ocultarVista() no es necesario, mostrarVista() llamara a funciones de la vista que se encargan de ocultar lo que toque
+getInstance() es un metodo static asi que no puede estar en la interfaz

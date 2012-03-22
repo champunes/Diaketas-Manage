@@ -1,0 +1,120 @@
+Aclaraciones: Algunas tablas tienen el atributo "OID" este atributo es mapeado al objeto
+a fin de poder identificarlo en el modelo OO con su equivalente persistenten en caso de 
+tener que modificarlo, etc. 
+
+FAMILIAR
+========
+- NIF: Varchar
+- nombre: "
+- apellidos: "
+- fechaNacimiento: Date
+- ocupacion: Varchar
+- parentesco: Varchar
+PK -> (NIF)
+
+FAMILIAR_BENEFICIARIO
+=====================
+- beneficiarioNIF: Varchar
+- familiarNIF: Varchar
+PK -> (beneficiarioNIF,familiarNIF)
+FK -> beneficiarioNIF sobre Beneficiario
+FK -> familiarNIF sobre Familiar
+
+BENEFICIARIO
+============
+- NIF: VARCHAR
+- nombre: "
+- apellidos: "
+- fechaNacimiento: Date
+- CP: int
+- telefonoFijo: int
+- telefonoMovil: int
+- domicilio: VARCHAR
+- estadoCivil: "
+- localidad: "
+- nacionalidad: "
+- nivelDeEstudio: "
+- observaciones: TEXT
+- ocupacion: "
+- profesion: "
+- situacionEconomica: "
+- vivienda: Varchar
+- viviendaAlquiler: DECIMAL
+- viviendaObservaciones: Text
+- asociacionID: int
+PK -> (NIF)
+FK -> asociacionID sobre Asociacion
+
+VOLUNTARIO
+==========
+- NIF: VARCHAR
+- nombre: "
+- apellidos: "
+- CP: int
+- telefonoFijo: int
+- telefonoMovil: int
+- domicilio: VARCHAR
+- localidad: "
+- fechaNacimiento: Date
+- password: Varchar
+- asociacionID: Varchar
+PK -> (NIF)
+FK -> asociacionID sobre Asociacion
+
+
+ASOCIACION
+==========
+- direccion: VARCHAR
+- nombre: VARCHAR
+- asociacionID: int, autonumérico
+PK -> (asociacionID)
+
+
+AYUDA
+=====
+- OID: VARCHAR
+- fecha: Date
+- importe: DECIMAL
+- observaciones: TEXT
+- tipoAyudaOID: VARCHAR
+- asociacionID: int
+- voluntarioNIF: Varchar
+- beneficiarioNIF: Varchar
+PK -> (OID)
+FK -> tipoAyudaOID sobre TipoAyuda
+FK -> asociacionID sobre Asociacion
+FK -> voluntarioNIF sobre Voluntario
+FK -> beneficiarioNIF sobre Beneficiario
+
+TIPOAYUDA
+=========
+- OID: String
+- descripcion: TEXT
+- monetaria: int(1)
+- titulo: VARCHAR
+PK -> (OID)
+
+
+MODIFICACION_AYUDA
+==================
+- modificacionID: int, autonumerico
+- ayudaOID: VARCHAR
+- voluntarioNIF: VARCHAR
+- fecha: Date
+PK -> (modificacionID)
+FK -> ayudaOID sobre Ayuda
+FK -> voluntarioNIF sobre Voluntario
+
+
+MOVIMIENTO
+==========
+- movimientoID: int, autonumerico
+- fecha: DATE
+- importe: DECIMAL
+- concepto: VARCHAR
+- tipo: CHAR ('G' Gasto, 'I' Ingreso)
+- asociacionID: int
+- ayudaOID: VARCHAR (Puede ser nulo)
+PK -> (movimientoID)
+FK -> asociacionID sobre Asociacion
+FK -> ayudaOID sobre Ayuda

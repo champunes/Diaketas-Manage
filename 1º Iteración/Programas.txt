@@ -42,3 +42,29 @@ JDK ALL PLATAFORM: http://www.oracle.com/technetwork/java/javase/downloads/jdk-7
 
 
 Los plugins para JDBC interfaz grafica hacre un mini manual en cuanto ponga a punto mi netbeans.
+
+COMO REGISTRAS MYSQL EN NETBEANS
+
+bajar el wampp o el xampp (yo tengo instalado el wampp y voy a poner la configuracion de mi pc)
+
+nos bajamos el wampp (usad http://www.google.es cabrones!)
+
+le damos a todo siguiente y bla bla bla.
+
+no hace falta tener iniciado el wampp/xampp
+
+en netbeans, nos vamos a la pestaña prestaciones y en base de datos le damos a registrar servidor sql. los parametros los dejamos como esta (si, sin password, porque? porque
+me sale la polla y soy el que crea la BD XD) y en propiedades de administracion rellenamos lo siguiente (recuerdo que lo estoy poniendo para wampp aunque para xampp sera o mismo
+supongo).
+
+url herramienta de administracion: C:\wamp\alias\phpmyadmin.conf
+ruta start: C:\wamp\wampmanager.exe
+ruta stop: C:\wamp\bin\mysql\mysql5.5.20\bin\mysqladmin.exe
+argumentos (en el stop): -u root shutdown
+
+y le damos a aceptar, creara la el servidor mysql. Creamos la bd con el boton secundario y lo llamamos diaketas (para que lo tengamos todos igual) y nos creara la BD y ya esta!
+ya se pueden crear archivos .sql y crear tablas. Para usar la bd con jdbc basicamente es poner 
+
+Connection conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", "root", "");
+
+(y no me comais la oreja con el tema de la pass que no me apetecia modificarlo en el wampp y hacer el puto manual! paz y amor :D)

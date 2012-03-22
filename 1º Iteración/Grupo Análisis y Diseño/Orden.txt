@@ -1,0 +1,27 @@
+MODELADO DE REQUISITOS - ANALISIS - DISEÑO
+
+
+MODELADO DE REQUISITOS
+	- Requisitos Funcionales
+	- Requisitos No Funcionales
+	- Diagrama de Casos de Uso
+	- Casos de Uso (Plantillas)
+	- Diagrama de Paquetes
+?	- Operaciones del Sistema
+	
+ANALISIS
+	- Diagramas de Secuencia
+	- Diagrama de Clases de analisis
+	
+DISEÑO 
+	- Prototipos de la interfaz
+	- Base de Datos
+	- Contratos
+	- Diagramas de Secuencia de Objetos
+	- Diagrama de Clases de Diseño
+	- Diagrama de componentes
+
+Antonio:
+	Te he arreglado esto. Miralo.
+	P.D: Hace falta, ya que estan los diagramas de secuencia (espero), y los diagramas de clase, hacer un documento con eso, y mandarselo al profesor.
+	

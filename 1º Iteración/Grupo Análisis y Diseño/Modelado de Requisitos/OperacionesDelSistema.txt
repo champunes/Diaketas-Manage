@@ -1,0 +1,78 @@
+==================
+CASOS DE USO
+	- OPERACIONES
+==================
+
+====================== GESTION BENEFICIARIOS Y VOLUNTARIOS ==========================
+REGISTRAR BENEFICIARIO
+	- IntroducirDatosBeneficiario(DNI, Nombre, ...) : Boolean
+	- ComprobarDatosBeneficiario(DNI, Nombre, ...) : Boolean
+	- RegistrarDatosBeneficiario(DNI, Nombre, ...)
+	
+REGISTRAR VOLUNTARIO
+	- IntroducirDatosVoluntario(DNI, Nombre, ...) : Boolean
+	- ComprobarDatosVoluntario(DNI, Nombre, ...) : Boolean
+	- RegistrarDatosVoluntario(DNI, Nombre, ...)
+	
+CONSULTAR BENEFICIARIO
+	- ConsultarBeneficiario(DNI) : (DatosBeneficiario)
+	
+CONSULTAR VOLUNTARIO 
+	- ConsultarVoluntario(DNI) : (DatosVoluntario)   *Hay que cambiarlo en los diagramas*
+	
+ELIMINAR BENEFICIARIO
+	- EliminarBeneficiario(DNI) : Boolean
+	- EliminaBeneficiario(DNI): Boolean   
+	
+ELIMINAR VOLUNTARIO
+	- EliminarVoluntario(DNI) : Boolean
+	- EliminaVoluntario(DNI) : Boolean
+	
+LISTAR BENEFICIARIOS
+	- ListarBeneficiarios() : (Lista)
+	
+LISTAR VOLUNTARIOS
+	- ListarVoluntarios() : (Lista)
+	
+MOSTRAR DATOS BENEFICIARIO
+	- ModificarDatosBeneficiario(DNI, Nombre, ...) : Boolean
+	- ComprobarDatosBeneficiario(DNI, Nombre, ...) : Boolean
+	- ModificarDatosInternosBeneficiario(DNI, Nombre, ...) 
+	
+MOSTRAR DATOS VOLUNTARIO
+	- ModificarDatosVoluntario(DNI, Nombre, ...) : Boolean
+	- ComprobarDatosVoluntario(DNI, Nombre, ...) : Boolean
+	- ModificarDatosInternosVoluntario(DNI, Nombre, ...) 
+	
+AÑADIR FAMILIAR BENEFICIARIO
+	- DatosFamiliar(String DNIBeneficiario, String DNIFamiliar, String Parentesco) : Boolean
+	- ComprobarDatos(String DNIBeneficiario, String DNIFamiliar, String Parentesco) : Boolean  *Hay que cambiar el nombre en el diagrama*
+	- AñadirFamiliar(String DNIBeneficiario, String DNIFamiliar, String Parentesco)
+	
+CONSULTAR FAMILIAR BENEFICIARIO
+
+
+ELIMINAR FAMILIAR BENEFICIARIO
+	- EliminarFamiliar(String DNIFamiliar, String DNIBeneficiario) : Boolean
+	- ComprobarDatos(String DNIFamiliar, String DNIBeneficiario) : Boolean
+	- EliminarDatosFamiliar(String DNIFamiliar, String DNIBeneficiario)
+	
+	
+========================================================================================
+	
+========================== GESTION DE AYUDAS ===========================================
+
+CONSULTAR AYUDA
+	- ConsultarAyuda(String TipoAyuda, String DNIBeneficiario, Date Fecha) : Boolean
+	- ComprobarExisteAyuda(String TipoAyuda, String DNIBeneficiario, Date Fecha) : Boolean
+	
+CREAR NUEVO TIPO DE AYUDA
+	- DatosNuevoTipoAyuda(String Titulo, String Descripcion, Boolean Monetaria) : Boolean
+	- ComprobarDatos(String Titulo, String Descripcion) : Boolean
+	- ComprobarTipoAyuda(String Titulo) : Boolean
+	- InsertarTipoAyuda(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	
+
+	
+	
+	
