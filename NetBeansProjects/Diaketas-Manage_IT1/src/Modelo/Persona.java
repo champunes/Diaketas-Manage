@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package Modelo;
 
 import java.util.Date;
 
@@ -10,11 +10,12 @@ import java.util.Date;
  *
  * @author Jobero
  */
-public class Movimiento {
+public abstract class Persona {
     
-    private String concepto;
-    private Date fecha;
-    private float importe;
-    private char tipo;
+    private String apellidos;
+    private Date fechaDENacimiento;
+    private String NIF;
+    private String nombre;
+    
     
 }

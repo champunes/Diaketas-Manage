@@ -2,15 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
-
-import java.util.Date;
+package Modelo;
 
 /**
  *
  * @author Jobero
  */
-public class Modifiacion {
-    private Date fecha;
+public class Familiar {
+    
+    private String parentesco;
     
 }
