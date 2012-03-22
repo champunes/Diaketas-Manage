@@ -170,7 +170,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelIdentificacionLayout.createSequentialGroup()
                         .add(53, 53, 53)
                         .add(imgIdent)))
-                .addContainerGap())
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         PanelIdentificacionLayout.setVerticalGroup(
             PanelIdentificacionLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -192,7 +192,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .add(labelContrasena))
                         .add(18, 18, 18)
                         .add(btConectarse)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         PanelInicio.setBackground(new java.awt.Color(255, 255, 255));
@@ -245,7 +245,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelInicioLayout.createSequentialGroup()
                         .add(160, 160, 160)
                         .add(imgSocio)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 224, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 302, Short.MAX_VALUE)
                 .add(imgBeneficiario)
                 .add(155, 155, 155))
         );
@@ -270,7 +270,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labelVoluntario)
                     .add(labelBolsaTrabajo))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         PanelSocio.setBackground(new java.awt.Color(255, 255, 255));
@@ -280,11 +280,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelSocio.setLayout(PanelSocioLayout);
         PanelSocioLayout.setHorizontalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 560, Short.MAX_VALUE)
+            .add(0, 966, Short.MAX_VALUE)
         );
         PanelSocioLayout.setVerticalGroup(
             PanelSocioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 341, Short.MAX_VALUE)
+            .add(0, 477, Short.MAX_VALUE)
         );
 
         PanelBeneficiario.setBackground(new java.awt.Color(255, 255, 255));
@@ -471,7 +471,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labSVolunt1.setText("Datos Voluntario");
 
         labVVDatos.setForeground(new java.awt.Color(0, 0, 255));
-        labVVDatos.setText("Buscar");
+        labVVDatos.setText("Voluntario");
 
         senalaVoluntarioDatos1.setForeground(new java.awt.Color(153, 153, 153));
         senalaVoluntarioDatos1.setText(">");
@@ -587,7 +587,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                     .add(PanelDatosVoluntarioLayout.createSequentialGroup()
                                         .add(2, 2, 2)
                                         .add(btnDatosVolLimpiar)))))
-                        .add(0, 78, Short.MAX_VALUE)))
+                        .add(0, 90, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -651,7 +651,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelDatosVoluntarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btnDatosVolGuardar)
                     .add(btnDatosVolLimpiar))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         PanelDatosVoluntarioLayout.linkSize(new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8}, org.jdesktop.layout.GroupLayout.VERTICAL);
@@ -817,7 +817,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .add(jLabel20)
                                 .add(18, 18, 18)
                                 .add(cuadroBalance, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(0, 12, Short.MAX_VALUE))
+                        .add(0, 24, Short.MAX_VALUE))
                     .add(PanelContabilidadLayout.createSequentialGroup()
                         .add(0, 0, Short.MAX_VALUE)
                         .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 388, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
