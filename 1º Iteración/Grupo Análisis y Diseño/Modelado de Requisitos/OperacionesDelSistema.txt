@@ -72,7 +72,59 @@ CREAR NUEVO TIPO DE AYUDA
 	- ComprobarTipoAyuda(String Titulo) : Boolean
 	- InsertarTipoAyuda(String Titulo, String Descripcion, Boolean Monetario) : Boolean
 	
+ELIMINAR AYUDA
+	- EliminarAyuda(String TipoAyuda, Date Fecha, Boolean Importe, String DNIBeneficiario) : Boolean
+	- ComprobarDatos(String TipoAyuda, Date Fecha, Boolean Importe, String DNIBeneficiario) : Boolean
+	- EliminaAyuda(String TipoAyuda, Date Fecha, Boolean Importe, String DNIBeneficiario)
+	
+ELIMINAR TIPO DE AYUDA
+	- EliminarTipoAyuda(String Titulo, String Concepto, Boolean Monetaria) : Boolean
+	- ComprobarDatos(String Titulo, String Concepto, Boolean Monetaria) : Boolean
+	- EliminaTipoAyuda(String Titulo, String Concepto, Boolean Monetaria)
+	
+MODIFICAR AYUDA 						*Para mi que no deberia de entrar esos datos en la función*
+	- DatosACambiar(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	- ComprobarDatos(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	- ExisteAyuda(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	- ModificarDatosAyuda(String Titulo, String Descripcion, Boolean Monetario)
+	
+MODIFICAR TIPO DE AYUDA
+	- DatosACambiar(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	- ComprobarDatos(String Titulo, String Descripcion, Boolean Monetario) : Boolean
+	- ModificarDatos(String Titulo, String Descripcion, Boolean Monetario)
+	
+OBTENER LISTADO DE AYUDAS
+	- CriteriosDeBusqueda(String DNIBeneficiario, Date FechaIni, Date FechaFin, String TipoAyuda, Float ImporteIni, Float ImporteFin) : Boolean
+	- ComprobarDatos(String DNIBeneficiario, Date FechaIni, Date FechaFin, String TipoAyuda, Float ImporteIni, Float ImporteFin) : Boolean
+	- MostrarListado(String DNIBeneficiario, Date FechaIni, Date FechaFin, String TipoAyuda, Float ImporteIni, Float ImporteFin) : Boolean 
+	* No se utiliza el booleano sublistado ayudas en el diagrama? *
+	
+OBTENER LISTADO TIPO DE AYUDAS
+	- ObtenerListadoTipoAyuda()
+	
+REGISTRAR AYUDA
+	- IndicarTipoAyuda(String TipoAyuda) : Boolean
+	- DatosAyuda(String Beneficiario, Boolean Impor/Material) : Boolean
+	- ComprobarDatos(String Beneficiario) : Boolean
+	- RegistrarDatos(String Beneficiario, Boolean Impor/Material, Date Fecha, String TipoAyuda)
+	
+===============================================================================================
 
+========================== CONTABILIDAD =======================================================
+
+OBTENER CONTABILIDAD
+	- ListadoContabilidad(Date FechaIni, Date FechaFin)
 	
+OBTENER LISTADO GASTOS
+	- ListadoGastos(Date FechaIni, Date FechaFin)
 	
+OBTENER LISTADO DE INGRESOS
+	- ListadoIngresos(Date FechaIni, Date FechaFin)
+	
+REGISTRAR GASTO
+	- RegistrarGasto(Real Importe, String Concepto)
+	- ComprobarDatos(Real Importe, String Concepto) : Boolean
+	- RegistroGasto(Date Fecha, Real Importe, String Concepto)
+
+
 	

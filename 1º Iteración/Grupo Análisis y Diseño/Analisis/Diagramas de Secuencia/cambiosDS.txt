@@ -11,8 +11,6 @@ LISTADO AYUDAS
 
 MODIFICAR TIPO AYUDA
 ====================
-- Quitar el cancelar
-- Quitar el loop
 - En la llamada "ComprobarDatos", quitar el parámetro boolean
 - Cambiar nombre "DatosACambiar" por "modificarTipoAyuda"
 - Cambiar nombre "ModificarDatos" por "ModificarDatosTipoAyuda"
@@ -21,7 +19,6 @@ MODIFICAR AYUDA
 ====================
 - El diagrama está equivocado. Es el mismo que el de "Modificar tipo de ayuda". 
 - Quitar el cancelar
-- Quitar el loop
 - A la accion de guardar la modificacion, hay que pasar como parámetro también el voluntario.
 - Quitar comprobar si existe la ayuda (no es necesario)
 - Sustituir el opt de "Existe ayuda"/"No existe ayuda" por un alt con dos opciones
@@ -59,8 +56,3 @@ OBTENER LISTADO INGRESOS
 REGISTRAR GASTO
 ===============
 - Quitar cancelar
-- Quitar loop
-
-REGISTRAR AYUDA
-===============
-- 
