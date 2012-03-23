@@ -2,13 +2,14 @@
 package Controlador;
 
 import Vista.VentanaPrincipal;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  * @see ControladorBenef es una clase singleton
  * @author Jose Angel Gonzalez Molina
  */
-public class ControladorBeneficiario implements Controlador{
+public class ControladorBeneficiario implements ActionListener{
 
 	//Atributo para singleton
 	private static ControladorBeneficiario instancia = null;
@@ -23,72 +24,23 @@ public class ControladorBeneficiario implements Controlador{
 	
 	private VentanaPrincipal vista;
 	
-	//Clase para controlar los eventos de la imagen Nuevo Beneficiario
-	class ListenerImgNBenef implements MouseListener{
-
-		@Override
-		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaNBenef();
-		}
-
-		@Override
-		public void mousePressed(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseExited(MouseEvent me) {
-		}
-		
-	}
-	
-	class ListenerImgBBuscar implements MouseListener{
-
-		@Override
-		public void mouseClicked(MouseEvent me) {
-			vista.mostrarVistaBBuscar();
-		}
-
-		@Override
-		public void mousePressed(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent me) {
-		}
-
-		@Override
-		public void mouseExited(MouseEvent me) {
-		}
-		
-	}
 	
 	private ControladorBeneficiario(VentanaPrincipal v){
 		
 		vista = v;
-		vista.anadirListenerImgNBenef(new ListenerImgNBenef());
-		vista.anadirListenerImgBBuscar(new ListenerImgBBuscar());
+		
 		
 	}
 	
-	@Override
-	public void actualizarVista() {
-		throw new UnsupportedOperationException("Not supported yet.");
-	}	
+	
 	
 	public void mostrarVista(){
 		vista.mostrarVistaBenef();
 	}
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 	
 }
