@@ -9,7 +9,7 @@ import java.awt.event.MouseListener;
 
 /**
  * @see ControladorVolunt es una clase singleton
- * @author Jose Angel Gonzalez Molina
+ * @author Mario Orozco Borrego
  */
 
 public class ControladorVoluntarios implements ActionListener{
@@ -17,10 +17,10 @@ public class ControladorVoluntarios implements ActionListener{
 	//Atributo para singleton
 	private static ControladorVoluntarios instancia = null;
 	
-	public static ControladorVoluntarios getInstance(VentanaPrincipal v){
+	public static ControladorVoluntarios getInstance(){
 		
 		if(instancia == null)
-			instancia = new ControladorVoluntarios(v);
+			instancia = new ControladorVoluntarios();
 		return instancia;
 		
 	}
@@ -28,10 +28,11 @@ public class ControladorVoluntarios implements ActionListener{
 	private VentanaPrincipal vista;
       
 
-		
+	public void setVentanaPrincipal(VentanaPrincipal pvista){
+         vista = pvista;
+        }	
 	
-	private ControladorVoluntarios(VentanaPrincipal v){
-		vista = v;
+	private ControladorVoluntarios(){
 		
 	}
 	
@@ -42,7 +43,26 @@ public class ControladorVoluntarios implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        String sAccion = ae.getActionCommand();
+        
+        if (sAccion.equals("ayudas")){
+            
+        }
+        else if (sAccion.equals("buscarVoluntario")){
+            
+        }
+        else if (sAccion.equals("contabilidad")){
+            vista.mostrarVistaContab();
+        }
+        else if (sAccion.equals("nuevoVoluntario")){
+            
+        }
+        else if (sAccion.equals("navToMainFromVoluntarios")){
+            vista.mostrarVistaPrincipal();
+        }
+        else{
+            System.out.println("Accion no reconocida.");
+        }
     }
 	
 }

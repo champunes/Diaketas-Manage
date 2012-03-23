@@ -13,7 +13,6 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO code application logic here
-            Vista.VentanaPrincipal VP = Vista.VentanaPrincipal.getInstance();
-            ControladorPrincipal.getInstance().setVentanaPrincipal(VP);
+            VentanaPrincipal.getInstance();
 	}
 }

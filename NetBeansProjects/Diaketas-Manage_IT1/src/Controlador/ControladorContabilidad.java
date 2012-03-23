@@ -19,10 +19,10 @@ public class ControladorContabilidad implements ActionListener{
     //Atributo para singleton
 	private static ControladorContabilidad instancia = null;
 	
-	public static ControladorContabilidad getInstance(VentanaPrincipal v){
+	public static ControladorContabilidad getInstance(){
 		
 		if(instancia == null)
-			instancia = new ControladorContabilidad(v);
+			instancia = new ControladorContabilidad();
 		return instancia;
 		
 	}
@@ -30,12 +30,13 @@ public class ControladorContabilidad implements ActionListener{
     private VentanaPrincipal vista;
     
     
-    private ControladorContabilidad(VentanaPrincipal v) {
-        vista = v;
+    private ControladorContabilidad() {
        
     }
    
-    
+     public void setVentanaPrincipal(VentanaPrincipal pvista){
+         vista = pvista;
+     }
  
 
    
@@ -45,7 +46,21 @@ public class ControladorContabilidad implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
+        String sAccion = ae.getActionCommand();
+        
+        if (sAccion.equals("obtenerContabilidad")){
+            
+        }
+        else if (sAccion.equals("navToMainFromContabilidad")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToVoluntariosFromContabilidad")){
+            vista.mostrarVistaVolunt();
+        }
+        else{
+            System.out.println("Accion no reconocida");
+        }
     }
     
 }

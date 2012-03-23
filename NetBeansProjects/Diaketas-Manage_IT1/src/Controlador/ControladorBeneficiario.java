@@ -7,17 +7,17 @@ import java.awt.event.ActionListener;
 
 /**
  * @see ControladorBenef es una clase singleton
- * @author Jose Angel Gonzalez Molina
+ * @author Mario Orozco Borrego
  */
 public class ControladorBeneficiario implements ActionListener{
 
 	//Atributo para singleton
 	private static ControladorBeneficiario instancia = null;
 	
-	public static ControladorBeneficiario getInstance(VentanaPrincipal v){
+	public static ControladorBeneficiario getInstance(){
 		
 		if(instancia == null)
-			instancia = new ControladorBeneficiario(v);
+			instancia = new ControladorBeneficiario();
 		return instancia;
 		
 	}
@@ -25,14 +25,14 @@ public class ControladorBeneficiario implements ActionListener{
 	private VentanaPrincipal vista;
 	
 	
-	private ControladorBeneficiario(VentanaPrincipal v){
-		
-		vista = v;
-		
+	private ControladorBeneficiario(){
 		
 	}
 	
-	
+     public void setVentanaPrincipal(VentanaPrincipal pvista){
+         vista = pvista;
+     }
+   
 	
 	public void mostrarVista(){
 		vista.mostrarVistaBenef();
@@ -40,7 +40,23 @@ public class ControladorBeneficiario implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
+        String sAccion = ae.getActionCommand();
+        
+        System.out.println("ActionCommand: " + sAccion);
+        
+        if (sAccion.equals("buscarBeneficiario")){
+            
+        }
+        else if (sAccion.equals("nuevoBeneficiario")){
+
+        }
+        else if (sAccion.equals("navToMainFromBeneficiarios")){
+            vista.mostrarVistaPrincipal();
+        }
+        else {
+            
+        }
     }
 	
 }
