@@ -4,11 +4,7 @@
  */
 package JDBC;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -19,15 +15,24 @@ public class DriverJDBC {
     
     private Connection conex;
     private String hostBD;
-    private DriverJDBC instancia;
+    private static DriverJDBC instancia;
     private String nombreBD;
     private String password;
     private String usuarioBD;
-    private Statement st;
+    private Statement statement;
+    private ResultSet tabla;
     
     
+    
+    //Falta mirar bien los close!!
     
     private DriverJDBC(){
+        
+        instancia = null;
+        conex = null;
+        tabla = null;
+        statement = null;
+        
         
         
     }
@@ -40,35 +45,51 @@ public class DriverJDBC {
         return true;
     }
     
-    private boolean desconectar(){
+    private boolean desconectar() throws SQLException{
         
-        
-        return true;
-    }
-    
-    public boolean actualizar(String cadena){
+        conex.close();
         
         return true;
     }
     
-    public boolean eliminar(String cadena){
+    public boolean actualizar(String sentencia_busqueda, String sentencia_actualizacion) throws SQLException{
+        
+        tabla = statement.executeQuery(sentencia_busqueda);
+	//Para que fuera mas correcto deberíamos comprobar si rs.next devuelve algo (a lo mejor nadie se llama Juan)
+	if( tabla.next() == false)
+            return false;
+        
+	int id = tabla.getInt("id");
+		
+	//statement.executeUpdate("UPDATE socio SET telefono='111' WHERE id="+id);
+        statement.executeUpdate(sentencia_actualizacion+id);
         
         return true;
     }
     
-    public DriverJDBC getInstance(){
+    public boolean eliminar(String sentencia_busqueda, String sentencia_eliminacion) throws SQLException{
         
-        return this.instancia;
+         return actualizar(sentencia_busqueda, sentencia_eliminacion);
     }
     
-    public boolean insertar(String cadena){
+    public static DriverJDBC getInstance(){
         
+        if(instancia == null)
+		instancia = new DriverJDBC();
+	return instancia;
+    }
+    
+    public boolean insertar(String sentencia) throws SQLException{
+        
+        statement.executeUpdate(sentencia);
         return true;
     }
     
-    public ResultSet seleccionar (String cadena){
+    public ResultSet seleccionar (String cadena) throws SQLException{
         
-        
+        return statement.executeQuery(cadena);
     }
+    
+    
 }
 

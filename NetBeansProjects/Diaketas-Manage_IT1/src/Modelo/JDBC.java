@@ -61,7 +61,7 @@ public class JDBC {
 		st.executeUpdate("DELETE FROM socio WHERE id="+id);
 		
 		//IMPORTANTES LOS CLOSE
-		conexion.close();;
+		conexion.close();
 	}
 	
 }
