@@ -18,5 +18,60 @@ public class Modificacion {
     
     private Voluntario voluntarioQueModifica;
     private Ayuda ayudaQueModifica;
+
+    /**
+     * Constructor por defecto
+     */
+    public Modificacion() {
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public Ayuda getAyudaQueModifica() {
+        return ayudaQueModifica;
+    }
+
+    /**
+     * 
+     * @param ayudaQueModifica
+     */
+    public void setAyudaQueModifica(Ayuda ayudaQueModifica) {
+        this.ayudaQueModifica = ayudaQueModifica;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public Date getFecha() {
+        return fecha;
+    }
+
+    /**
+     * 
+     * @param fecha
+     */
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public Voluntario getVoluntarioQueModifica() {
+        return voluntarioQueModifica;
+    }
+
+    /**
+     * 
+     * @param voluntarioQueModifica
+     */
+    public void setVoluntarioQueModifica(Voluntario voluntarioQueModifica) {
+        this.voluntarioQueModifica = voluntarioQueModifica;
+    }
+    
     
 }
