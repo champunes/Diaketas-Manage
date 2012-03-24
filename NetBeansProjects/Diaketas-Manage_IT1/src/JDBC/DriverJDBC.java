@@ -58,18 +58,18 @@ public class DriverJDBC {
 	//Para que fuera mas correcto deberíamos comprobar si rs.next devuelve algo (a lo mejor nadie se llama Juan)
 	if( tabla.next() == false)
             return false;
-        
-	int id = tabla.getInt("id");
 		
 	//statement.executeUpdate("UPDATE socio SET telefono='111' WHERE id="+id);
-        statement.executeUpdate(sentencia_actualizacion+id);
+        statement.executeUpdate(sentencia_actualizacion);
         
         return true;
     }
     
     public boolean eliminar(String sentencia_busqueda, String sentencia_eliminacion) throws SQLException{
         
-         return actualizar(sentencia_busqueda, sentencia_eliminacion);
+        actualizar(sentencia_busqueda, sentencia_eliminacion);
+        
+        return true;
     }
     
     public static DriverJDBC getInstance(){
