@@ -45,8 +45,9 @@ public class ControladorVoluntarios implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         String sAccion = ae.getActionCommand();
         
+        /** PANEL INICIO VOLUNTARIOS */
         if (sAccion.equals("ayudas")){
-            
+            vista.mostrarVistaAyuda();
         }
         else if (sAccion.equals("buscarVoluntario")){
             
@@ -59,6 +60,26 @@ public class ControladorVoluntarios implements ActionListener{
         }
         else if (sAccion.equals("navToMainFromVoluntarios")){
             vista.mostrarVistaPrincipal();
+        }
+        
+        /** PANEL DE AYUDAS **/
+        else if (sAccion.equals("navToMainFromAyudas")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToVoluntariosFromAyudas")){
+            vista.mostrarVistaVolunt();
+        }
+        else if (sAccion.equals("buscarBeneficiario")){
+            
+        }
+        else if (sAccion.equals("guardarTipoAyudas")){
+            
+        }
+        else if (sAccion.equals("guardarTipoAyuda")){
+            
+        }
+        else if (sAccion.equals("eliminarTipoAyuda")){
+            
         }
         else{
             System.out.println("Accion no reconocida.");
