@@ -46,13 +46,30 @@ public class ControladorBeneficiario implements ActionListener{
         System.out.println("ActionCommand: " + sAccion);
         
         if (sAccion.equals("buscarBeneficiario")){
-            
+            vista.mostrarVistaBBuscar();
         }
         else if (sAccion.equals("nuevoBeneficiario")){
 
         }
         else if (sAccion.equals("navToMainFromBeneficiarios")){
             vista.mostrarVistaPrincipal();
+        }
+        
+        /** PANEL BUSQUEDA BENEFICIARIO **/
+        else if (sAccion.equals("navToMainFromBuscarBeneficiario")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToBeneficiariosFromBuscarBeneficiario")){
+            vista.mostrarVistaBenef();
+        }
+        else if (sAccion.equals("buscarBeneficiarioDNI")){
+            
+        }
+        else if (sAccion.equals("modificarItemBusquedaBeneficiario")){
+            
+        }
+        else if (sAccion.equals("eliminarItemBusquedaBeneficiario")){
+            
         }
         else {
             

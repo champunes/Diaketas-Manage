@@ -81,6 +81,8 @@ public class ControladorVoluntarios implements ActionListener{
         else if (sAccion.equals("eliminarTipoAyuda")){
             
         }
+        
+        
         else{
             System.out.println("Accion no reconocida.");
         }
