@@ -5,6 +5,8 @@
 package Controlador;
 
 import Vista.VentanaPrincipal;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -12,15 +14,15 @@ import java.awt.event.MouseListener;
  *
  * @author Mario Orozco Borrego
  */
-public class ControladorContabilidad implements Controlador{
+public class ControladorContabilidad implements ActionListener{
 
     //Atributo para singleton
 	private static ControladorContabilidad instancia = null;
 	
-	public static ControladorContabilidad getInstance(VentanaPrincipal v){
+	public static ControladorContabilidad getInstance(){
 		
 		if(instancia == null)
-			instancia = new ControladorContabilidad(v);
+			instancia = new ControladorContabilidad();
 		return instancia;
 		
 	}
@@ -28,104 +30,37 @@ public class ControladorContabilidad implements Controlador{
     private VentanaPrincipal vista;
     
     
-    private ControladorContabilidad(VentanaPrincipal v) {
-        vista = v;
-        vista.anadirListenerlabVContMain(new ListenerlabVContMain());
-        vista.anadirListenerlabVContVoluntarios(new ListenerlabVContVoluntarios());
-        vista.anadirListenerBtnObtenerContabilidad(new ListenerbtnObtenerContabilidad());
+    private ControladorContabilidad() {
+       
     }
-    
-    /*
-     * @brief Clase para el control de la navegabilidad, va al panel principal de Voluntarios
-     */
-    class ListenerlabVContVoluntarios implements MouseListener{
+   
+     public void setVentanaPrincipal(VentanaPrincipal pvista){
+         vista = pvista;
+     }
+ 
 
-        @Override
-        public void mouseClicked(MouseEvent me) {
-            vista.mostrarVistaVolunt();
-        }
-
-        @Override
-        public void mousePressed(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent me) {
-           
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent me) {
-        }
-        
-        
-    }
-    
-    
-    class ListenerlabVContMain implements MouseListener{
-
-        @Override
-        public void mouseClicked(MouseEvent me) {
-            vista.mostrarVistaPrincipal();
-        }
-
-        @Override
-        public void mousePressed(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent me) {
-        }
-        
-        
-    }
-    
-    class ListenerbtnObtenerContabilidad implements MouseListener{
-
-        @Override
-        public void mouseClicked(MouseEvent me) {
-            //ACCION AL PULSAR EL BOTÓN
-        }
-
-        @Override
-        public void mousePressed(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent me) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent me) {
-        }
-        
-        
-    }
-    
-    @Override
-    public void actualizarVista() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
+   
     public void mostrarVista() {
         vista.mostrarVistaContab();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        
+        String sAccion = ae.getActionCommand();
+        
+        if (sAccion.equals("obtenerContabilidad")){
+            
+        }
+        else if (sAccion.equals("navToMainFromContabilidad")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToVoluntariosFromContabilidad")){
+            vista.mostrarVistaVolunt();
+        }
+        else{
+            System.out.println("Accion no reconocida");
+        }
     }
     
 }

@@ -1,0 +1,42 @@
+En el panel/vista/frame correspondiente:
+
+public class pruebaPanel extends javax.swing.JFrame {
+
+    /**
+     * Creates new form pruebaPanel
+     */
+    public pruebaPanel() {
+        initComponents();
+        jButton2.addActionListener(ControladorPrueba.getInstance());
+        jButton3.addActionListener(ControladorPrueba.getInstance());
+    }
+	....
+}
+
+
+
+En el controlador correspondiente:
+
+class ControladorPrueba implements ActionListener{
+    private static ControladorPrueba instancia=null;
+    
+    private ControladorPrueba(){}
+    public static ControladorPrueba getInstance(){
+        if(instancia==null)
+               return new ControladorPrueba();
+        else
+            return instancia;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String accion = e.getActionCommand();
+        if(accion.equals("darBoton"))
+            System.out.println("Le han dado al otro boton");
+        else if(accion.equals("obtenerAyuda")){
+            System.out.println("Le han dado al primer boton");
+          
+          
+        }
+    }
+}
