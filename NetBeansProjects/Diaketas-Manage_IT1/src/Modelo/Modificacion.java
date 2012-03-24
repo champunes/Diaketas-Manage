@@ -5,8 +5,6 @@ package Modelo;
  * and open the template in the editor.
  */
 
-import Modelo.Ayuda;
-import Modelo.Voluntario;
 import java.util.Date;
 
 /**

@@ -42,7 +42,7 @@ public class JDBC {
 					", telefono = "+rs.getObject("telefono"));
 		}
 		//IMPORTANTES LOS CLOSE
-		rs.close();
+		rs.close();  //Cerramos una vez hecha una busqueda
 		
 		//Updatear datos. Cambiar el telefono de "Juan"
 		//Buscamos la tupla y obtenemos el id
@@ -61,7 +61,7 @@ public class JDBC {
 		st.executeUpdate("DELETE FROM socio WHERE id="+id);
 		
 		//IMPORTANTES LOS CLOSE
-		conexion.close();;
+		conexion.close();
 	}
 	
 }
