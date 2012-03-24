@@ -50,7 +50,7 @@ public class ControladorVoluntarios implements ActionListener{
             vista.mostrarVistaAyuda();
         }
         else if (sAccion.equals("buscarVoluntario")){
-            
+            vista.mostrarVistaVBuscar();
         }
         else if (sAccion.equals("contabilidad")){
             vista.mostrarVistaContab();
@@ -82,9 +82,24 @@ public class ControladorVoluntarios implements ActionListener{
             
         }
         
-        
+        /** PANEL DE BUSQUEDA DE VOLUNTARIOS */
+        else if (sAccion.equals("navToMainFromBuscarVoluntario")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToVoluntariosFromBuscarVoluntario")){
+            vista.mostrarVistaVolunt();
+        }
+        else if (sAccion.equals("buscarVoluntarioDNI")){
+            
+        }
+        else if (sAccion.equals("modificarItemBusquedaVoluntario")){
+            
+        }
+        else if (sAccion.equals("eliminarItemBusquedaVoluntario")){
+            
+        }
         else{
-            System.out.println("Accion no reconocida.");
+
         }
     }
 	

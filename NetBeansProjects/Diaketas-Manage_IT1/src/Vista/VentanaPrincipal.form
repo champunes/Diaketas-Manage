@@ -34,126 +34,10 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-50,0,0,3,-121"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="PanelVoluntarioInicio" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelIdentificacion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelVoluntarioDatos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelVoluntarioContabilidad" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelBeneficiarioInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
-                  <Component id="PanelVoluntarioAyudas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
-                  <Component id="PanelBeneficiarioBuscar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="PanelVoluntarioInicio" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelIdentificacion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelVoluntarioDatos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelVoluntarioContabilidad" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PanelBeneficiarioInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
-                  <Component id="PanelVoluntarioAyudas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
-                  <Component id="PanelBeneficiarioBuscar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-      </Group>
-    </DimensionLayout>
-  </Layout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="PanelIdentificacion">
       <Properties>
@@ -169,10 +53,12 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card2"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -201,7 +87,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
+                  <EmptySpace pref="169" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -227,7 +113,7 @@
                           <Component id="btConectarse" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -284,10 +170,12 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card3"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -301,7 +189,7 @@
                           <Component id="btVoluntario" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="252" max="32767" attributes="0"/>
+                  <EmptySpace pref="267" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="btBeneficiario" min="-2" max="-2" attributes="0"/>
@@ -330,12 +218,12 @@
                       <Component id="btSocio" min="-2" max="-2" attributes="0"/>
                       <Component id="btBeneficiario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
+                  <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="btVoluntario" min="-2" max="-2" attributes="0"/>
                       <Component id="btBolsaTrabajo" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -412,178 +300,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="PanelVoluntarioInicio">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                          <Component id="btNuevoVoluntario" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-                          <Component id="btContabilidad" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="156" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="btBuscarVoluntario" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="btAyudas" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="navToMainFromVoluntarios" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="senalaVoluntario" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="labSVolunt" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="separadorVoluntario" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="navToMainFromVoluntarios" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="senalaVoluntario" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="labSVolunt" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                  <Component id="separadorVoluntario" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="btBuscarVoluntario" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="btNuevoVoluntario" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btContabilidad" min="-2" max="-2" attributes="0"/>
-                      <Component id="btAyudas" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JSeparator" name="separadorVoluntario">
-        </Component>
-        <Component class="javax.swing.JLabel" name="senalaVoluntario">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&gt;"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labSVolunt">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Voluntarios"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btNuevoVoluntario">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/images/vol.png"/>
-            </Property>
-            <Property name="actionCommand" type="java.lang.String" value="nuevoVoluntario"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btBuscarVoluntario">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Grande" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/images/lupa.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="BUSCAR"/>
-            <Property name="actionCommand" type="java.lang.String" value="buscarVoluntario"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btContabilidad">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Grande" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/images/contabilidad.jpg"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Contabilidad"/>
-            <Property name="actionCommand" type="java.lang.String" value="contabilidad"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btAyudas">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Grande" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/images/images.jpg"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="AYUDAS"/>
-            <Property name="actionCommand" type="java.lang.String" value="ayudas"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="navToMainFromVoluntarios">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="DIAKETAS"/>
-            <Property name="actionCommand" type="java.lang.String" value="navToMainFromVoluntarios"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
     <Container class="javax.swing.JPanel" name="PanelBeneficiarioInicio">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -595,10 +311,12 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card4"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -621,7 +339,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
                   <Component id="btNuevoBeneficiario" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
                   <Component id="btBuscarBeneficiario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
               </Group>
@@ -643,7 +361,7 @@
                       <Component id="btNuevoBeneficiario" min="-2" max="-2" attributes="0"/>
                       <Component id="btBuscarBeneficiario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="103" max="32767" attributes="0"/>
+                  <EmptySpace pref="115" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -718,10 +436,12 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card5"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -796,7 +516,7 @@
                       </Group>
                       <Component id="textObservaciones" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="96" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="111" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
@@ -1066,10 +786,12 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card6"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1093,7 +815,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="330" max="-2" attributes="0"/>
@@ -1161,7 +883,7 @@
                       <Component id="jScrollPane2" pref="361" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace pref="31" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1306,6 +1028,397 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JPanel" name="PanelVoluntarioInicio">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[888, 450]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[888, 450]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[888, 450]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card7"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <Component id="btNuevoVoluntario" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="btContabilidad" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="171" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btBuscarVoluntario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btAyudas" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="navToMainFromVoluntarios" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="senalaVoluntario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="labSVolunt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="separadorVoluntario" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="navToMainFromVoluntarios" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="senalaVoluntario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labSVolunt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Component id="separadorVoluntario" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btBuscarVoluntario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btNuevoVoluntario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btContabilidad" min="-2" max="-2" attributes="0"/>
+                      <Component id="btAyudas" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="separadorVoluntario">
+        </Component>
+        <Component class="javax.swing.JLabel" name="senalaVoluntario">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labSVolunt">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Voluntarios"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btNuevoVoluntario">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/vol.png"/>
+            </Property>
+            <Property name="actionCommand" type="java.lang.String" value="nuevoVoluntario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btBuscarVoluntario">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Lucida Grande" size="14" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/lupa.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="BUSCAR"/>
+            <Property name="actionCommand" type="java.lang.String" value="buscarVoluntario"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btContabilidad">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Lucida Grande" size="14" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/contabilidad.jpg"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Contabilidad"/>
+            <Property name="actionCommand" type="java.lang.String" value="contabilidad"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btAyudas">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Lucida Grande" size="14" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/images.jpg"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="AYUDAS"/>
+            <Property name="actionCommand" type="java.lang.String" value="ayudas"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="navToMainFromVoluntarios">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="DIAKETAS"/>
+            <Property name="actionCommand" type="java.lang.String" value="navToMainFromVoluntarios"/>
+            <Property name="borderPainted" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="PanelVoluntarioBuscar">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[888, 450]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[888, 450]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card8"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="separadorBeneficiario2" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="navToMainFromBuscarVoluntario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="senalaBeneficiario3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="navToVoluntariosFromBuscarVoluntario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="senalaBeneficiario4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="cbTipoBusquedaVoluntario" min="-2" pref="138" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="498" max="-2" attributes="0"/>
+                                  <Component id="btModificarItemBusquedaVoluntario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btEliminarItemBusquedaVoluntario" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="textBusquedaVoluntarioDNI" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btBuscarVoluntarioDNI" min="-2" pref="34" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane6" alignment="0" min="-2" pref="827" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="44" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="senalaBeneficiario3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="navToMainFromBuscarVoluntario" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="navToVoluntariosFromBuscarVoluntario" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="senalaBeneficiario4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorBeneficiario2" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textBusquedaVoluntarioDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btBuscarVoluntarioDNI" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbTipoBusquedaVoluntario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btModificarItemBusquedaVoluntario" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btEliminarItemBusquedaVoluntario" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane6" min="-2" pref="279" max="-2" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="separadorBeneficiario2">
+        </Component>
+        <Component class="javax.swing.JLabel" name="senalaBeneficiario3">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="navToMainFromBuscarVoluntario">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="DIAKETAS"/>
+            <Property name="actionCommand" type="java.lang.String" value="navToMainFromBuscarVoluntario"/>
+            <Property name="borderPainted" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="navToVoluntariosFromBuscarVoluntario">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Voluntarios"/>
+            <Property name="actionCommand" type="java.lang.String" value="navToVoluntariosFromBuscarVoluntario"/>
+            <Property name="borderPainted" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="senalaBeneficiario4">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel30">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar Voluntario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel31">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textBusquedaVoluntarioDNI">
+        </Component>
+        <Component class="javax.swing.JButton" name="btBuscarVoluntarioDNI">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/buscar.png"/>
+            </Property>
+            <Property name="actionCommand" type="java.lang.String" value="buscarVoluntarioDNI"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel32">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar por"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbTipoBusquedaVoluntario">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tablaBusquedaVoluntario">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Tipo B&#xfa;squeda" type="java.lang.Object"/>
+                    <Column editable="true" title="DNI" type="java.lang.Object"/>
+                    <Column editable="true" title="Nombre y Apellidos" type="java.lang.Object"/>
+                    <Column editable="true" title="Fecha Nacimiento" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btModificarItemBusquedaVoluntario">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/save_f2.png"/>
+            </Property>
+            <Property name="actionCommand" type="java.lang.String" value="modificarItemBusquedaVoluntario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btEliminarItemBusquedaVoluntario">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/images/limpiar.png"/>
+            </Property>
+            <Property name="actionCommand" type="java.lang.String" value="eliminarItemBusquedaVoluntario"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
     <Container class="javax.swing.JPanel" name="PanelVoluntarioAyudas">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1317,10 +1430,15 @@
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card9"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1380,7 +1498,7 @@
                           <Component id="btnEliminarTipoAyuda" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                  <EmptySpace pref="61" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1430,7 +1548,7 @@
                           <Component id="jScrollPane3" min="-2" pref="292" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1594,20 +1712,22 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[888, 450]"/>
         </Property>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[888, 450]"/>
-        </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card10"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Component id="separadorBeneficiario1" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="separadorBeneficiario1" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="navToMainFromBuscarBeneficiario" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1618,32 +1738,31 @@
                                   <Component id="senalaBeneficiario2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="cbTipoBusqueda" min="-2" pref="138" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="498" max="-2" attributes="0"/>
-                                  <Component id="btModificarItemBusquedaBeneficiario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="btEliminarItemBusquedaBeneficiario" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="textBusqueda" min="-2" pref="132" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btBuscarBeneficiarioDNI" min="-2" pref="34" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="cbTipoBusquedaBeneficiario" min="-2" pref="138" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="498" max="-2" attributes="0"/>
+                                          <Component id="btModificarItemBusquedaBeneficiario" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="btEliminarItemBusquedaBeneficiario" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="textBusquedaBeneficiarioDNI" min="-2" pref="132" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btBuscarBeneficiarioDNI" min="-2" pref="34" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jScrollPane5" alignment="0" min="-2" pref="827" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="jScrollPane5" alignment="0" min="-2" pref="827" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="44" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -1653,7 +1772,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="senalaBeneficiario1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="navToMainFromBuscarBeneficiario" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
@@ -1666,19 +1785,19 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textBusqueda" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textBusquedaBeneficiarioDNI" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btBuscarBeneficiarioDNI" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbTipoBusqueda" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbTipoBusquedaBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btModificarItemBusquedaBeneficiario" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="btEliminarItemBusquedaBeneficiario" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane5" min="-2" pref="279" max="-2" attributes="0"/>
-                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                  <EmptySpace pref="27" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1732,7 +1851,7 @@
             <Property name="text" type="java.lang.String" value="DNI"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="textBusqueda">
+        <Component class="javax.swing.JTextField" name="textBusquedaBeneficiarioDNI">
         </Component>
         <Component class="javax.swing.JButton" name="btBuscarBeneficiarioDNI">
           <Properties>
@@ -1747,7 +1866,7 @@
             <Property name="text" type="java.lang.String" value="Buscar por"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbTipoBusqueda">
+        <Component class="javax.swing.JComboBox" name="cbTipoBusquedaBeneficiario">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">

@@ -42,10 +42,8 @@ public class ControladorPrincipal implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-          System.out.println("ActionPerformed");
         
         String sAccion = ae.getActionCommand();
-        System.out.println("Accion: " + sAccion);
      
         if (sAccion.equals("accionLogin")){
             vista.mostrarVistaPrincipal();
@@ -63,7 +61,7 @@ public class ControladorPrincipal implements ActionListener{
             vista.mostrarVistaVolunt();
         }
         else{
-            System.out.println("La accion no se reconoce");
+
         }
     }
 	
