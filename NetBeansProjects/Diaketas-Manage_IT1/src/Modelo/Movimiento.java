@@ -13,6 +13,7 @@ import java.util.Date;
  */
 public class Movimiento {
     
+    private String movimientoID;
     private String concepto;
     private Date fecha;
     private float importe;
@@ -35,7 +36,24 @@ public class Movimiento {
     public Asociacion getAsociacionQueGenera() {
         return asociacionQueGenera;
     }
-
+    
+    
+    /**
+     * 
+     * @param asociacionQueGenera
+     */
+    public void setMovimientoID(String movimientoID) {
+        this.movimientoID = movimientoID;
+    }   
+    
+    /**
+     * 
+     * @return
+     */
+    public String getMovimientoID() {
+        return movimientoID;
+    }
+    
     /**
      * 
      * @param asociacionQueGenera

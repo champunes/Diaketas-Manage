@@ -19,76 +19,69 @@ import java.util.ArrayList;
     
         private BeneficiarioJDBC(){
         
-        instancia=null;
         
         }
     
-        public boolean añadirFamiliar (Familiar f, String cadena) throws SQLException{
+        //mirar
+        public boolean añadirFamiliar (Familiar f, String beneficiarioNIF) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;
-            String sentencia ;
+            String sentencia, sentencia2 ;
             String fecha ;
             fecha = f.getFechaNacimiento().toString();
 
             sentencia = "INSERT INTO familiar (NIF,Apellidos,FechaNacimiento,Nombre,Ocupacion,Parentesco) VALUES ('"+f.getNIF()+"','"+f.getApellidos()+"','"+fecha+"','"+f.getNombre()+"','"+f.getOcupacion()+"','"+f.getParentesco()+"' )";
 
-            driver.insertar(sentencia);
+            boolean exito = driver.insertar(sentencia);
+            
+            sentencia2 = "INSERT INTO familiarbeneficiario (BeneficiarioNIF, FamiliarNIF) VALUES ('"+beneficiarioNIF+",'"+f.getNIF()+"')";
 
+            if(exito==false){
+                driver.insertar(sentencia2); 
+                System.out.println("Error al realizar el INSERT en la base de datos");
+                System.exit(1);
+            }
+            
             return true;
         }
 
-        public ArrayList<Familiar> datosFamiliares(String NIF_familiar) throws SQLException{
+        public ArrayList<Familiar> datosFamiliares(String beneficiarioDNI) throws SQLException{
 
             ArrayList<Familiar> familiares = new ArrayList<Familiar>();
-            ResultSet rs;
+            ResultSet resultados;
             DriverJDBC driver = DriverJDBC.getInstance() ;
-            Familiar f;
+            Familiar temp ;
             //Si no introducimos parámetro alguno se devolveran todos los familiares
-            if(NIF_familiar==null){
-                String consulta = "SELECT * FROM familiar ";
-                rs = driver.seleccionar(consulta);
+           
+            String consulta = "SELECT * FROM familiar f, familiarbeneficiario fb WHERE fb.beneficiarioNIF=' "+beneficiarioDNI+"' AND f.NIF=fb.FamiliarNIF";
+            resultados = driver.seleccionar(consulta);
 
-                while (rs.next()){
-                    f=new Familiar();
-                    f.setNIF(rs.getString("NIF"));
-                    f.setApellidos(rs.getString("Apellidos"));
-                    f.setFechaNacimiento(rs.getDate("FechaNacimiento"));
-                    f.setNombre(rs.getString("Nombre"));
-                    f.setOcupacion(rs.getString("Ocupacion"));
-                    f.setParentesco(rs.getString("Parentesco"));
+            while (resultados.next()){
+                temp=new Familiar();
+                temp.setNIF(resultados.getString("NIF"));
+                temp.setApellidos(resultados.getString("Apellidos"));
+                temp.setFechaNacimiento(resultados.getDate("FechaNacimiento"));
+                temp.setNombre(resultados.getString("Nombre"));
+                temp.setOcupacion(resultados.getString("Ocupacion"));
+                temp.setParentesco(resultados.getString("Parentesco"));
 
-                    familiares.add(f);
+                familiares.add(temp);
 
-                }   
-            } else{
-
-                String consulta = "SELECT * FROM familiar where NIF = '"+NIF_familiar+"'";
-                rs = driver.seleccionar(consulta);
-
-                f=new Familiar();
-
-                f.setNIF(rs.getString("NIF"));
-                f.setApellidos(rs.getString("Apellidos"));
-                f.setFechaNacimiento(rs.getDate("FechaNacimiento"));
-                f.setNombre(rs.getString("Nombre"));
-                f.setOcupacion(rs.getString("Ocupacion"));
-                f.setParentesco(rs.getString("Parentesco"));
-
-                familiares.add(f);
-
-            }
+            }   
 
             return familiares;
 
         }
 
-        public boolean eliminarDatosfamiliar(String dni_familiar) throws SQLException{
-
-            String sentencia_busqueda = "SELECT "+dni_familiar+" FROM familiar WHERE NIF='"+dni_familiar+"'";
-            String sentencia_eliminacion = "DELETE FROM familiar WHERE NIF='"+dni_familiar+"'";
+        //Mirar
+        public boolean eliminarDatosfamiliar(String familiar_DNI, String beneficiario_DNI) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;
-            driver.eliminar(sentencia_busqueda, sentencia_eliminacion); 
+           
+            String sentencia = "DELETE FROM familiar_beneficiario WHERE FamiliarNIF= '"+familiar_DNI+"' AND BeneficiarioNIF = '"+beneficiario_DNI+"'";
+
+            
+            driver.eliminar(sentencia); 
 
             return true;
         }

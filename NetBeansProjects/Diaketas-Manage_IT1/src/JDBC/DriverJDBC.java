@@ -31,18 +31,17 @@ public class DriverJDBC {
         instancia = null;
         conex = null;
         tabla = null;
-        statement = null;
-           
+        statement = null;      
     }
     
-    private boolean conectar(String usuarioBD, String password) throws ClassNotFoundException, SQLException{
+    //Antes de conectar se debera haber configurado
+    private boolean conectar() throws ClassNotFoundException, SQLException{
         
-        this.usuarioBD = usuarioBD;
-        this.password=password;
-        
+   
+        //Siempre usaremos mysql
         Class.forName("com.mysql.jdbc.Driver");
-	conex = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", usuarioBD, password);
-		
+	//conex = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", usuarioBD, password);
+	conex = DriverManager.getConnection("jdbc:mysql//"+hostBD+"/"+nombreBD , usuarioBD, password);	
         return true;
     }
     
@@ -53,22 +52,34 @@ public class DriverJDBC {
         return true;
     }
     
-    public boolean actualizar(String sentencia_busqueda, String sentencia_actualizacion) throws SQLException{
+    public void configurar(String hostBD, String nombreBD, String password, String usuarioBD){
         
+        this.hostBD=hostBD;
+        this.nombreBD=nombreBD;
+        this.password=password;
+        this.usuarioBD=usuarioBD;
+        
+    }
+    
+    
+    public boolean actualizar(String sentencia) throws SQLException{
+        
+        /*
         tabla = statement.executeQuery(sentencia_busqueda);
 	//Para que fuera mas correcto deberíamos comprobar si rs.next devuelve algo (a lo mejor nadie se llama Juan)
 	if( tabla.next() == false)
             return false;
-		
+	*/
+        
 	//statement.executeUpdate("UPDATE socio SET telefono='111' WHERE id="+id);
-        statement.executeUpdate(sentencia_actualizacion);
+        statement.executeUpdate(sentencia);
         
         return true;
     }
     
-    public boolean eliminar(String sentencia_busqueda, String sentencia_eliminacion) throws SQLException{
+    public boolean eliminar(String sentencia) throws SQLException{
         
-        actualizar(sentencia_busqueda, sentencia_eliminacion);
+        actualizar(sentencia);
         
         return true;
     }
@@ -81,8 +92,8 @@ public class DriverJDBC {
     }
     
     public boolean insertar(String sentencia) throws SQLException{
-        
-        statement.executeUpdate(sentencia);
+         statement.executeUpdate(sentencia);
+         
         return true;
     }
     
