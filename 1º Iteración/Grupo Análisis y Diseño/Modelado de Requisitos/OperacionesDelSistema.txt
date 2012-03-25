@@ -34,12 +34,11 @@ LISTAR BENEFICIARIOS
 LISTAR VOLUNTARIOS
 	- ListarVoluntarios() : (Lista)
 	
-MOSTRAR DATOS BENEFICIARIO
+MODIFICAR DATOS BENEFICIARIO
 	- ModificarDatosBeneficiario(DNI, Nombre, ...) : Boolean
-	- ComprobarDatosBeneficiario(DNI, Nombre, ...) : Boolean
 	- ModificarDatosInternosBeneficiario(DNI, Nombre, ...) 
 	
-MOSTRAR DATOS VOLUNTARIO
+MOSDIFICAR DATOS VOLUNTARIO
 	- ModificarDatosVoluntario(DNI, Nombre, ...) : Boolean
 	- ComprobarDatosVoluntario(DNI, Nombre, ...) : Boolean
 	- ModificarDatosInternosVoluntario(DNI, Nombre, ...) 
