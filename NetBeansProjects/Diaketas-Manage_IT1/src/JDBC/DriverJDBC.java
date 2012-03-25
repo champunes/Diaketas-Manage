@@ -32,15 +32,16 @@ public class DriverJDBC {
         conex = null;
         tabla = null;
         statement = null;
-        
-        
-        
+           
     }
     
-    private boolean conectar() throws ClassNotFoundException, SQLException{
+    private boolean conectar(String usuarioBD, String password) throws ClassNotFoundException, SQLException{
+        
+        this.usuarioBD = usuarioBD;
+        this.password=password;
         
         Class.forName("com.mysql.jdbc.Driver");
-	conex = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", "root", "1234");
+	conex = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", usuarioBD, password);
 		
         return true;
     }
