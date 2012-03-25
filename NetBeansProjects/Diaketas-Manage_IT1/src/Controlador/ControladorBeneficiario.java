@@ -1,3 +1,29 @@
+/**
+ ** NOMBRE CLASE: 
+ **	  ControladorBeneficiario.java
+ **
+ ** DESCRIPCION:
+ **        Controlador del panel de beneficiarios, asímismo de algunas operaciones que ocurren dentro de su jerarquía de paneles
+ **       
+ **
+ ** DESARROLLADO POR:
+ *          Mario Orozco Borrego (MOB)
+ **         José Ángel González Molina (JGM)
+ **        
+ **
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 20, 2012 - JGM - Creacion
+ *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
+ *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
+ */
 
 package Controlador;
 
@@ -5,13 +31,11 @@ import Vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * @see ControladorBenef es una clase singleton
- * @author Mario Orozco Borrego
- */
+
 public class ControladorBeneficiario implements ActionListener{
 
-	//Atributo para singleton
+	/** PATRON DE DISEÑO SINGLETON */
+    
 	private static ControladorBeneficiario instancia = null;
 	
 	public static ControladorBeneficiario getInstance(){
@@ -22,22 +46,27 @@ public class ControladorBeneficiario implements ActionListener{
 		
 	}
 	
-	private VentanaPrincipal vista;
+    private VentanaPrincipal vista;
 	
+    /**
+     * Constructor de la clase
+     */
+    private ControladorBeneficiario(){
+    
+    }
 	
-	private ControladorBeneficiario(){
-		
-	}
-	
+    /** 
+     * Establece como ventana padre la pasada como parámetro
+     * @param pvista ventana padre
+     */
      public void setVentanaPrincipal(VentanaPrincipal pvista){
          vista = pvista;
      }
    
-	
-	public void mostrarVista(){
-		vista.mostrarVistaBenef();
-	}
-
+     /**
+      * Manejador de eventos de la interfaz
+      * @param ae evento
+      */
     @Override
     public void actionPerformed(ActionEvent ae) {
         
@@ -46,10 +75,10 @@ public class ControladorBeneficiario implements ActionListener{
         System.out.println("ActionCommand: " + sAccion);
         
         if (sAccion.equals("buscarBeneficiario")){
-            vista.mostrarVistaBBuscar();
+            vista.mostrarVistaBuscarBeneficiario();
         }
         else if (sAccion.equals("nuevoBeneficiario")){
-            vista.mostrarVistaNBenef();
+            vista.mostrarVistaDatosBeneficiario();
         }
         else if (sAccion.equals("navToMainFromBeneficiarios")){
             vista.mostrarVistaPrincipal();
@@ -60,7 +89,7 @@ public class ControladorBeneficiario implements ActionListener{
             vista.mostrarVistaPrincipal();
         }
         else if (sAccion.equals("navToBeneficiariosFromBuscarBeneficiario")){
-            vista.mostrarVistaBenef();
+            vista.mostrarVistaBeneficiarios();
         }
         else if (sAccion.equals("buscarBeneficiarioDNI")){
             
@@ -77,12 +106,9 @@ public class ControladorBeneficiario implements ActionListener{
             vista.mostrarVistaPrincipal();
         }
         else if (sAccion.equals("navToBeneficiariosFromBeneficiarioDatos")){
-            vista.mostrarVistaBenef();
+            vista.mostrarVistaBeneficiarios();
         }
-        
-        else {
-            
-        }
+ 
     }
 	
 }
