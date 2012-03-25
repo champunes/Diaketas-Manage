@@ -49,7 +49,7 @@ public class ControladorBeneficiario implements ActionListener{
             vista.mostrarVistaBBuscar();
         }
         else if (sAccion.equals("nuevoBeneficiario")){
-
+            vista.mostrarVistaNBenef();
         }
         else if (sAccion.equals("navToMainFromBeneficiarios")){
             vista.mostrarVistaPrincipal();
@@ -71,6 +71,15 @@ public class ControladorBeneficiario implements ActionListener{
         else if (sAccion.equals("eliminarItemBusquedaBeneficiario")){
             
         }
+        
+        /** PANEL DATOS BENEFICIARIO **/
+        else if (sAccion.equals("navToMainFromBeneficiarioDatos")){
+            vista.mostrarVistaPrincipal();
+        }
+        else if (sAccion.equals("navToBeneficiariosFromBeneficiarioDatos")){
+            vista.mostrarVistaBenef();
+        }
+        
         else {
             
         }

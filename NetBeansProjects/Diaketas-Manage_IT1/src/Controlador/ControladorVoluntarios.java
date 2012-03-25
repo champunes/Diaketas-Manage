@@ -44,7 +44,7 @@ public class ControladorVoluntarios implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         String sAccion = ae.getActionCommand();
-        
+
         /** PANEL INICIO VOLUNTARIOS */
         if (sAccion.equals("ayudas")){
             vista.mostrarVistaAyuda();
@@ -56,29 +56,23 @@ public class ControladorVoluntarios implements ActionListener{
             vista.mostrarVistaContab();
         }
         else if (sAccion.equals("nuevoVoluntario")){
-            
+            vista.mostrarVistaNVolunt();
         }
         else if (sAccion.equals("navToMainFromVoluntarios")){
             vista.mostrarVistaPrincipal();
         }
         
-        /** PANEL DE AYUDAS **/
-        else if (sAccion.equals("navToMainFromAyudas")){
+        /** PANEL DE DATOS DE VOLUNTARIOS */
+        else if (sAccion.equals("navToMainFromDatosVoluntario")){
             vista.mostrarVistaPrincipal();
         }
-        else if (sAccion.equals("navToVoluntariosFromAyudas")){
+        else if (sAccion.equals("navToVoluntariosFromDatosVoluntario")){
             vista.mostrarVistaVolunt();
         }
-        else if (sAccion.equals("buscarBeneficiario")){
+        else if (sAccion.equals("guardarDatosVoluntario")){
             
         }
-        else if (sAccion.equals("guardarTipoAyudas")){
-            
-        }
-        else if (sAccion.equals("guardarTipoAyuda")){
-            
-        }
-        else if (sAccion.equals("eliminarTipoAyuda")){
+        else if (sAccion.equals("borrarDatosVoluntario")){
             
         }
         
