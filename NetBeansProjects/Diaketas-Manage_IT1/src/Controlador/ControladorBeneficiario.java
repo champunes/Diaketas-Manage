@@ -72,7 +72,6 @@ public class ControladorBeneficiario implements ActionListener{
         
         String sAccion = ae.getActionCommand();
         
-        System.out.println("ActionCommand: " + sAccion);
         
         if (sAccion.equals("buscarBeneficiario")){
             vista.mostrarVistaBuscarBeneficiario();
@@ -92,13 +91,10 @@ public class ControladorBeneficiario implements ActionListener{
             vista.mostrarVistaBeneficiarios();
         }
         else if (sAccion.equals("buscarBeneficiarioDNI")){
-            
+            System.out.println("Accion ejecutada: " + sAccion);
         }
-        else if (sAccion.equals("modificarItemBusquedaBeneficiario")){
-            
-        }
-        else if (sAccion.equals("eliminarItemBusquedaBeneficiario")){
-            
+        else if (sAccion.equals("verBeneficiarioBusqueda")){
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         
         /** PANEL DATOS BENEFICIARIO **/

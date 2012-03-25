@@ -73,7 +73,7 @@ public class ControladorContabilidad implements ActionListener{
         String sAccion = ae.getActionCommand();
         
         if (sAccion.equals("obtenerContabilidad")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("navToMainFromContabilidad")){
             vista.mostrarVistaPrincipal();

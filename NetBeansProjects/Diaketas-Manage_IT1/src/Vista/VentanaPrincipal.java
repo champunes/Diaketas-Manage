@@ -982,7 +982,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(105, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel2);
+        jTabbedPane1.addTab("Datos Generales", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1073,7 +1073,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab2", jPanel3);
+        jTabbedPane1.addTab("Situación Familiar", jPanel3);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1165,7 +1165,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("tab3", jPanel4);
+        jTabbedPane1.addTab("Intervenciones", jPanel4);
 
         org.jdesktop.layout.GroupLayout PanelBeneficiarioDatosLayout = new org.jdesktop.layout.GroupLayout(PanelBeneficiarioDatos);
         PanelBeneficiarioDatos.setLayout(PanelBeneficiarioDatosLayout);
@@ -1177,7 +1177,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelBeneficiarioDatosLayout.createSequentialGroup()
                         .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 941, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
+                        .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
                     .add(PanelBeneficiarioDatosLayout.createSequentialGroup()
                         .add(navToMainFromBeneficiarioDatos)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1205,7 +1205,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelBeneficiarioDatosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelBeneficiarioDatos, "card10");

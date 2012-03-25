@@ -96,10 +96,10 @@ public class ControladorVoluntarios implements ActionListener{
             vista.mostrarVistaVoluntarios();
         }
         else if (sAccion.equals("guardarDatosVoluntario")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("borrarDatosVoluntario")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         
         /** PANEL DE BUSQUEDA DE VOLUNTARIOS */
@@ -110,14 +110,12 @@ public class ControladorVoluntarios implements ActionListener{
             vista.mostrarVistaVoluntarios();
         }
         else if (sAccion.equals("buscarVoluntarioDNI")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
-        else if (sAccion.equals("modificarItemBusquedaVoluntario")){
-            
+        else if (sAccion.equals("verVoluntarioBusqueda")){
+             System.out.println("Accion ejecutada: " + sAccion);
         }
-        else if (sAccion.equals("eliminarItemBusquedaVoluntario")){
-            
-        }
+       
     }
 	
 }

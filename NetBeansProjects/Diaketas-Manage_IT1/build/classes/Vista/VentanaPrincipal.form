@@ -681,7 +681,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jTabbedPane1" min="-2" pref="941" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="separadorBeneficiario3" pref="1" max="32767" attributes="0"/>
+                          <Component id="separadorBeneficiario3" pref="41" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="navToMainFromBeneficiarioDatos" min="-2" max="-2" attributes="0"/>
@@ -716,7 +716,7 @@
                       <Component id="separadorBeneficiario3" min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -777,8 +777,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="tab1">
-                    <Property name="tabTitle" type="java.lang.String" value="tab1"/>
+                  <JTabbedPaneConstraints tabName="Datos Generales">
+                    <Property name="tabTitle" type="java.lang.String" value="Datos Generales"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1173,8 +1173,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="tab2">
-                    <Property name="tabTitle" type="java.lang.String" value="tab2"/>
+                  <JTabbedPaneConstraints tabName="Situaci&#xf3;n Familiar">
+                    <Property name="tabTitle" type="java.lang.String" value="Situaci&#xf3;n Familiar"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1364,8 +1364,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="tab3">
-                    <Property name="tabTitle" type="java.lang.String" value="tab3"/>
+                  <JTabbedPaneConstraints tabName="Intervenciones">
+                    <Property name="tabTitle" type="java.lang.String" value="Intervenciones"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>

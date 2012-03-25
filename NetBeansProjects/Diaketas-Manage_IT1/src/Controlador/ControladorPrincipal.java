@@ -80,10 +80,10 @@ public class ControladorPrincipal implements ActionListener{
             vista.mostrarVistaBeneficiarios();
         }
         else if(sAccion.equals("entrarAPanelBolsaTrabajo")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("entrarAPanelSocios")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("entrarAPanelVoluntarios")){
             vista.mostrarVistaVoluntarios();

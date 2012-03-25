@@ -78,16 +78,16 @@ public class ControladorAyuda implements ActionListener{
             vista.mostrarVistaVoluntarios();
         }
         else if (sAccion.equals("buscarBeneficiario")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("guardarTipoAyudas")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("guardarTipoAyuda")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
         else if (sAccion.equals("eliminarTipoAyuda")){
-            
+             System.out.println("Accion ejecutada: " + sAccion);
         }
       
     }
