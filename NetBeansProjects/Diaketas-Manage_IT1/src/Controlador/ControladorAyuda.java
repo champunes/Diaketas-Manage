@@ -14,9 +14,9 @@
  **          
  **
  ** HISTORIA:
- ** 	000 - Mar 22, 2012 - MOB - Creacion
- *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
- *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
+ ** 	000 - Mar 24, 2012 - MOB - Creacion
+ *      001 - Mar 24, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
+ *      002 - Mar 24, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
  *      
  **
  ** NOTAS:
