@@ -105,7 +105,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="imgLogo" alignment="0" max="32767" attributes="0"/>
+                      <Component id="imgLogo" alignment="0" pref="451" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="labelTitulo" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
@@ -204,7 +204,7 @@
                       <Component id="btSocio" min="-2" pref="215" max="-2" attributes="0"/>
                       <Component id="btVoluntario" min="-2" pref="215" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="350" max="32767" attributes="0"/>
+                  <EmptySpace pref="328" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btBeneficiario" min="-2" max="-2" attributes="0"/>
                       <Component id="btBolsaTrabajo" min="-2" pref="215" max="-2" attributes="0"/>
@@ -218,7 +218,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="64" max="32767" attributes="0"/>
+                  <EmptySpace pref="206" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btSocio" linkSize="8" min="-2" max="-2" attributes="0"/>
                       <Component id="btBeneficiario" linkSize="8" min="-2" max="-2" attributes="0"/>
@@ -246,7 +246,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Acceso a Socios"/>
             <Property name="actionCommand" type="java.lang.String" value="entrarAPanelSocios"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Cursor predeterminado"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -347,7 +347,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                   <Component id="btNuevoBeneficiario" linkSize="9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="282" max="32767" attributes="0"/>
+                  <EmptySpace pref="260" max="32767" attributes="0"/>
                   <Component id="btBuscarBeneficiario" linkSize="9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
               </Group>
@@ -369,7 +369,7 @@
                       <Component id="btNuevoBeneficiario" min="-2" max="-2" attributes="0"/>
                       <Component id="btBuscarBeneficiario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="199" max="32767" attributes="0"/>
+                  <EmptySpace pref="341" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -488,7 +488,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
@@ -538,7 +538,7 @@
                       <Component id="cbTipoBusquedaBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="jScrollPane5" pref="422" max="32767" attributes="0"/>
+                  <Component id="jScrollPane5" pref="564" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btVerBeneficiarioBusqueda" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -681,7 +681,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jTabbedPane1" min="-2" pref="941" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="separadorBeneficiario3" pref="41" max="32767" attributes="0"/>
+                          <Component id="separadorBeneficiario3" pref="19" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="navToMainFromBeneficiarioDatos" min="-2" max="-2" attributes="0"/>
@@ -716,7 +716,7 @@
                       <Component id="separadorBeneficiario3" min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="175" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1396,10 +1396,7 @@
                                           <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="jLabel60" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1593,7 +1590,7 @@
                           <Component id="btContabilidad" min="-2" pref="166" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="243" max="32767" attributes="0"/>
+                  <EmptySpace pref="221" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btBuscarVoluntario" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="btAyudas" alignment="1" min="-2" pref="166" max="-2" attributes="0"/>
@@ -1623,7 +1620,7 @@
                       <Component id="btAyudas" min="-2" pref="183" max="-2" attributes="0"/>
                       <Component id="btContabilidad" min="-2" pref="183" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="85" max="32767" attributes="0"/>
+                  <EmptySpace pref="227" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1833,7 +1830,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                   <Component id="separadorVoluntario1" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace pref="134" max="32767" attributes="0"/>
+                  <EmptySpace pref="276" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="textNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2125,7 +2122,7 @@
                           <Component id="cuadroBalance" min="-2" pref="178" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="19" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2162,7 +2159,7 @@
                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane2" linkSize="11" min="-2" pref="212" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="153" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2370,7 +2367,7 @@
                               </Group>
                               <Component id="jScrollPane6" alignment="0" min="-2" pref="952" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -2415,7 +2412,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="jScrollPane6" min="-2" pref="410" max="-2" attributes="0"/>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <EmptySpace pref="154" max="32767" attributes="0"/>
                   <Component id="btVerVoluntarioBusqueda" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -2654,7 +2651,7 @@
                       <Component id="jScrollPane3" pref="465" max="32767" attributes="0"/>
                       <Component id="jScrollPane4" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                  <EmptySpace pref="167" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

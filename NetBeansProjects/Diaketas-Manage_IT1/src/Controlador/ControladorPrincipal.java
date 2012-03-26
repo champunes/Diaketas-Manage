@@ -18,6 +18,7 @@
  ** 	000 - Mar 20, 2012 - JGM - Creacion
  *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
+ *		003 - Mar 26, 2012 - JGM - Restructuracion de la clase para adaptarse a la arquitectura MVC
  *      
  **
  ** NOTAS:
@@ -32,16 +33,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControladorPrincipal implements ActionListener{
+public class ControladorPrincipal {
 	
     /** PATRON DE DISEÑO SINGLETON */
     
     private static ControladorPrincipal instancia;
 
 
-    public static ControladorPrincipal getInstance(){
+    public static ControladorPrincipal getInstance(VentanaPrincipal pvista){
         if (instancia == null)
-            instancia = new ControladorPrincipal();
+            instancia = new ControladorPrincipal(pvista);
 
         return instancia;
 
@@ -52,43 +53,111 @@ public class ControladorPrincipal implements ActionListener{
     /**
      * Constructor de la clase
      */	
-    private ControladorPrincipal(){
+    private ControladorPrincipal(VentanaPrincipal pvista){
 
-    }
-	
-    /** 
-    * Establece como ventana padre la pasada como parámetro
-    * @param pvista ventana padre
-    */
-    public void setVentanaPrincipal(VentanaPrincipal pvista){
-        vista = pvista;
+	/** 
+     * Establece como ventana padre la pasada como parámetro
+     */
+		vista = pvista;
+	/** 
+     * Conecta el controlador con las distintas interfaces de la vista
+     */
+		vista.anadirListenerBtConectarse(new ListenerBtConectarse());
+		vista.anadirListenerBtBeneficiario(new ListenerBtBeneficiario());
+		vista.anadirListenerBtBolsaTrabajo(new ListenerBtBolsaTrabajo());
+		vista.anadirListenerBtSocio(new ListenerBtSocio());
+		vista.anadirListenerBtVoluntario(new ListenerBtVoluntario());
+		vista.anadirListenerNavToMainFromBeneficiarios(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromContabilidad(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromVoluntarios(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromAyudas(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromBuscarBeneficiario(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromBuscarVoluntario(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromDatosVoluntario(new ListenerNavToMain());
+		vista.anadirListenerNavToMainFromBeneficiarioDatos(new ListenerNavToMain());
+		
     }
    
-    /**
-     * Manejador de eventos de la interfaz
-     * @param ae evento
-     */ 
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        
-        String sAccion = ae.getActionCommand();
-     
-        if (sAccion.equals("accionLogin")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if(sAccion.equals("entrarAPanelBeneficiarios")){
-            vista.mostrarVistaBeneficiarios();
-        }
-        else if(sAccion.equals("entrarAPanelBolsaTrabajo")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("entrarAPanelSocios")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("entrarAPanelVoluntarios")){
-            vista.mostrarVistaVoluntarios();
-        }
-      
-    }
+	/**
+	 * Clase interna para manejar los eventos de btConectarse
+	 */
+	
+	private class ListenerBtConectarse implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaPrincipal();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBeneficiario
+	 */
+	
+	private class ListenerBtBeneficiario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {			
+			ControladorBeneficiario.getInstance(vista);
+			vista.mostrarVistaBeneficiarios();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBolsaTrabajo
+	 */
+	
+	private class ListenerBtBolsaTrabajo implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btSocio
+	 */
+	
+	private class ListenerBtSocio implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btVoluntario
+	 */
+	
+	private class ListenerBtVoluntario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			ControladorVoluntarios.getInstance(vista);
+			vista.mostrarVistaVoluntarios();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de los navegadores a main
+	 */
+	
+	private class ListenerNavToMain implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaPrincipal();
+		}
+		
+	}
 	
 }

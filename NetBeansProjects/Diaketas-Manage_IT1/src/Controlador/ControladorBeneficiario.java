@@ -18,6 +18,7 @@
  ** 	000 - Mar 20, 2012 - JGM - Creacion
  *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
+ *		003 - Mar 26, 2012 - JGM - Restructuración de la clase para adaptarse a la arquitectura MVC
  *      
  **
  ** NOTAS:
@@ -32,16 +33,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControladorBeneficiario implements ActionListener{
+public class ControladorBeneficiario{
 
 	/** PATRON DE DISEÑO SINGLETON */
     
 	private static ControladorBeneficiario instancia = null;
 	
-	public static ControladorBeneficiario getInstance(){
+	public static ControladorBeneficiario getInstance(VentanaPrincipal pvista){
 		
 		if(instancia == null)
-			instancia = new ControladorBeneficiario();
+			instancia = new ControladorBeneficiario(pvista);
 		return instancia;
 		
 	}
@@ -51,60 +52,90 @@ public class ControladorBeneficiario implements ActionListener{
     /**
      * Constructor de la clase
      */
-    private ControladorBeneficiario(){
+    private ControladorBeneficiario(VentanaPrincipal pvista){
     
+	/** 
+     * Establece como ventana padre la pasada como parámetro
+     */
+		vista = pvista;
+	/** 
+     * Conecta el controlador con las distintas interfaces de la vista
+     */	
+		vista.anadirListenerBtBuscarBeneficiario(new ListenerBtBuscarBeneficiario());
+		vista.anadirListenerBtNuevoBeneficiario(new ListenerBtNuevoBeneficiario());
+		vista.anadirListenerBtBuscarBeneficiarioDNI(new ListenerBtBuscarBeneficiarioDNI());
+		vista.anadirListenerBtVerBeneficiarioBusqueda(new ListenerBtVerBeneficiarioBusqueda());
+		vista.anadirListenerNavToBeneficiariosFromBuscarBeneficiario(new ListenerNavToBeneficiarios());
+		vista.anadirListenerNavToBeneficiariosFromBeneficiarioDatos(new ListenerNavToBeneficiarios());
     }
 	
-    /** 
-     * Establece como ventana padre la pasada como parámetro
-     * @param pvista ventana padre
-     */
-     public void setVentanaPrincipal(VentanaPrincipal pvista){
-         vista = pvista;
-     }
-   
-     /**
-      * Manejador de eventos de la interfaz
-      * @param ae evento
-      */
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        
-        String sAccion = ae.getActionCommand();
-        
-        
-        if (sAccion.equals("buscarBeneficiario")){
-            vista.mostrarVistaBuscarBeneficiario();
-        }
-        else if (sAccion.equals("nuevoBeneficiario")){
-            vista.mostrarVistaDatosBeneficiario();
-        }
-        else if (sAccion.equals("navToMainFromBeneficiarios")){
-            vista.mostrarVistaPrincipal();
-        }
-        
-        /** PANEL BUSQUEDA BENEFICIARIO **/
-        else if (sAccion.equals("navToMainFromBuscarBeneficiario")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if (sAccion.equals("navToBeneficiariosFromBuscarBeneficiario")){
-            vista.mostrarVistaBeneficiarios();
-        }
-        else if (sAccion.equals("buscarBeneficiarioDNI")){
-            System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("verBeneficiarioBusqueda")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        
-        /** PANEL DATOS BENEFICIARIO **/
-        else if (sAccion.equals("navToMainFromBeneficiarioDatos")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if (sAccion.equals("navToBeneficiariosFromBeneficiarioDatos")){
-            vista.mostrarVistaBeneficiarios();
-        }
- 
-    }
+	/**
+	 * Clase interna para manejar los eventos de btBuscarBeneficiario
+	 */
+	
+	private class ListenerBtBuscarBeneficiario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaBuscarBeneficiario();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btNuevoBeneficiario
+	 */
+	
+	private class ListenerBtNuevoBeneficiario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaDatosBeneficiario();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBuscarBeneficiarioDNI
+	 */
+	
+	private class ListenerBtBuscarBeneficiarioDNI implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btVerBeneficiarioBusqueda
+	 */
+	
+	private class ListenerBtVerBeneficiarioBusqueda implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	
+	
+	/**
+	 * Clase interna para manejar los eventos de los navegadores a Beneficiarios
+	 */
+	
+	private class ListenerNavToBeneficiarios implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaBeneficiarios();
+		}
+		
+	}
 	
 }

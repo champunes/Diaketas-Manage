@@ -8,6 +8,7 @@
  **
  ** DESARROLLADO POR:
  *          Mario Orozco Borrego (MOB)
+ *			José Ángel González Molina (JGM)
  **        
  **
  ** SUPERVISADO POR:
@@ -17,6 +18,7 @@
  ** 	000 - Mar 24, 2012 - MOB - Creacion
  *      001 - Mar 24, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 24, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
+ *		003 - Mar 26, 2012 - JGM - Reestructuración de la clase para que se adapte a la arquitectura MVC
  *      
  **
  ** NOTAS:
@@ -31,16 +33,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControladorAyuda implements ActionListener{
+public class ControladorAyuda{
 
     /** PATRON DE DISEÑO SINGLETON */
     
     private static ControladorAyuda instancia = null;
 
-    public static ControladorAyuda getInstance(){
+    public static ControladorAyuda getInstance(VentanaPrincipal pvista){
 
             if(instancia == null)
-                    instancia = new ControladorAyuda();
+                    instancia = new ControladorAyuda(pvista);
             return instancia;
 
     }
@@ -48,48 +50,62 @@ public class ControladorAyuda implements ActionListener{
     private VentanaPrincipal vista;
 
     /** 
-    * Establece como ventana padre la pasada como parámetro
-    * @param pvista ventana padre
-    */
-    public void setVentanaPrincipal(VentanaPrincipal pvista){
-        vista = pvista;
-    }	
-
-    /** 
      * Constructor de la clase 
      */
-    private ControladorAyuda(){
+    private ControladorAyuda(VentanaPrincipal pvista){
 
+	/** 
+     * Establece como ventana padre la pasada como parámetro
+     */
+		vista = pvista;
+	/** 
+     * Conecta el controlador con las distintas interfaces de la vista
+     */
+		vista.anadirListenerBtnBuscarBeneficiario(new ListenerBtnBuscarBeneficiario());
+		vista.anadirListenerBtnGuardarTipoAyuda(new ListenerBtnGuardarTipoAyuda());
+		vista.anadirListenerBtnEliminarTipoAyuda(new ListenerBtnEliminarTipoAyuda());
     }
+	
+	/**
+	 * Clase interna para manejar los eventos de btnBuscarBeneficiario
+	 */
+	
+	private class ListenerBtnBuscarBeneficiario implements ActionListener{
 
-    /**
-     * Manejador de eventos de la interfaz
-     * @param ae evento
-     */ 
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        String sAccion = ae.getActionCommand();
-        
-        /** PANEL DE AYUDAS **/
-        if (sAccion.equals("navToMainFromAyudas")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if (sAccion.equals("navToVoluntariosFromAyudas")){
-            vista.mostrarVistaVoluntarios();
-        }
-        else if (sAccion.equals("buscarBeneficiario")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("guardarTipoAyudas")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("guardarTipoAyuda")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("eliminarTipoAyuda")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-      
-    }
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btnGuardarTipoAyuda
+	 */
+	
+	private class ListenerBtnGuardarTipoAyuda implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btnEliminarTipoAyuda
+	 */
+	
+	private class ListenerBtnEliminarTipoAyuda implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
 	
 }

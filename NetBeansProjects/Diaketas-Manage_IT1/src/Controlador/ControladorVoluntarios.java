@@ -9,6 +9,7 @@
  **
  ** DESARROLLADO POR:
  *          Mario Orozco Borrego (MOB)
+ *			José Ángel González Molina (JGM)
  **        
  **
  ** SUPERVISADO POR:
@@ -32,90 +33,169 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControladorVoluntarios implements ActionListener{
+public class ControladorVoluntarios{
 
 	/** PATRON DE DISEÑO SINGLETON */
 	private static ControladorVoluntarios instancia = null;
 	
-	public static ControladorVoluntarios getInstance(){
+	public static ControladorVoluntarios getInstance(VentanaPrincipal pvista){
 		
 		if(instancia == null)
-			instancia = new ControladorVoluntarios();
+			instancia = new ControladorVoluntarios(pvista);
 		return instancia;
 		
 	}
 	
 	private VentanaPrincipal vista;
-      
-    /** 
-     * Establece como ventana padre la pasada como parámetro
-     * @param pvista ventana padre
-     */
-    public void setVentanaPrincipal(VentanaPrincipal pvista){
-        vista = pvista;
-    }	
 
     /**
      * Constructor de la clase
      */
-    private ControladorVoluntarios(){
+    private ControladorVoluntarios(VentanaPrincipal pvista){
 
+	/** 
+     * Establece como ventana padre la pasada como parámetro
+     */
+		vista = pvista;
+	/** 
+     * Conecta el controlador con las distintas interfaces de la vista
+     */
+		vista.anadirListenerBtAyudas(new ListenerBtAyudas());
+		vista.anadirListenerBtBuscarVoluntario(new ListenerBtBuscarVoluntario());
+		vista.anadirListenerBtContabilidad(new ListenerBtContabilidad());
+		vista.anadirListenerBtNuevoVoluntario(new ListenerBtNuevoVoluntario());
+		vista.anadirListenerBtBuscarVoluntarioDNI(new ListenerBtBuscarVoluntarioDNI());
+		vista.anadirListenerBtVerVoluntarioBusqueda(new ListenerBtVerVoluntarioBusqueda());
+		vista.anadirListenerBtBorrar(new ListenerBtBorrar());
+		vista.anadirListenerBtGuardar(new ListenerBtGuardar());		
+		vista.anadirListenerNavToVoluntariosFromContabilidad(new ListenerNavToVoluntarios());	
+		vista.anadirListenerNavToVoluntariosFromAyudas(new ListenerNavToVoluntarios());
+		vista.anadirListenerNavToVoluntariosFromBuscarVoluntario(new ListenerNavToVoluntarios());
+		vista.anadirListenerNavToVoluntariosFromDatosVoluntario(new ListenerNavToVoluntarios());
+		
     }
 	
-    
-    /**
-     * Manejador de eventos de la interfaz
-     * @param ae evento
-     */  
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        String sAccion = ae.getActionCommand();
+	/**
+	 * Clase interna para manejar los eventos de btAyudas
+	 */
+	
+	private class ListenerBtAyudas implements ActionListener{
 
-        /** PANEL INICIO VOLUNTARIOS */
-        if (sAccion.equals("ayudas")){
-            vista.mostrarVistaAyuda();
-        }
-        else if (sAccion.equals("buscarVoluntario")){
-            vista.mostrarVistaBuscarVoluntario();
-        }
-        else if (sAccion.equals("contabilidad")){
-            vista.mostrarVistaContabilidad();
-        }
-        else if (sAccion.equals("nuevoVoluntario")){
-            vista.mostarVistaDatosVoluntario();
-        }
-        else if (sAccion.equals("navToMainFromVoluntarios")){
-            vista.mostrarVistaPrincipal();
-        }
-        
-        /** PANEL DE DATOS DE VOLUNTARIOS */
-        else if (sAccion.equals("navToMainFromDatosVoluntario")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if (sAccion.equals("navToVoluntariosFromDatosVoluntario")){
-            vista.mostrarVistaVoluntarios();
-        }
-        else if (sAccion.equals("guardarDatosVoluntario")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("borrarDatosVoluntario")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        
-        /** PANEL DE BUSQUEDA DE VOLUNTARIOS */
-        else if (sAccion.equals("navToMainFromBuscarVoluntario")){
-            vista.mostrarVistaPrincipal();
-        }
-        else if (sAccion.equals("navToVoluntariosFromBuscarVoluntario")){
-            vista.mostrarVistaVoluntarios();
-        }
-        else if (sAccion.equals("buscarVoluntarioDNI")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-        else if (sAccion.equals("verVoluntarioBusqueda")){
-             System.out.println("Accion ejecutada: " + sAccion);
-        }
-       
-    }
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			ControladorAyuda.getInstance(vista);
+			vista.mostrarVistaAyuda();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBuscarVoluntario
+	 */
+	
+	private class ListenerBtBuscarVoluntario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaBuscarVoluntario();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btContabilidad
+	 */
+	
+	private class ListenerBtContabilidad implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			ControladorContabilidad.getInstance(vista);
+			vista.mostrarVistaContabilidad();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btNuevoVoluntario
+	 */
+	
+	private class ListenerBtNuevoVoluntario implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostarVistaDatosVoluntario();
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBuscarVoluntarioDNI
+	 */
+	
+	private class ListenerBtBuscarVoluntarioDNI implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btVerVoluntarioBusqueda
+	 */
+	
+	private class ListenerBtVerVoluntarioBusqueda implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btBorrar
+	 */
+	
+	private class ListenerBtBorrar implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de btGuardar
+	 */
+	
+	private class ListenerBtGuardar implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			String sAccion = ae.getActionCommand();
+			System.out.println("Accion ejecutada: " + sAccion);
+		}
+		
+	}
+	
+	/**
+	 * Clase interna para manejar los eventos de los navegadores a Voluntarios
+	 */
+	
+	private class ListenerNavToVoluntarios implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent ae) {
+			vista.mostrarVistaVoluntarios();
+		}
+		
+	}
 	
 }

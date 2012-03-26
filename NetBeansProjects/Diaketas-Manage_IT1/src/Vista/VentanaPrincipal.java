@@ -24,6 +24,7 @@
  *      004 - Mar 23, 2012 - MOB - Registro de los listeners de toda la interfaz en el constructor de la clase
  *      005 - Mar 25, 2012 - MOB - Refactoring de los metodos que muestran las vistas, ahora su nombre es mas descriptivo
  *      006 - Mar 25, 2012 - MOB - Finalización del diseño de la interfaz
+ *		007 - Mar 26, 2012 - JGM - Creacion de una copia de la interfaz manteniendose fiel a la arquitectura MVC
  **
  ** NOTAS:
  **   
@@ -32,7 +33,6 @@
 
 package Vista;
 
-import Controlador.*;
 import java.awt.event.ActionListener;
 
 /**
@@ -51,7 +51,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	
         /**
 	 * Crea la ventana principal que contendrá todos los elementos que la componene, además
-         * registra todos los listeners para cada uno de los widgets usando el controlador requerido 
+         * registra todos los listeners para cada uno de los widgets dados por el controlador requerido 
          * para cada caso
          * 
          * 
@@ -66,115 +66,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	private VentanaPrincipal() {
 		initComponents();
                 
+        /** Esta ventana principal será visible y mostrará la ventana de identificación */
                 
-                /**
-                 * Se obtienen las instancias de todos los controladores que maneja la aplicación
-                 */
-                ControladorPrincipal cPrincipal = ControladorPrincipal.getInstance();
-                ControladorBeneficiario cBeneficiario = ControladorBeneficiario.getInstance();
-                ControladorContabilidad cContabilidad = ControladorContabilidad.getInstance();
-                ControladorVoluntarios cVoluntarios = ControladorVoluntarios.getInstance();
-                ControladorAyuda cAyuda = ControladorAyuda.getInstance();
-               
-               /**
-                * Se le pasa como parámetro a cada uno de ellos la ventana padre que tienen asocidada
-                */ 
-                cPrincipal.setVentanaPrincipal(this);
-                cBeneficiario.setVentanaPrincipal(this);
-                cContabilidad.setVentanaPrincipal(this);
-                cVoluntarios.setVentanaPrincipal(this);
-                cAyuda.setVentanaPrincipal(this);
-                
-                
-                /** 
-                 * REGISTRAR LISTENERS PARA EL PANEL DE IDENTIFICACION
-                 */
-                btConectarse.addActionListener(cPrincipal);
-                
-                /**
-                 * REGISTRAR LISTENERS PARA EL PANEL DE INICIO PRINCIPAL
-                 */
-                
-                btBeneficiario.addActionListener(cPrincipal);
-                btBolsaTrabajo.addActionListener(cPrincipal);
-                btSocio.addActionListener(cPrincipal);
-                btVoluntario.addActionListener(cPrincipal);
-                
-                
-                /**
-                 * REGISTRAR LISTENERS PARA EL PANEL DE INICIO DE BENEFICIARIOS
-                 */
-                btBuscarBeneficiario.addActionListener(cBeneficiario);
-                btNuevoBeneficiario.addActionListener(cBeneficiario);
-                navToMainFromBeneficiarios.addActionListener(cBeneficiario);
-                
-                
-                
-                /**
-                 * REGISTRAR LISTENERS PARA EL PANEL DE CONTABILIDAD
-                 */
-                btnObtenerContabilidad.addActionListener(cContabilidad);
-                navToMainFromContabilidad.addActionListener(cContabilidad);
-                navToVoluntariosFromContabilidad.addActionListener(cContabilidad);
-                
-                
-                /**
-                 * REGISTRAR LISTENERS PARA EL PANEL DE VOLUNTARIOS
-                 */
-                btAyudas.addActionListener(cVoluntarios);
-                btBuscarVoluntario.addActionListener(cVoluntarios);
-                btContabilidad.addActionListener(cVoluntarios);
-                btNuevoVoluntario.addActionListener(cVoluntarios);
-                navToMainFromVoluntarios.addActionListener(cVoluntarios);
-                
-                 
-                /**
-                 * REGISTRAR LOS LISTENERS PARA EL PANEL DE AYUDAS
-                 */
-                navToMainFromAyudas.addActionListener(cAyuda);
-                navToVoluntariosFromAyudas.addActionListener(cAyuda);
-                btnBuscarBeneficiario.addActionListener(cAyuda);
-                btnGuardarTipoAyuda.addActionListener(cAyuda);
-                btnEliminarTipoAyuda.addActionListener(cAyuda);
-                
-                
-                /** 
-                 * REGISTRAR LOS LISTENERS PARA EL PANEL DE BUSQUEDA DE BENEFICIARIO
-                 */
-                navToMainFromBuscarBeneficiario.addActionListener(cBeneficiario);
-                navToBeneficiariosFromBuscarBeneficiario.addActionListener(cBeneficiario);
-                btBuscarBeneficiarioDNI.addActionListener(cBeneficiario);
-                btVerBeneficiarioBusqueda.addActionListener(cBeneficiario);
-                
-                
-                /**
-                 * REGISTRAR LOS LISTENERS PARA EL PANEL DE BUSQUEDA DE VOLUNTARIO
-                 */
-                navToMainFromBuscarVoluntario.addActionListener(cVoluntarios);
-                navToVoluntariosFromBuscarVoluntario.addActionListener(cVoluntarios);
-                btBuscarVoluntarioDNI.addActionListener(cVoluntarios);
-                btVerVoluntarioBusqueda.addActionListener(cVoluntarios);
-                
-                
-                /** 
-                 * REGISTRAR LOS LISTENERES PARA EL PANEL DE DATOS DE VOLUNTARIOS
-                 */
-                navToMainFromDatosVoluntario.addActionListener(cVoluntarios);
-                navToVoluntariosFromDatosVoluntario.addActionListener(cVoluntarios);
-                btBorrar.addActionListener(cVoluntarios);
-                btGuardar.addActionListener(cVoluntarios);
-                
-                /**
-                 * REGISTRAR LOS LISTENERS PARA EL PANEL DE DATOS DE BENEFICIARIOS
-                 */
-                navToMainFromBeneficiarioDatos.addActionListener(cBeneficiario);
-                navToBeneficiariosFromBeneficiarioDatos.addActionListener(cBeneficiario);
-                
-                
-                /** Esta ventana principal será visible y mostrará la ventana de identificación */
-                
-                this.setVisible(true);
-                this.mostrarVistaIdentificacion();   
+        this.setVisible(true);
+        //this.mostrarVistaIdentificacion();   
                  
 	}
 
@@ -457,7 +352,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, PanelIdentificacionLayout.createSequentialGroup()
                 .add(148, 148, 148)
                 .add(PanelIdentificacionLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(imgLogo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(imgLogo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
                     .add(PanelIdentificacionLayout.createSequentialGroup()
                         .add(labelTitulo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(135, 135, 135)
@@ -528,7 +423,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(btSocio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 215, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(btVoluntario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 215, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 350, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 328, Short.MAX_VALUE)
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btBeneficiario)
                     .add(btBolsaTrabajo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 215, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -539,7 +434,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, PanelInicioLayout.createSequentialGroup()
                 .add(26, 26, 26)
                 .add(jLabel21)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 206, Short.MAX_VALUE)
                 .add(PanelInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btSocio)
                     .add(btBeneficiario))
@@ -602,7 +497,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .add(PanelBeneficiarioInicioLayout.createSequentialGroup()
                 .add(121, 121, 121)
                 .add(btNuevoBeneficiario)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 282, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 260, Short.MAX_VALUE)
                 .add(btBuscarBeneficiario)
                 .add(165, 165, 165))
         );
@@ -623,7 +518,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelBeneficiarioInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btNuevoBeneficiario)
                     .add(btBuscarBeneficiario))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(341, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelBeneficiarioInicio, "card4");
@@ -708,7 +603,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .add(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, PanelBeneficiarioBuscarLayout.createSequentialGroup()
-                        .add(0, 20, Short.MAX_VALUE)
+                        .add(0, 0, Short.MAX_VALUE)
                         .add(PanelBeneficiarioBuscarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(PanelBeneficiarioBuscarLayout.createSequentialGroup()
                                 .add(jLabel29)
@@ -745,7 +640,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(jLabel29)
                     .add(cbTipoBusquedaBeneficiario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(14, 14, 14)
-                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(btVerBeneficiarioBusqueda)
                 .add(10, 10, 10))
@@ -1127,9 +1022,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .add(jPanel4Layout.createSequentialGroup()
                                 .add(jLabel61)
                                 .add(32, 32, 32))
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel4Layout.createSequentialGroup()
-                                .add(jLabel60)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel60))
                         .add(18, 18, 18)
                         .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(textConceptoBeneficiario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 717, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1177,7 +1070,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelBeneficiarioDatosLayout.createSequentialGroup()
                         .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 941, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+                        .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE))
                     .add(PanelBeneficiarioDatosLayout.createSequentialGroup()
                         .add(navToMainFromBeneficiarioDatos)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1205,7 +1098,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelBeneficiarioDatosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(separadorBeneficiario3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelBeneficiarioDatos, "card10");
@@ -1273,7 +1166,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(PanelVoluntarioInicioLayout.createSequentialGroup()
                         .add(104, 104, 104)
                         .add(btContabilidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 243, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 221, Short.MAX_VALUE)
                 .add(PanelVoluntarioInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, btBuscarVoluntario)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, btAyudas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -1297,7 +1190,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelVoluntarioInicioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(btAyudas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(btContabilidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelVoluntarioInicio, "card7");
@@ -1453,7 +1346,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(jLabel22))
                 .add(4, 4, 4)
                 .add(separadorVoluntario1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 134, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 276, Short.MAX_VALUE)
                 .add(panelVoluntarioDatosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(textNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel1)
@@ -1631,7 +1524,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .add(jLabel20)
                         .add(18, 18, 18)
                         .add(cuadroBalance, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 178, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(0, 19, Short.MAX_VALUE))
+                .add(0, 0, Short.MAX_VALUE))
         );
 
         PanelVoluntarioContabilidadLayout.linkSize(new java.awt.Component[] {fieldFechaFin, fieldFechaInicio}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
@@ -1666,7 +1559,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(jLabel19)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 11, Short.MAX_VALUE))
+                .add(0, 153, Short.MAX_VALUE))
         );
 
         PanelVoluntarioContabilidadLayout.linkSize(new java.awt.Component[] {jScrollPane1, jScrollPane2}, org.jdesktop.layout.GroupLayout.VERTICAL);
@@ -1756,7 +1649,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(btBuscarVoluntarioDNI, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 34, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 952, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(0, 16, Short.MAX_VALUE)))
+                        .add(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .add(org.jdesktop.layout.GroupLayout.TRAILING, PanelVoluntarioBuscarLayout.createSequentialGroup()
                 .add(0, 0, Short.MAX_VALUE)
@@ -1790,7 +1683,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .add(cbTipoBusquedaVoluntario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(7, 7, 7)
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 410, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 154, Short.MAX_VALUE)
                 .add(btVerVoluntarioBusqueda)
                 .addContainerGap())
         );
@@ -1956,7 +1849,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .add(PanelVoluntarioAyudasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
                     .add(jScrollPane4))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelVoluntarioAyudas, "card9");
@@ -2378,4 +2271,359 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 PanelBeneficiarioDatos.setVisible(false);
 	}  
         
+	/**
+     * REGISTRAR LISTENERS PARA EL PANEL DE IDENTIFICACION
+     */
+	
+	/**
+	 * @post  Asigna a btConectarse el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtConectarse(ActionListener listener){
+		btConectarse.addActionListener(listener);
+	}
+	
+	/**
+     * REGISTRAR LISTENERS PARA EL PANEL DE INICIO PRINCIPAL
+     */
+	
+	/**
+	 * @post  Asigna a btBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBeneficiario(ActionListener listener){
+		btBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBolsaTrabajo el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBolsaTrabajo(ActionListener listener){
+		btBolsaTrabajo.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btSocio el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtSocio(ActionListener listener){
+		btSocio.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtVoluntario(ActionListener listener){
+		btVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBuscarBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	/**
+    * REGISTRAR LISTENERS PARA EL PANEL DE INICIO DE BENEFICIARIOS
+    */
+	
+	public void anadirListenerBtBuscarBeneficiario(ActionListener listener){
+		btBuscarBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btNuevoBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtNuevoBeneficiario(ActionListener listener){
+		btNuevoBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToMainFromBeneficiarios el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromBeneficiarios(ActionListener listener){
+		navToMainFromBeneficiarios.addActionListener(listener);
+	}
+                
+    /**
+     * REGISTRAR LISTENERS PARA EL PANEL DE CONTABILIDAD
+     */
+	
+	/**
+	 * @post  Asigna a btnObtenerContabilidad el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtnObtenerContabilidad(ActionListener listener){
+		btnObtenerContabilidad.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToMainFromContabilidad el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromContabilidad(ActionListener listener){
+		navToMainFromContabilidad.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToVoluntariosFromContabilidad el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToVoluntariosFromContabilidad(ActionListener listener){
+		navToVoluntariosFromContabilidad.addActionListener(listener);
+	}
+                
+    /**
+     * REGISTRAR LISTENERS PARA EL PANEL DE VOLUNTARIOS
+     */
+	
+	/**
+	 * @post  Asigna a btAyudas el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtAyudas(ActionListener listener){
+		btAyudas.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBuscarVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBuscarVoluntario(ActionListener listener){
+		btBuscarVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btContabilidad el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtContabilidad(ActionListener listener){
+		btContabilidad.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btNuevoVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtNuevoVoluntario(ActionListener listener){
+		btNuevoVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToMainFromVoluntarios el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromVoluntarios(ActionListener listener){
+		navToMainFromVoluntarios.addActionListener(listener);
+	}
+	
+	/**
+     * REGISTRAR LOS LISTENERS PARA EL PANEL DE AYUDAS
+     */
+	
+	/**
+	 * @post  Asigna a navToMainFromAyudas el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromAyudas(ActionListener listener){
+		navToMainFromAyudas.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToVoluntariosFromAyudas el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToVoluntariosFromAyudas(ActionListener listener){
+		navToVoluntariosFromAyudas.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btnBuscarBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtnBuscarBeneficiario(ActionListener listener){
+		btnBuscarBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btnGuardarTipoAyuda el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtnGuardarTipoAyuda(ActionListener listener){
+		btnGuardarTipoAyuda.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btnEliminarTipoAyuda el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtnEliminarTipoAyuda(ActionListener listener){
+		btnEliminarTipoAyuda.addActionListener(listener);
+	}
+	
+    /** 
+     * REGISTRAR LOS LISTENERS PARA EL PANEL DE BUSQUEDA DE BENEFICIARIO
+     */
+	
+	/**
+	 * @post  Asigna a navToMainFromBuscarBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromBuscarBeneficiario(ActionListener listener){
+		navToMainFromBuscarBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToBeneficiariosFromBuscarBeneficiario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToBeneficiariosFromBuscarBeneficiario(ActionListener listener){
+		navToBeneficiariosFromBuscarBeneficiario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBuscarBeneficiarioDNI el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBuscarBeneficiarioDNI(ActionListener listener){
+		btBuscarBeneficiarioDNI.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btVerBeneficiarioBusqueda el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtVerBeneficiarioBusqueda(ActionListener listener){
+		btVerBeneficiarioBusqueda.addActionListener(listener);
+	}
+	
+	/**
+     * REGISTRAR LOS LISTENERS PARA EL PANEL DE BUSQUEDA DE VOLUNTARIO
+     */
+     
+	/**
+	 * @post  Asigna a navToMainFromBuscarVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromBuscarVoluntario(ActionListener listener){
+		navToMainFromBuscarVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToVoluntariosFromBuscarVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToVoluntariosFromBuscarVoluntario(ActionListener listener){
+		navToVoluntariosFromBuscarVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBuscarVoluntarioDNI el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBuscarVoluntarioDNI(ActionListener listener){
+		btBuscarVoluntarioDNI.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btVerVoluntarioBusqueda el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtVerVoluntarioBusqueda(ActionListener listener){
+		btVerVoluntarioBusqueda.addActionListener(listener);
+	}
+	           
+    /** 
+     * REGISTRAR LOS LISTENERES PARA EL PANEL DE DATOS DE VOLUNTARIOS
+     */
+	
+	/**
+	 * @post  Asigna a navToMainFromDatosVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromDatosVoluntario(ActionListener listener){
+		navToMainFromDatosVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToVoluntariosFromDatosVoluntario el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToVoluntariosFromDatosVoluntario(ActionListener listener){
+		navToVoluntariosFromDatosVoluntario.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btBorrar el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtBorrar(ActionListener listener){
+		btBorrar.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a btGuardar el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerBtGuardar(ActionListener listener){
+		btGuardar.addActionListener(listener);
+	}
+	
+	/**
+     * REGISTRAR LOS LISTENERS PARA EL PANEL DE DATOS DE BENEFICIARIOS
+     */
+	
+	/**
+	 * @post  Asigna a navToMainFromBeneficiarioDatos el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToMainFromBeneficiarioDatos(ActionListener listener){
+		navToMainFromBeneficiarioDatos.addActionListener(listener);
+	}
+	
+	/**
+	 * @post  Asigna a navToBeneficiariosFromBeneficiarioDatos el listener desde el controlador encargado
+	 * @param listener 
+	 */
+	
+	public void anadirListenerNavToBeneficiariosFromBeneficiarioDatos(ActionListener listener){
+		navToBeneficiariosFromBeneficiarioDatos.addActionListener(listener);
+	}           
+           
 }
