@@ -22,7 +22,7 @@ import java.util.ArrayList;
         
         }
     
-        //mirar
+        
         public boolean añadirFamiliar (Familiar f, String beneficiarioNIF) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;
@@ -34,13 +34,13 @@ import java.util.ArrayList;
 
             boolean exito = driver.insertar(sentencia);
             
-            sentencia2 = "INSERT INTO familiarbeneficiario (BeneficiarioNIF, FamiliarNIF) VALUES ('"+beneficiarioNIF+",'"+f.getNIF()+"')";
-
-            if(exito==false){
+            if(exito==true){
+                sentencia2 = "INSERT INTO familiarbeneficiario (BeneficiarioNIF, FamiliarNIF) VALUES ('"+beneficiarioNIF+",'"+f.getNIF()+"')";
                 driver.insertar(sentencia2); 
+            }else{
                 System.out.println("Error al realizar el INSERT en la base de datos");
                 System.exit(1);
-            }
+            }    
             
             return true;
         }
@@ -73,7 +73,7 @@ import java.util.ArrayList;
 
         }
 
-        //Mirar
+        
         public boolean eliminarDatosfamiliar(String familiar_DNI, String beneficiario_DNI) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;
@@ -81,8 +81,18 @@ import java.util.ArrayList;
             String sentencia = "DELETE FROM familiar_beneficiario WHERE FamiliarNIF= '"+familiar_DNI+"' AND BeneficiarioNIF = '"+beneficiario_DNI+"'";
 
             
-            driver.eliminar(sentencia); 
+            boolean exito = driver.eliminar(sentencia); 
 
+            if(exito==false){
+                System.out.println("Error al realizar el DELETE en la base de datos");
+                System.exit(1);
+                
+            }
+            else {
+                String sentencia2 = "DELETE FROM familiar WHERE NIF= '"+familiar_DNI+"'";
+                boolean exito2 = driver.eliminar(sentencia2);
+                
+            }    
             return true;
         }
 

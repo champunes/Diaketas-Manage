@@ -79,9 +79,9 @@ public class DriverJDBC {
     
     public boolean eliminar(String sentencia) throws SQLException{
         
-        actualizar(sentencia);
+        boolean exito= actualizar(sentencia);
         
-        return true;
+        return exito;
     }
     
     public static DriverJDBC getInstance(){

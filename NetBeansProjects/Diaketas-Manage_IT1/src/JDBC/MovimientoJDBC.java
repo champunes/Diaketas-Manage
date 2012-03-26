@@ -210,10 +210,7 @@ public class MovimientoJDBC {
          
          sentencia = "INSERT INTO movimiento (MovimientoID,Fecha,Importe,concepto,tipo,AsociacionID,AyudaOID) VALUES ('"+movimiento.getMovimientoID()+"','"+fecha_ayuda+"','"+importe.toString()+"','"+movimiento.getConcepto()+"','"+movimiento.getTipo()+"','1','" +ayuda.getOID()+ "' )";
 
-         boolean exito = driver.insertar(sentencia);
-
-         
-         
+         boolean exito = driver.insertar(sentencia); 
          return exito;
      }
              
