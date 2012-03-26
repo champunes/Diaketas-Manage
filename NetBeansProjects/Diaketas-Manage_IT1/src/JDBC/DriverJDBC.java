@@ -1,10 +1,33 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  DriverJDBC.java
+ **
+ ** DESCRIPCION:
+ **       Driver de comunicación con JDBC
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ **     001 - COMPLETA POR AQUI
+ **     002 - Mar 26, 2012 - FBR - Modificación del constructor de la clase, getInstance ahora es public
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 package JDBC;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,26 +51,33 @@ public class DriverJDBC {
     
     private DriverJDBC(){
         
-        instancia = null;
-        conex = null;
-        tabla = null;
-        statement = null;      
     }
     
     //Antes de conectar se debera haber configurado
-    private boolean conectar() throws ClassNotFoundException, SQLException{
+    public boolean conectar(){
         
    
         //Siempre usaremos mysql
-        Class.forName("com.mysql.jdbc.Driver");
-	//conex = DriverManager.getConnection("jdbc:mysql://127.0.0.1/diaketas", usuarioBD, password);
-	conex = DriverManager.getConnection("jdbc:mysql//"+hostBD+"/"+nombreBD , usuarioBD, password);	
+       try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conex = DriverManager.getConnection("jdbc:mysql://"+hostBD+"/"+nombreBD , usuarioBD, password);
+            
+            statement = conex.createStatement();
+        } catch (SQLException ex) {
+            return false;
+        } catch (ClassNotFoundException ex1){
+            return false;
+        }
+       
         return true;
     }
     
-    private boolean desconectar() throws SQLException{
-        
-        conex.close();
+    public boolean desconectar(){
+        try {
+            conex.close();
+        } catch (SQLException ex) {
+            return false;
+        }
         
         return true;
     }

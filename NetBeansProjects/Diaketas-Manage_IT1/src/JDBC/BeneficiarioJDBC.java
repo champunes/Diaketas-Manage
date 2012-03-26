@@ -1,7 +1,29 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  BeneficiarioJDBC.java
+ **
+ ** DESCRIPCION:
+ **       Abstracción JDBC de Beneficiario
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ **     001 - COMPLETA POR AQUI
+ **     002 - Mar 26, 2012 - FBR - Corregidos errores en las sentencias de añadirFamiliar() y datosFamiliares()
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
+
 package JDBC;
 
 import Modelo.Familiar;
@@ -28,14 +50,14 @@ import java.util.ArrayList;
             DriverJDBC driver = DriverJDBC.getInstance() ;
             String sentencia, sentencia2 ;
             String fecha ;
-            fecha = f.getFechaNacimiento().toString();
+            fecha = f.getFechaNacimiento();
 
-            sentencia = "INSERT INTO familiar (NIF,Apellidos,FechaNacimiento,Nombre,Ocupacion,Parentesco) VALUES ('"+f.getNIF()+"','"+f.getApellidos()+"','"+fecha+"','"+f.getNombre()+"','"+f.getOcupacion()+"','"+f.getParentesco()+"' )";
+            sentencia = "INSERT INTO Familiar (NIF,Apellidos,FechaNacimiento,Nombre,Ocupacion,Parentesco) VALUES ('"+f.getNIF()+"','"+f.getApellidos()+"','"+fecha+"','"+f.getNombre()+"','"+f.getOcupacion()+"','"+f.getParentesco()+"' )";
 
             boolean exito = driver.insertar(sentencia);
             
             if(exito==true){
-                sentencia2 = "INSERT INTO familiarbeneficiario (BeneficiarioNIF, FamiliarNIF) VALUES ('"+beneficiarioNIF+",'"+f.getNIF()+"')";
+                sentencia2 = "INSERT INTO FamiliarBeneficiario (BeneficiarioNIF, FamiliarNIF) VALUES ('"+beneficiarioNIF+"','"+f.getNIF()+"')";
                 driver.insertar(sentencia2); 
             }else{
                 System.out.println("Error al realizar el INSERT en la base de datos");
@@ -53,14 +75,14 @@ import java.util.ArrayList;
             Familiar temp ;
             //Si no introducimos parámetro alguno se devolveran todos los familiares
            
-            String consulta = "SELECT * FROM familiar f, familiarbeneficiario fb WHERE fb.beneficiarioNIF=' "+beneficiarioDNI+"' AND f.NIF=fb.FamiliarNIF";
+            String consulta = "SELECT * FROM familiar f, familiarbeneficiario fb WHERE fb.beneficiarioNIF='"+beneficiarioDNI+"' AND f.NIF=fb.FamiliarNIF";
             resultados = driver.seleccionar(consulta);
 
             while (resultados.next()){
                 temp=new Familiar();
                 temp.setNIF(resultados.getString("NIF"));
                 temp.setApellidos(resultados.getString("Apellidos"));
-                temp.setFechaNacimiento(resultados.getDate("FechaNacimiento"));
+                temp.setFechaNacimiento(resultados.getDate("FechaNacimiento").toString());
                 temp.setNombre(resultados.getString("Nombre"));
                 temp.setOcupacion(resultados.getString("Ocupacion"));
                 temp.setParentesco(resultados.getString("Parentesco"));
@@ -96,7 +118,7 @@ import java.util.ArrayList;
             return true;
         }
 
-        public BeneficiarioJDBC getInstance(){
+        public static BeneficiarioJDBC getInstance(){
 
             if(instancia == null)
                     instancia = new BeneficiarioJDBC();

@@ -1,6 +1,27 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  Familiar.java
+ **
+ ** DESCRIPCION:
+ **       Representación de un familiar
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ **     001 - COMPLETA POR AQUI
+ **     002 - Mar 26, 2012 - FBR - Cambiado tipo de dato de fechaNacimiento a String, (tiene que ser del formato YYYY-MM-DD)
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 package Modelo;
 
@@ -14,7 +35,7 @@ import java.util.Date;
 public class Familiar {
     
     private String apellidos;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private String NIF;
     private String nombre;
     private String ocupacion;
@@ -80,7 +101,7 @@ public class Familiar {
      * 
      * @return
      */
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
@@ -88,7 +109,7 @@ public class Familiar {
      * 
      * @param fechaNacimiento
      */
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
