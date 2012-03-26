@@ -1,6 +1,7 @@
 package Controlador;
 
 import Vista.VentanaPrincipal;
+import Vista.VentanaPrincipal2;
 
 /**
  *
@@ -13,6 +14,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO code application logic here
-            VentanaPrincipal.getInstance();
+            //VentanaPrincipal.getInstance();
+			ControladorPrincipal2.getInstance(VentanaPrincipal2.getInstance());
 	}
 }
