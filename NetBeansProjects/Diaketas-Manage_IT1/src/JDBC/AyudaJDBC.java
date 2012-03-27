@@ -71,7 +71,7 @@ public class AyudaJDBC {
             temp = new Ayuda();
             
             temp.setOID(resultado.getString("OID"));
-            temp.setFecha(resultado.getDate("Fecha"));
+            temp.setFecha(resultado.getDate("Fecha").toString());
             temp.setObservaciones(resultado.getString("Observaciones"));
             temp.setImporte(resultado.getFloat("Importe"));
             
@@ -108,7 +108,7 @@ public class AyudaJDBC {
         if(resultados.next()){
             ayuda = new Ayuda();
             ayuda.setOID(resultados.getString("OID"));
-            ayuda.setFecha(resultados.getDate("Fecha"));
+            ayuda.setFecha(resultados.getDate("Fecha").toString());
             ayuda.setImporte(resultados.getFloat("Importe"));
             ayuda.setObservaciones("Observaciones");
             
