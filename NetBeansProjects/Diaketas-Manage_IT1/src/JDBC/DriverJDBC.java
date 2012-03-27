@@ -15,8 +15,9 @@
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion
- **     001 - COMPLETA POR AQUI
- **     002 - Mar 26, 2012 - FBR - Modificación del constructor de la clase, getInstance ahora es public
+ **     001 - Mar 25, 2012 - FBR - Implementación de los métodos
+ *      002 - Mar 26, 2012 - FBR - Modificación de diversos métodos
+ **     003 - Mar 26, 2012 - FBR - Modificación del constructor de la clase, getInstance ahora es public
  *      
  **
  ** NOTAS:

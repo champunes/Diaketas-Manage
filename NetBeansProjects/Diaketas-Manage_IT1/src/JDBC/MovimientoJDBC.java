@@ -1,6 +1,28 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  MovimientoJDBC.java
+ **
+ ** DESCRIPCION:
+ **       Abstracción JDBC de Movimiento
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion e implementación de los  métodos
+ **     001 - Mar 25, 2012 - FBR - Implementacion de los metodos
+ *      002 - Mar 26, 2012 - FBR - Implementacion de los métodos 
+ **   
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 package JDBC;
 
@@ -100,7 +122,7 @@ public class MovimientoJDBC {
               ArrayList<Ayuda> lista_ayudas = new ArrayList<Ayuda>();
               while (rs2.next()){
                   ayu = new Ayuda();
-                  ayu.setFecha(rs2.getDate("Fecha").toString());
+                  ayu.setFecha(rs2.getDate("Fecha"));
                   ayu.setImporte(rs2.getFloat("Importe"));
                   ayu.setObservaciones(rs2.getString("Observaciones"));
                   ayu.setOID(rs2.getString("OID"));
@@ -160,7 +182,7 @@ public class MovimientoJDBC {
               ArrayList<Ayuda> lista_ayudas = new ArrayList<Ayuda>();
               while (rs2.next()){
                   ayu = new Ayuda();
-                  ayu.setFecha(rs2.getDate("Fecha").toString());
+                  ayu.setFecha(rs2.getDate("Fecha"));
                   ayu.setImporte(rs2.getFloat("Importe"));
                   ayu.setObservaciones(rs2.getString("Observaciones"));
                   ayu.setOID(rs2.getString("OID"));

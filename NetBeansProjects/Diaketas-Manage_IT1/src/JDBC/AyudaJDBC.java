@@ -1,6 +1,6 @@
 /**
  ** NOMBRE CLASE: 
- **	  AtudaJDBC.java
+ **	  AyudaJDBC.java
  **
  ** DESCRIPCION:
  **       Abstracción JDBC de Ayuda
@@ -14,15 +14,18 @@
  **          
  **
  ** HISTORIA:
- ** 	000 - Mar 24, 2012 - FBR - Creacion
- **     001 - COMPLETA POR AQUI
- **     002 - Mar 27, 2012 - FBR - Modificado getInstance() e instancia a static
+ ** 	000 - Mar 24, 2012 - FBR - Creacion 
+ **     001 - Mar 26, 2012 - FBR - Implementacion de los metodos
+ *      
+ **   
  *      
  **
  ** NOTAS:
  **   
  **
  */
+
+
 package JDBC;
 
 import Modelo.Ayuda;
@@ -39,14 +42,14 @@ import java.util.Date;
  */
 public class AyudaJDBC {
     
-    private static AyudaJDBC instancia;
+    private AyudaJDBC instancia;
     
     private AyudaJDBC(){
         
         
     }
     
-    public static AyudaJDBC getInstance(){
+    public AyudaJDBC getInstance(){
 
         if(instancia == null)
              instancia = new AyudaJDBC();
@@ -68,7 +71,7 @@ public class AyudaJDBC {
             temp = new Ayuda();
             
             temp.setOID(resultado.getString("OID"));
-            temp.setFecha(resultado.getDate("Fecha").toString());
+            temp.setFecha(resultado.getDate("Fecha"));
             temp.setObservaciones(resultado.getString("Observaciones"));
             temp.setImporte(resultado.getFloat("Importe"));
             
@@ -105,7 +108,7 @@ public class AyudaJDBC {
         if(resultados.next()){
             ayuda = new Ayuda();
             ayuda.setOID(resultados.getString("OID"));
-            ayuda.setFecha(resultados.getDate("Fecha").toString());
+            ayuda.setFecha(resultados.getDate("Fecha"));
             ayuda.setImporte(resultados.getFloat("Importe"));
             ayuda.setObservaciones("Observaciones");
             

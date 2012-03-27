@@ -15,7 +15,8 @@
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion
- **     001 - COMPLETA POR AQUI
+ **     001 - Mar 25, 2012 - FBR - Implementacion de los metodos
+ **     002 - Mar 26, 2012 - FBR - Implementacion de los métodos 
  **     002 - Mar 26, 2012 - FBR - Corregidos errores en las sentencias de añadirFamiliar() y datosFamiliares()
  *      
  **
