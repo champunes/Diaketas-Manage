@@ -29,6 +29,10 @@
 package Controlador;
 
 import Vista.VentanaPrincipal;
+import Modelo.Voluntario;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -74,6 +78,41 @@ public class ControladorVoluntarios{
 		vista.anadirListenerNavToVoluntariosFromDatosVoluntario(new ListenerNavToVoluntarios());
 		
     }
+	
+	private boolean insertarVoluntario(String[] datos,String password){
+		
+		if (Utilidades.comprobarDatos(datos) == false ||Utilidades.comprobarContrasena(password) == false)
+			return false;
+		
+		Voluntario temp = new Voluntario();
+		/*El orden de los datos en el array es:
+			 Nombre,Apellidos,NIF,FechaNacimiento,Nacionalidad,EstadoCivil,
+			 NivelEstudios,Profesion,Domicilio,CP,Localidad,Telefono,Observaciones
+			*/
+		
+		temp.setNombre(datos[0]);
+		temp.setApellidos(datos[1]);
+		temp.setNIF(datos[2]);
+		DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
+		try{
+		temp.setFechaDENacimiento(df.parse(datos[3]));
+		}
+		catch(ParseException p){
+			System.err.print(p.getMessage());
+		}
+		//temp.setNacionalidad(datos[4]);
+		//temp.setEstadoCivil(datos[5]);
+		//temp.setNivelEstudios(datos[6]);
+		//temp.setProfesion(datos[7]);
+		temp.setDomicilio(datos[8]);
+		temp.setCP(Integer.parseInt(datos[9]));
+		temp.setLocalidad(datos[10]);
+		temp.setTelefonoFijo(Integer.parseInt(datos[11]));
+		//temp.setObservaciones();
+		temp.setPassword(password);
+		return true;	
+			
+	}
 	
 	/**
 	 * Clase interna para manejar los eventos de btAyudas
@@ -179,8 +218,27 @@ public class ControladorVoluntarios{
 
 		@Override
 		public void actionPerformed(ActionEvent ae) {
-			String sAccion = ae.getActionCommand();
-			System.out.println("Accion ejecutada: " + sAccion);
+			String[] datos = new String[13];
+			/*El orden de los datos en el array es:
+			 Nombre,Apellidos,NIF,FechaNacimiento,Nacionalidad,EstadoCivil,
+			 NivelEstudios,Profesion,Domicilio,CP,Localidad,Telefono,Observaciones
+			*/
+			datos[0] = vista.obtenerNombreVoluntario();
+			datos[1] = vista.obtenerApellidosVoluntario();
+			datos[2] = vista.obtenerNIFVoluntario();
+			datos[3] = vista.obtenerFechaNacimientoVoluntario();
+			datos[4] = vista.obtenerNacionalidadVoluntario();
+			datos[5] = vista.obtenerEstadoCivilVoluntario();
+			datos[6] = vista.obtenerNivelEstudiosVoluntario();
+			datos[7] = vista.obtenerProfesionVoluntario();
+			datos[8] = vista.obtenerDomicilioVoluntario();
+			datos[9] = vista.obtenerCPVoluntario();
+			datos[10] = vista.obtenerLocalidadVoluntario();
+			datos[11] = vista.obtenerTelefonoVoluntario();
+			datos[12] = vista.obtenerObservacionesVoluntario();
+			
+			insertarVoluntario(datos,"pass");
+					
 		}
 		
 	}
