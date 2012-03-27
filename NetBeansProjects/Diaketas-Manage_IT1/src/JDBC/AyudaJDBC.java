@@ -1,6 +1,27 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  AtudaJDBC.java
+ **
+ ** DESCRIPCION:
+ **       Abstracción JDBC de Ayuda
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ **     001 - COMPLETA POR AQUI
+ **     002 - Mar 27, 2012 - FBR - Modificado getInstance() e instancia a static
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 package JDBC;
 
@@ -18,14 +39,14 @@ import java.util.Date;
  */
 public class AyudaJDBC {
     
-    private AyudaJDBC instancia;
+    private static AyudaJDBC instancia;
     
     private AyudaJDBC(){
         
         
     }
     
-    public AyudaJDBC getInstance(){
+    public static AyudaJDBC getInstance(){
 
         if(instancia == null)
              instancia = new AyudaJDBC();
@@ -47,7 +68,7 @@ public class AyudaJDBC {
             temp = new Ayuda();
             
             temp.setOID(resultado.getString("OID"));
-            temp.setFecha(resultado.getDate("Fecha"));
+            temp.setFecha(resultado.getDate("Fecha").toString());
             temp.setObservaciones(resultado.getString("Observaciones"));
             temp.setImporte(resultado.getFloat("Importe"));
             
@@ -84,7 +105,7 @@ public class AyudaJDBC {
         if(resultados.next()){
             ayuda = new Ayuda();
             ayuda.setOID(resultados.getString("OID"));
-            ayuda.setFecha(resultados.getDate("Fecha"));
+            ayuda.setFecha(resultados.getDate("Fecha").toString());
             ayuda.setImporte(resultados.getFloat("Importe"));
             ayuda.setObservaciones("Observaciones");
             

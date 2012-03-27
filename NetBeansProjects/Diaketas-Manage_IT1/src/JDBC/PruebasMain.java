@@ -4,8 +4,7 @@
  */
 package JDBC;
 
-import Modelo.Beneficiario;
-import Modelo.Familiar;
+import Modelo.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,7 +28,7 @@ public class PruebasMain {
             System.exit(-1);
         }
         
-        BeneficiarioJDBC benf = BeneficiarioJDBC.getInstance();
+  /*      BeneficiarioJDBC benf = BeneficiarioJDBC.getInstance();
         
         
         Familiar fam = new Familiar();
@@ -56,6 +55,39 @@ public class PruebasMain {
         } catch (SQLException ex) {
             Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
         }
+     */
         
+        AyudaJDBC ay = AyudaJDBC.getInstance();
+        
+        Ayuda ayud = new Ayuda();
+        Asociacion asoc = new Asociacion();
+        asoc.setNombre("DIAKETAS");
+        
+        ayud.setAsociacionQueOtorga(asoc);
+        ayud.setImporte(300);
+        ayud.setFecha("2012-03-27");
+        Beneficiario benef = new Beneficiario();
+        benef.setNombre("Pepe");
+        benef.setApellidos("Garcia Palos");
+        benef.setNIF("12345678Y");
+        benef.setAsociacion(asoc);
+        benef.setCP(18000);
+        benef.setDomicilio("C/Falsa 123");
+        benef.setEstadoCivil("soltero");
+        benef.setLocalidad("GRANADA");
+        benef.setNacionalidad("ESPAÑOLA");
+        
+        ayud.setBeneficiarioDeAyuda(benef);
+         TipoAyuda tip = new TipoAyuda();
+         tip.setMonetaria(true);
+         tip.setDescripcion("Ayuda de tipo monetaria");
+         tip.setOID("1");
+         tip.setTitulo("MONTERIA");
+        try {
+            ay.insertarTipoAyuda(tip);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

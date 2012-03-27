@@ -1,6 +1,27 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  Ayuda.java
+ **
+ ** DESCRIPCION:
+ **       Clase que representa una ayuda
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ **     001 - COMPLETA POR AQUI
+ **     002 - Mar 26, 2012 - FBR - Tipo de 'fecha' cambiado a string, tiene que ser del formato YYYY-MM-DD
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 
 package Modelo;
@@ -14,7 +35,7 @@ import java.util.Date;
  */
 public class Ayuda {
     
-    private Date fecha;
+    private String fecha;
     private float importe;
     private String observaciones;
     private String OID;
@@ -85,7 +106,7 @@ public class Ayuda {
      * 
      * @return
      */
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
@@ -93,7 +114,7 @@ public class Ayuda {
      * 
      * @param fecha
      */
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
