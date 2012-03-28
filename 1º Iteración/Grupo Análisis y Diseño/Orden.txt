@@ -20,8 +20,3 @@ DISEÑO
 	- Diagramas de Secuencia de Objetos
 	- Diagrama de Clases de Diseño
 	- Diagrama de componentes
-
-Antonio:
-	Te he arreglado esto. Miralo.
-	P.D: Hace falta, ya que estan los diagramas de secuencia (espero), y los diagramas de clase, hacer un documento con eso, y mandarselo al profesor.
-	
