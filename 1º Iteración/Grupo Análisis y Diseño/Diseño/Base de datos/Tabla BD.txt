@@ -1,0 +1,70 @@
+Faltan las tablas de relaciones
+
+Persona {
+	NIF			VARCHAR(8) PRIMARY KEY
+	Nombre			VARCHAR(30) 
+	Apellido		VARCHAR(30)
+	FechaDeNacimiento	DATE
+	Domicilio		VARCHAR(99)
+	Localidad		VARCHAR(30)
+	CP 			VARCHAR(20)
+	TelFijo			INTEGER
+	TelMovil		INTEGER
+}
+
+Voluntario {
+	NIF_V 			VARCHAR FOREIGN KEY REFERENCES Persona ON UPDATE CASCADE ON DELETE CASCADE
+	Password		VARCHAR(20)
+	PK (NIF_V)
+}
+
+Beneficiario {
+	NIF_B 			VARCHAR FOREIGN KEY REFERENCES Persona ON UPDATE CASCADE ON DELETE CASCADE
+	EstadoCivil		VARCHAR(20)
+	Nacionalidad		VARCHAR(20)
+	PK (NIF_V)
+}
+
+Familiar {
+	NIF			VARCHAR(8) PRIMARY KEY
+	Nombre			VARCHAR(30) 
+	Apellido		VARCHAR(30)
+	FechaDeNacimiento	DATE
+	Ocupacion		VARCHAR(30)
+	Parentesco		Varchar(20)
+}
+
+Asociacion {
+	id_asociacion		INT PRIMARY KEY
+	Direccion		VARCHAR(50)
+	Nombre			VARCHAR(15)
+}
+
+Movimiento {
+	id_movimiento		INT PRIMARY KEY
+	Fecha			DATE
+	Importe			DECIMAL
+	Concepto		VARCHAR(20)
+	Tipo			CHAR ('G' Gasto, 'I' Ingreso)
+	
+}
+
+Modificacion {
+	id_modificacion		INT PRIMARY KEY
+	Fecha			DATE
+}
+
+Ayuda {
+	id_ayuda		INT PRIMARY KEY
+	Fecha			DATE
+	Importe			VARCHAR(20)
+	Observaciones		VARCHAR(99)
+}
+
+Tipo Ayuda {
+	id_tipoAyuda		INT PRIMARY KEY
+	Titulo			VARCHAR(20)
+	Descripcion		VARCHAR(99)
+	Monetaria
+}
+

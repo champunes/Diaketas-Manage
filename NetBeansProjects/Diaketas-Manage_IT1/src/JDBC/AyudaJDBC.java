@@ -42,14 +42,14 @@ import java.util.Date;
  */
 public class AyudaJDBC {
     
-    private AyudaJDBC instancia;
+    private static AyudaJDBC instancia;
     
     private AyudaJDBC(){
         
         
     }
     
-    public AyudaJDBC getInstance(){
+    public static AyudaJDBC getInstance(){
 
         if(instancia == null)
              instancia = new AyudaJDBC();
@@ -63,7 +63,7 @@ public class AyudaJDBC {
         ArrayList<Ayuda> lista_ayudas = new ArrayList<Ayuda>();
         DriverJDBC driver = DriverJDBC.getInstance() ;
         
-        String sentencia = "SELECT * FROM ayuda a, tipoayuda t WHERE a.VoluntarioNIF='"+dni+"' AND a.fecha>="+fechaIni+" AND a.Fecha<="+fechaFin+" AND a.Importe>="+importeIni+" AND a.Importe<="+importeFin+" AND t.OID = a.tipoAyudaOID AND t.titulo LIKE '%"+tipoAyuda+"%'";
+        String sentencia = "SELECT * FROM ayuda a, tipoayuda t WHERE a.BeneficiarioNIF='"+dni+"' AND a.fecha>="+fechaIni+" AND a.Fecha<="+fechaFin+" AND a.Importe>="+importeIni+" AND a.Importe<="+importeFin+" AND t.OID = a.tipoAyudaOID AND t.titulo LIKE '%"+tipoAyuda+"%'";
         
         ResultSet resultado = driver.seleccionar(sentencia);
         Ayuda temp;

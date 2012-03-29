@@ -15,8 +15,7 @@
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion
- **     001 - COMPLETA POR AQUI
- **     002 - Mar 26, 2012 - FBR - Tipo de 'fecha' cambiado a string, tiene que ser del formato YYYY-MM-DD
+ **     001 - Mar 26, 2012 - FBR - Tipo de 'fecha' cambiado a string, tiene que ser del formato YYYY-MM-DD
  *      
  **
  ** NOTAS:
@@ -27,7 +26,6 @@
 package Modelo;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *

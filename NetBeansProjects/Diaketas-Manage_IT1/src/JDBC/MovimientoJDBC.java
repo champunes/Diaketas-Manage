@@ -47,7 +47,7 @@ public class MovimientoJDBC {
         
      }
      
-     public MovimientoJDBC getInstance(){
+     public static MovimientoJDBC getInstance(){
 
             if(instancia == null)
                     instancia = new MovimientoJDBC();

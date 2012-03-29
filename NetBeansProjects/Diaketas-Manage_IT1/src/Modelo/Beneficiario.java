@@ -1,6 +1,25 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  Beneficiario.java
+ **
+ ** DESCRIPCION:
+ **       Abstracción de Beneficiario
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ *      
+ **
+ ** NOTAS:
+ **   
+ **
  */
 
 package Modelo;
@@ -24,8 +43,7 @@ public class Beneficiario extends Persona {
     private String vivienda;
     private float viviendaAlquiler;
     private String viviendaObservaciones;
-    
-    private ArrayList<Familiar>  familiares;
+   
     private ArrayList<Ayuda> ayudasPrestadas;
 
     /**
@@ -66,21 +84,8 @@ public class Beneficiario extends Persona {
         this.estadoCivil = estadoCivil;
     }
 
-    /**
-     * 
-     * @return
-     */
-    public ArrayList<Familiar> getFamiliares() {
-        return familiares;
-    }
+   
 
-    /**
-     * 
-     * @param familiares
-     */
-    public void setFamiliares(ArrayList<Familiar> familiares) {
-        this.familiares = familiares;
-    }
 
     /**
      * 

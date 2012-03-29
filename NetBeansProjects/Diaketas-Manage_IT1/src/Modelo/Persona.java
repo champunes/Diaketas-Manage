@@ -1,9 +1,29 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ ** NOMBRE CLASE: 
+ **	  Persona.java
+ **
+ ** DESCRIPCION:
+ **       Abstracción de Persona
+ **       
+ **
+ ** DESARROLLADO POR:
+ *        Francisco José Beltrán Rodriguez (FBR)
+ *	   
+ **        
+ ** SUPERVISADO POR:
+ **          
+ **
+ ** HISTORIA:
+ ** 	000 - Mar 24, 2012 - FBR - Creacion
+ *      001 - Mar 29, 2012 - FBR - Se ha añadido un vector para indicar los familiares
+ **
+ ** NOTAS:
+ **   
+ **
  */
 package Modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -21,6 +41,7 @@ public abstract class Persona {
     private String nombre;
     private int telefonoFijo;
     private int telefonoMovil;
+    private ArrayList<Persona> familia;
     
     private Asociacion asociacion;
 
