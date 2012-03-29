@@ -24,8 +24,7 @@ public class Beneficiario extends Persona {
     private String vivienda;
     private float viviendaAlquiler;
     private String viviendaObservaciones;
-    
-    private ArrayList<Familiar>  familiares;
+   
     private ArrayList<Ayuda> ayudasPrestadas;
 
     /**
@@ -66,21 +65,8 @@ public class Beneficiario extends Persona {
         this.estadoCivil = estadoCivil;
     }
 
-    /**
-     * 
-     * @return
-     */
-    public ArrayList<Familiar> getFamiliares() {
-        return familiares;
-    }
+   
 
-    /**
-     * 
-     * @param familiares
-     */
-    public void setFamiliares(ArrayList<Familiar> familiares) {
-        this.familiares = familiares;
-    }
 
     /**
      * 

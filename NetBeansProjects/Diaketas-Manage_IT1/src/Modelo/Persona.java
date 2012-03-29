@@ -4,6 +4,7 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -21,6 +22,7 @@ public abstract class Persona {
     private String nombre;
     private int telefonoFijo;
     private int telefonoMovil;
+    private ArrayList<Persona> familia;
     
     private Asociacion asociacion;
 

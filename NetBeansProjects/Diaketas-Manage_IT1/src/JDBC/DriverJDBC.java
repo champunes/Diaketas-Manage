@@ -44,7 +44,7 @@ public class DriverJDBC {
     private String password;
     private String usuarioBD;
     private Statement statement;
-    private ResultSet tabla;
+  
     
     
     
