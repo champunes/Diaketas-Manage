@@ -11,7 +11,7 @@
  *	   
  **        
  ** SUPERVISADO POR:
- **          
+ **       Adolfo Arcoya Nieto (AAN)   
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion
@@ -46,7 +46,7 @@ import java.util.ArrayList;
         }
     
         
-        public boolean añadirFamiliar (Familiar f, String beneficiarioNIF) throws SQLException{
+       /* public boolean añadirFamiliar (Familiar f, String beneficiarioNIF) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;
             String sentencia, sentencia2 ;
@@ -96,7 +96,7 @@ import java.util.ArrayList;
 
         }
 
-        
+        */
         public boolean eliminarDatosfamiliar(String familiar_DNI, String beneficiario_DNI) throws SQLException{
 
             DriverJDBC driver = DriverJDBC.getInstance() ;

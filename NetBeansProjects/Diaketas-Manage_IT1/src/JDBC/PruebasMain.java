@@ -76,16 +76,40 @@ public class PruebasMain {
         benef.setEstadoCivil("soltero");
         benef.setLocalidad("GRANADA");
         benef.setNacionalidad("ESPAÑOLA");
-        
+        System.out.println(asoc.getNombre());
         ayud.setBeneficiarioDeAyuda(benef);
          TipoAyuda tip = new TipoAyuda();
          tip.setMonetaria(true);
          tip.setDescripcion("Ayuda de tipo monetaria");
          tip.setOID("1");
          tip.setTitulo("MONTERIA");
-        try {
+       /* try {
             ay.insertarTipoAyuda(tip);
             
+        } catch (SQLException ex) {
+            Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tip.setDescripcion("modificando");
+        tip.setTitulo("JARJAR");
+        try{
+        ay.modificarDatosTipoAyuda(tip);
+        } catch (SQLException ex) {
+            Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        java.util.Date fecha = new java.util.Date();
+        java.sql.Date sqldate = new java.sql.Date(fecha.getTime());
+        Movimiento mov = new Movimiento();
+        mov.setAsociacionQueGenera(asoc);
+        mov.setConcepto("eres mu feo");
+        mov.setFecha(sqldate);
+        mov.setImporte(200);
+        mov.setMovimientoID("1");
+        mov.setTipo('I');
+        
+        MovimientoJDBC movi = MovimientoJDBC.getInstance();
+        
+        try{
+        movi.registrarDatosGasto(mov);
         } catch (SQLException ex) {
             Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
         }

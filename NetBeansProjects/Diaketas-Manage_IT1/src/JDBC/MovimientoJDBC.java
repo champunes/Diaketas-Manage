@@ -11,7 +11,7 @@
  *	   
  **        
  ** SUPERVISADO POR:
- **          
+ **       Adolfo Arcoya Nieto (AAN)  
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion e implementación de los  métodos
