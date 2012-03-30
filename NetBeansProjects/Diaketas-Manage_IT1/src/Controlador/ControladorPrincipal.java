@@ -19,6 +19,7 @@
  *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
  *		003 - Mar 26, 2012 - JGM - Restructuracion de la clase para adaptarse a la arquitectura MVC
+ *		004 - Mar 30, 2012 - JGM - conectarUsuario(), deconectarUsuario(), ListenerBtConectarse
  *      
  **
  ** NOTAS:
@@ -28,12 +29,12 @@
 
 package Controlador;
 
+import JDBC.DriverJDBC;
 import Vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-public class ControladorPrincipal {
+public class ControladorPrincipal implements Controlador{
 	
     /** PATRON DE DISEÑO SINGLETON */
     
@@ -49,6 +50,7 @@ public class ControladorPrincipal {
     }
 
     private VentanaPrincipal vista;
+	private DriverJDBC dr;
 
     /**
      * Constructor de la clase
@@ -59,6 +61,9 @@ public class ControladorPrincipal {
      * Establece como ventana padre la pasada como parámetro
      */
 		vista = pvista;
+		
+		dr = DriverJDBC.getInstance();
+		
 	/** 
      * Conecta el controlador con las distintas interfaces de la vista
      */
@@ -77,6 +82,34 @@ public class ControladorPrincipal {
 		vista.anadirListenerNavToMainFromBeneficiarioDatos(new ListenerNavToMain());
 		
     }
+
+	@Override
+	public boolean comprobarDatos(String datos[]) {
+		
+		//Comprobar login		
+		return true;
+		
+	}
+	
+	public boolean conectarUsuario(String usuario, String contrasena){
+		
+		String[] log = {usuario,contrasena};
+		if(comprobarDatos(log) == false)
+			return false;
+		
+		dr.configurar("localhost", "Diaketas", usuario, contrasena);
+		if(!dr.conectar())		
+			return false;
+		
+		return true;
+		
+	}
+	
+	public boolean desconectarUsuario(){
+		
+		return dr.desconectar();
+		
+	}
    
 	/**
 	 * Clase interna para manejar los eventos de btConectarse
@@ -87,6 +120,10 @@ public class ControladorPrincipal {
 		@Override
 		public void actionPerformed(ActionEvent ae) {
 			vista.mostrarVistaPrincipal();
+			String usuario,contrasena;
+			usuario = vista.obtenerUsuario();
+			contrasena = vista.obtenerContrasena();
+			conectarUsuario(usuario,contrasena);
 		}
 		
 	}
