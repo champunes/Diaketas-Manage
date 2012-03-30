@@ -58,11 +58,13 @@ public class PruebasMain {
      */
         
         AyudaJDBC ay = AyudaJDBC.getInstance();
+        BeneficiarioJDBC be = BeneficiarioJDBC.getInstance();
         
         Ayuda ayud = new Ayuda();
         Asociacion asoc = new Asociacion();
         asoc.setNombre("DIAKETAS");
-        
+        java.util.Date fecha = new java.util.Date();
+        java.sql.Date sqldate = new java.sql.Date(fecha.getTime());
         ayud.setAsociacionQueOtorga(asoc);
         ayud.setImporte(300);
         ayud.setFecha("2012-03-27");
@@ -76,6 +78,17 @@ public class PruebasMain {
         benef.setEstadoCivil("soltero");
         benef.setLocalidad("GRANADA");
         benef.setNacionalidad("ESPAÑOLA");
+        benef.setFechaDENacimiento(sqldate);
+        benef.setTelefonoFijo(958131718);
+        benef.setTelefonoMovil(630981148);
+        benef.setNivelDeEstudio(1);
+        benef.setObservaciones("");
+        benef.setOcupacion("");
+        benef.setSituacionEconomica("");
+        benef.setProfesion("");
+        benef.setVivienda("");
+        benef.setViviendaAlquiler(1);
+        benef.setViviendaObservaciones("");
         System.out.println(asoc.getNombre());
         ayud.setBeneficiarioDeAyuda(benef);
          TipoAyuda tip = new TipoAyuda();
@@ -83,6 +96,12 @@ public class PruebasMain {
          tip.setDescripcion("Ayuda de tipo monetaria");
          tip.setOID("1");
          tip.setTitulo("MONTERIA");
+         try {
+            be.añadirBeneficiario(benef);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
        /* try {
             ay.insertarTipoAyuda(tip);
             
@@ -96,7 +115,7 @@ public class PruebasMain {
         } catch (SQLException ex) {
             Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        java.util.Date fecha = new java.util.Date();
+        /*java.util.Date fecha = new java.util.Date();
         java.sql.Date sqldate = new java.sql.Date(fecha.getTime());
         Movimiento mov = new Movimiento();
         mov.setAsociacionQueGenera(asoc);
@@ -112,6 +131,6 @@ public class PruebasMain {
         movi.registrarDatosGasto(mov);
         } catch (SQLException ex) {
             Logger.getLogger(PruebasMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }
 }

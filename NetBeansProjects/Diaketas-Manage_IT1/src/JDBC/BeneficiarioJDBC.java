@@ -19,6 +19,7 @@
  **     002 - Mar 26, 2012 - FBR - Implementacion de los métodos 
  **     003 - Mar 26, 2012 - FBR - Corregidos errores en las sentencias de añadirFamiliar() y datosFamiliares()
  *      004 - Mar 27, 2012 - FBR - Ampliación e implementación de métodos
+ *      005 - Mar 30, 2012 - AAN - Reestructuracion para usar la tabla person
  **
  ** NOTAS:
  **   
@@ -134,10 +135,11 @@ import java.util.ArrayList;
            
             String sql = "SELECT * FROM beneficiario WHERE (NIF='"+DNI+"')";
             
+            String sql2 = "SELECT * FROM persona WHERE (NIF='"+DNI+"')";
             ResultSet resultado = driver.seleccionar(sql);
+            ResultSet resultado2 = driver.seleccionar(sql2);
             Beneficiario benef = null ;
-            
-            if(resultado.next()){
+            if(resultado2.next()){
                 benef = new Beneficiario();
                 benef.setNIF(resultado.getString("NIF"));
                 benef.setNombre(resultado.getString("Nombre"));
@@ -147,8 +149,11 @@ import java.util.ArrayList;
                 benef.setTelefonoFijo(resultado.getInt("TelefonoFijo"));
                 benef.setTelefonoMovil(resultado.getInt("TelefonoMovil"));
                 benef.setDomicilio(resultado.getString("Domicilio"));
-                benef.setEstadoCivil(resultado.getString("EstadoCivil"));
                 benef.setLocalidad(resultado.getString("Localidad"));
+            }
+            
+            if(resultado.next()){
+                benef.setEstadoCivil(resultado.getString("EstadoCivil"));
                 benef.setNacionalidad(resultado.getString("Nacionalidad"));
                 benef.setNivelDeEstudio(resultado.getInt("NivelDeEstudio")); //En la base de datos NivelDeEstudio debe aparecer como entero
                 benef.setObservaciones(resultado.getString("Observaciones"));
@@ -184,23 +189,14 @@ import java.util.ArrayList;
             
             DriverJDBC driver = DriverJDBC.getInstance() ;
            
-            String sql = "SELECT * FROM beneficiario WHERE "+tipoDato+"="+dato;
-            
+            String sql = "SELECT * FROM beneficiario WHERE "+tipoDato+"="+dato+"'";
+            String sql2= "SELECT * FROM persona WHERE "+tipoDato+"="+dato+"'";
             ResultSet resultados = driver.seleccionar(sql);
             ArrayList<Beneficiario> listadoBeneficiarios = new ArrayList<Beneficiario>();
             Beneficiario temp = null;
             if(resultados.next()){
                 temp = new Beneficiario();
                 temp.setNIF(resultados.getString("NIF"));
-                temp.setNombre(resultados.getString("Nombre"));
-                temp.setApellidos(resultados.getString("Apellidos"));
-                temp.setFechaDENacimiento(resultados.getDate("FechaNacimiento"));
-                temp.setCP(resultados.getInt("CP"));
-                temp.setTelefonoFijo(resultados.getInt("TelefonoFijo"));
-                temp.setTelefonoMovil(resultados.getInt("TelefonoMovil"));
-                temp.setDomicilio(resultados.getString("Domicilio"));
-                temp.setLocalidad(resultados.getString("Localidad"));
-                temp.setNacionalidad(resultados.getString("Nacionalidad"));
                 temp.setNivelDeEstudio(resultados.getInt("NivelDeEstudio")); //En la base de datos NivelDeEstudio debe aparecer como entero
                 temp.setObservaciones(resultados.getString("Observaciones"));
                 temp.setOcupacion(resultados.getString("Ocupacion"));
@@ -209,10 +205,24 @@ import java.util.ArrayList;
                 temp.setVivienda(resultados.getString("Vivienda"));
                 temp.setViviendaAlquiler(resultados.getFloat("ViviendaAlquiler"));
                 temp.setViviendaObservaciones(resultados.getString("ViviendaObservaciones"));
-                
+                temp.setNacionalidad(resultados.getString("Nacionalidad"));
                 listadoBeneficiarios.add(temp);
             }
             
+            ResultSet resultados2 = driver.seleccionar(sql2);
+            if(resultados2.next()){
+                temp.setNombre(resultados.getString("Nombre"));
+                temp.setApellidos(resultados.getString("Apellidos"));
+                temp.setFechaDENacimiento(resultados.getDate("FechaNacimiento"));
+                temp.setCP(resultados.getInt("CP"));
+                temp.setTelefonoFijo(resultados.getInt("TelefonoFijo"));
+                temp.setTelefonoMovil(resultados.getInt("TelefonoMovil"));
+                temp.setDomicilio(resultados.getString("Domicilio"));
+                temp.setLocalidad(resultados.getString("Localidad"));
+                
+                   
+                listadoBeneficiarios.add(temp);
+            }
             return listadoBeneficiarios;
         } 
         
@@ -228,8 +238,11 @@ import java.util.ArrayList;
             Integer nivel_estudio = beneficiario.getNivelDeEstudio();
             String nivel_estudio_cadena = nivel_estudio.toString();
             
+            String sql2 = "UPDATE persona SET NIF='"+beneficiario.getNIF()+"',Nombre='"+beneficiario.getNombre()+"',Apellidos='"+beneficiario.getApellidos()+"',FechaNacimiento='"+beneficiario.getFechaDENacimiento()+"',CP='"+Cp_cadena+"',TelefonoFijo='"+telefono_fijo_cadena+"',TelefonoMovil='"+telefono_movil_cadena+"',Domicilio='"+beneficiario.getDomicilio()+"',Localidad='"+beneficiario.getLocalidad()+"WHERE NIF ="+beneficiario.getNIF()+"'";
             
-            String sql = "UPDATE beneficiari SET NIF='"+beneficiario.getNIF()+"',Nombre='"+beneficiario.getNombre()+"',Apellidos='"+beneficiario.getApellidos()+"',FechaNacimiento='"+beneficiario.getFechaDENacimiento().toString()+"',CP='"+Cp_cadena+"',TelefonoFijo='"+telefono_fijo_cadena+"',TelefonoMovil='"+telefono_movil_cadena+"',Domicilio='"+beneficiario.getDomicilio()+"',EstadoCivil='"+beneficiario.getEstadoCivil()+"',Localidad='"+beneficiario.getLocalidad()+"',Nacionalidad='"+beneficiario.getNacionalidad()+"',NivelDeEstudio='"+nivel_estudio_cadena+"',Observaciones='"+beneficiario.getObservaciones()+"',Ocupacion='"+beneficiario.getOcupacion()+"',Profesion='"+beneficiario.getProfesion()+"',SituacionEconomica='"+beneficiario.getSituacionEconomica()+"',Vivienda='"+beneficiario.getVivienda()+"',ViviendaAlquiler='"+beneficiario.getViviendaAlquiler()+"',ViviendaObservaciones='"+beneficiario.getViviendaObservaciones()+"WHERE NIF ="+beneficiario.getNIF();
+            boolean exito2 = driver.actualizar(sql2);
+            
+            String sql = "UPDATE beneficiario SET NIF='"+beneficiario.getNIF()+"',Nacionalidad='"+beneficiario.getNacionalidad()+"',EstadoCivil='"+beneficiario.getEstadoCivil()+"',NivelDeEstudio='"+nivel_estudio_cadena+"',Observaciones='"+beneficiario.getObservaciones()+"',Ocupacion='"+beneficiario.getOcupacion()+"',Profesion='"+beneficiario.getProfesion()+"',SituacionEconomica='"+beneficiario.getSituacionEconomica()+"',Vivienda='"+beneficiario.getVivienda()+"',ViviendaAlquiler='"+beneficiario.getViviendaAlquiler()+"',ViviendaObservaciones='"+beneficiario.getViviendaObservaciones()+"WHERE NIF ="+beneficiario.getNIF()+"'";
             
             boolean exito = driver.actualizar(sql);
             
@@ -249,8 +262,9 @@ import java.util.ArrayList;
         String nivel_estudio_cadena = nivel_estudio.toString();
         Float vivienda_alquiler = beneficiario.getViviendaAlquiler();
         String vivienda_alquiler_cadena = nivel_estudio.toString();
-        
-        String sql = "INSERT INTO beneficiario (NIF,Nombre,Apellidos,FechaNacimiento,CP,TelefonoFijo,TelefonoMovil,Domicilio,EstadoCivil,Localidad,Nacionalidad,NivelDeEstudio,Observaciones,Ocupacion,Profesion,SituacionEconomica,Vivienda,ViviendaAlquiler,ViviendaObservaciones) VALUES ('"+beneficiario.getNIF()+"','"+beneficiario.getNombre()+"','"+beneficiario.getApellidos()+"','"+beneficiario.getFechaDENacimiento().toString()+"','"+Cp_cadena+"','"+telefono_fijo_cadena+"','"+telefono_movil_cadena+"','"+beneficiario.getDomicilio()+"','"+beneficiario.getEstadoCivil()+"','"+beneficiario.getLocalidad()+"','"+beneficiario.getNacionalidad()+"','"+nivel_estudio_cadena+"','"+beneficiario.getObservaciones()+"','"+beneficiario.getOcupacion()+"','"+beneficiario.getProfesion()+"','"+beneficiario.getSituacionEconomica()+"','"+beneficiario.getVivienda()+"','"+vivienda_alquiler_cadena+"','"+beneficiario.getViviendaObservaciones();
+        String sql2 = "INSERT INTO persona (NIF,Nombre,Apellidos,FechaNacimiento,CP,TelefonoFijo,TelefonoMovil,Domicilio,Localidad) VALUES ('"+beneficiario.getNIF()+"','"+beneficiario.getNombre()+"','"+beneficiario.getApellidos()+"','"+beneficiario.getFechaDENacimiento()+"','"+Cp_cadena+"','"+telefono_fijo_cadena+"','"+telefono_movil_cadena+"','"+beneficiario.getDomicilio()+"','"+beneficiario.getLocalidad()+"')";
+        boolean exito2 = driver.insertar(sql2);
+        String sql = "INSERT INTO beneficiario (NIF,EstadoCivil,Nacionalidad,NivelDeEstudio,Observaciones,Ocupacion,Profesion,SituacionEconomica,Vivienda,ViviendaAlquiler,ViviendaObservaciones) VALUES ('"+beneficiario.getNIF()+"','"+beneficiario.getEstadoCivil()+"','"+beneficiario.getNacionalidad()+"','"+nivel_estudio_cadena+"','"+beneficiario.getObservaciones()+"','"+beneficiario.getOcupacion()+"','"+beneficiario.getProfesion()+"','"+beneficiario.getSituacionEconomica()+"','"+beneficiario.getVivienda()+"','"+vivienda_alquiler_cadena+"','"+beneficiario.getViviendaObservaciones()+"')";
         
         boolean exito=driver.insertar(sql);
         
