@@ -16,10 +16,9 @@ import java.util.logging.Logger;
  * @author psylock
  */
 public class PruebasMain {
-    
+    	
     public static void main (String ...args){
         
-
         DriverJDBC driver = DriverJDBC.getInstance();
         driver.configurar("127.0.0.1", "diaketas", "", "root");
         

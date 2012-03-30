@@ -19,7 +19,9 @@
  ** 	000 - Mar 22, 2012 - MOB - Creacion
  *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
- *      
+ *		003 - Mar 26, 2012 - JGM - Restructuración de la clase para adaptarse a la arquitectura MVC
+ *		004 - Mar 27, 2012 - JGM - ListenerBtGuardar - Lectura del formulario en la vista
+ *      005 - Mar 29, 2012 - JGM - insertarVoluntario() - Manejo de la insercion de un voluntario
  **
  ** NOTAS:
  **   
@@ -28,15 +30,21 @@
 
 package Controlador;
 
+import JDBC.VoluntarioJDBC;
+import Modelo.Voluntario;
 import Vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
 
 
-public class ControladorVoluntarios{
+public class ControladorVoluntarios implements Controlador{
 
 	/** PATRON DE DISEÑO SINGLETON */
 	private static ControladorVoluntarios instancia = null;
+	private static final String baseContrasena = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	public static ControladorVoluntarios getInstance(VentanaPrincipal pvista){
 		
@@ -46,7 +54,24 @@ public class ControladorVoluntarios{
 		
 	}
 	
+	public static String genContrasena(){
+		
+		String contrasena="";
+		int longitud = baseContrasena.length();
+		int largoContrasena = 6;
+		
+		for(int i=0;i<largoContrasena;i++){
+			int numero = (int)(Math.random()*(longitud));
+			String caracter = baseContrasena.substring(numero,numero+1);
+			contrasena = contrasena+caracter;
+		}
+		System.out.println(contrasena);
+		return contrasena;						
+		
+	}
+	
 	private VentanaPrincipal vista;
+	private VoluntarioJDBC vol;
 
     /**
      * Constructor de la clase
@@ -57,6 +82,9 @@ public class ControladorVoluntarios{
      * Establece como ventana padre la pasada como parámetro
      */
 		vista = pvista;
+		
+		vol = VoluntarioJDBC.getInstance();
+		
 	/** 
      * Conecta el controlador con las distintas interfaces de la vista
      */
@@ -74,6 +102,61 @@ public class ControladorVoluntarios{
 		vista.anadirListenerNavToVoluntariosFromDatosVoluntario(new ListenerNavToVoluntarios());
 		
     }
+	
+	private boolean insertarVoluntario(String[] datos,String password){
+		
+		if (this.comprobarDatos(datos) == false ||this.comprobarContrasena(password) == false)
+			return false;
+		
+		Voluntario temp = new Voluntario();
+		/*El orden de los datos en el array es:
+			 Nombre,Apellidos,NIF,FechaNacimiento,Nacionalidad,EstadoCivil,
+			 NivelEstudios,Profesion,Domicilio,CP,Localidad,Telefono,Observaciones
+			*/
+		
+		temp.setNombre(datos[0]);
+		temp.setApellidos(datos[1]);
+		temp.setNIF(datos[2]);
+		DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
+		try{
+		temp.setFechaDENacimiento(df.parse(datos[3]));
+		}
+		catch(ParseException p){
+			System.err.print(p.getMessage());
+		}
+		//temp.setNacionalidad(datos[4]);
+		//temp.setEstadoCivil(datos[5]);
+		//temp.setNivelEstudios(datos[6]);
+		//temp.setProfesion(datos[7]);
+		temp.setDomicilio(datos[8]);
+		temp.setCP(Integer.parseInt(datos[9]));
+		temp.setLocalidad(datos[10]);
+		temp.setTelefonoFijo(Integer.parseInt(datos[11]));
+		//temp.setObservaciones();
+		temp.setPassword(password);
+		
+		try{
+		vol.añadirVoluntario(temp);
+		}
+		catch(SQLException se){
+			System.err.print(se.getMessage());
+		}
+		
+		return true;	
+			
+	}
+
+	@Override
+	public boolean comprobarDatos(String[] datos) {
+		//Comprobar DNI
+		if(datos[2].length() < 9 || datos[2].length() > 9)
+			return false;		
+		return true;
+	}
+
+	public boolean comprobarContrasena(String contrasena) {
+		return true;
+	}
 	
 	/**
 	 * Clase interna para manejar los eventos de btAyudas
@@ -179,8 +262,27 @@ public class ControladorVoluntarios{
 
 		@Override
 		public void actionPerformed(ActionEvent ae) {
-			String sAccion = ae.getActionCommand();
-			System.out.println("Accion ejecutada: " + sAccion);
+			String[] datos = new String[13];
+			/*El orden de los datos en el array es:
+			 Nombre,Apellidos,NIF,FechaNacimiento,Nacionalidad,EstadoCivil,
+			 NivelEstudios,Profesion,Domicilio,CP,Localidad,Telefono,Observaciones
+			*/
+			datos[0] = vista.obtenerNombreVoluntario();
+			datos[1] = vista.obtenerApellidosVoluntario();
+			datos[2] = vista.obtenerNIFVoluntario();
+			datos[3] = vista.obtenerFechaNacimientoVoluntario();
+			datos[4] = vista.obtenerNacionalidadVoluntario();
+			datos[5] = vista.obtenerEstadoCivilVoluntario();
+			datos[6] = vista.obtenerNivelEstudiosVoluntario();
+			datos[7] = vista.obtenerProfesionVoluntario();
+			datos[8] = vista.obtenerDomicilioVoluntario();
+			datos[9] = vista.obtenerCPVoluntario();
+			datos[10] = vista.obtenerLocalidadVoluntario();
+			datos[11] = vista.obtenerTelefonoVoluntario();
+			datos[12] = vista.obtenerObservacionesVoluntario();
+			
+			insertarVoluntario(datos,ControladorVoluntarios.genContrasena());
+					
 		}
 		
 	}

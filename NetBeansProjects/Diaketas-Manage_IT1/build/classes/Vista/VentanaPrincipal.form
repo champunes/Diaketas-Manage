@@ -716,7 +716,7 @@
                       <Component id="separadorBeneficiario3" min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="175" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -787,89 +787,98 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jLabel38" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel37" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel35" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel39" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel40" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel41" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel42" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel51" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel52" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="textNacionalidadBeneficiario" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="textLocalidadBeneficiario" max="32767" attributes="0"/>
+                                                          <Component id="textNombreBeneficiario" max="32767" attributes="0"/>
+                                                          <Component id="textDomicilioBeneficiario" min="-2" pref="137" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="textNIFBeneficiario" min="-2" pref="137" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel45" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel44" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="textFechaNacimientoBeneficiario" min="-2" pref="148" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                          <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="textProvinciaNacimientoBeneficiario" min="-2" pref="117" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="textTelefonoBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                      <Component id="textCPBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                      <Component id="textApellidosBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="cbTipoViviendaBeneficiario" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                                  <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="textPrecioViviendaBeneficiario" min="-2" pref="95" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="textEspecificarTipoVivienda" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="textObservacionesBeneficiario" alignment="0" min="-2" pref="403" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="cbNivelEstudiosBeneficiario" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                                                          <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="textProfesionBeneficiario" min="-2" pref="148" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
+                                                          <Component id="cbEstadoCivilBeneficiario" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabel38" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel37" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel35" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel39" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel40" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel41" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel42" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel51" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel52" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="textNacionalidadBeneficiario" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="textLocalidadBeneficiario" max="32767" attributes="0"/>
-                                                  <Component id="textNombreBeneficiario" max="32767" attributes="0"/>
-                                                  <Component id="textDomicilioBeneficiario" min="-2" pref="137" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="textNIFBeneficiario" min="-2" pref="137" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel45" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel44" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="textFechaNacimientoBeneficiario" min="-2" pref="148" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                  <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="textProvinciaNacimientoBeneficiario" min="-2" pref="117" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="textTelefonoBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                                              <Component id="textCPBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                                              <Component id="textApellidosBeneficiario" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="cbTipoViviendaBeneficiario" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                          <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="textPrecioViviendaBeneficiario" min="-2" pref="95" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="textEspecificarTipoVivienda" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="cbEstadoCivilBeneficiario" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-                                                  <Component id="textEstadoCivilBeneficiario" min="-2" pref="148" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="textObservacionesBeneficiario" alignment="0" min="-2" pref="403" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="cbNivelEstudiosBeneficiario" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                                                  <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="textProfesionBeneficiario" min="-2" pref="148" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
+                                  <Component id="btGuardarBeneficiario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btEliminarBeneficiario" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="60" max="32767" attributes="0"/>
@@ -911,7 +920,6 @@
                                       <Component id="textNacionalidadBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="cbEstadoCivilBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textEstadoCivilBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -970,7 +978,12 @@
                                   <Component id="jScrollPane7" min="-2" pref="241" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="105" max="32767" attributes="0"/>
+                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btGuardarBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btEliminarBeneficiario" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1161,7 +1174,15 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JTextField" name="textEstadoCivilBeneficiario">
+                <Component class="javax.swing.JButton" name="btGuardarBeneficiario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Guardar"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btEliminarBeneficiario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Eliminar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2156,7 +2177,7 @@
                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane2" linkSize="11" min="-2" pref="212" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="153" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2409,7 +2430,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="jScrollPane6" min="-2" pref="410" max="-2" attributes="0"/>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <EmptySpace pref="154" max="32767" attributes="0"/>
                   <Component id="btVerVoluntarioBusqueda" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -2648,7 +2669,7 @@
                       <Component id="jScrollPane3" pref="465" max="32767" attributes="0"/>
                       <Component id="jScrollPane4" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                  <EmptySpace pref="167" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
