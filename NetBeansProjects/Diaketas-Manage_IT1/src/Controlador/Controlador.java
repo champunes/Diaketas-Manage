@@ -7,6 +7,5 @@ package Controlador;
 public interface Controlador {
 
 	public boolean comprobarDatos(String[] datos);
-	public boolean comprobarContrasena(String contrasena);
 	
 }

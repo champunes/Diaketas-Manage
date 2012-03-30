@@ -19,7 +19,9 @@
  ** 	000 - Mar 22, 2012 - MOB - Creacion
  *      001 - Mar 22, 2012 - MOB - Reestructuración de la clase, ahora implementa ActionListener
  *      002 - Mar 23, 2012 - MOB - Modificación del método Overriden actionPerformed de la interfaz para que gestione las diferentes acciones de la UI
- *      
+ *		003 - Mar 26, 2012 - JGM - Restructuración de la clase para adaptarse a la arquitectura MVC
+ *		004 - Mar 27, 2012 - JGM - ListenerBtGuardar - Lectura del formulario en la vista
+ *      005 - Mar 29, 2012 - JGM - insertarVoluntario() - Manejo de la insercion de un voluntario
  **
  ** NOTAS:
  **   
@@ -152,7 +154,6 @@ public class ControladorVoluntarios implements Controlador{
 		return true;
 	}
 
-	@Override
 	public boolean comprobarContrasena(String contrasena) {
 		return true;
 	}
