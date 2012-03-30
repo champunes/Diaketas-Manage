@@ -16,6 +16,7 @@
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion
  *      001 - Mar 27, 2012 - FBR - Implementación de los métodos
+ *      002 - Mar 30, 2012 - AAN - Reestructuracion para la tabla persona
  *      
  **
  ** NOTAS:
@@ -59,9 +60,12 @@ public class VoluntarioJDBC {
         Integer telefono_movil = voluntario.getTelefonoMovil();
         String telefono_movil_cadena = telefono_movil.toString();  
         
-        String sql = "INSERT INTO voluntario (NIF,Nombre,Apellidos,CP,TelefonoFijo,TelefonoMovil,Domicilio,Localidad,FechaNacimiento,Password) VALUES ('"+voluntario.getNIF()+"','"+voluntario.getNombre()+"','"+voluntario.getApellidos()+"','"+Cp_cadena+"','"+telefono_fijo_cadena+"','"+telefono_movil_cadena+"','"+voluntario.getDomicilio()+"','"+voluntario.getLocalidad()+"','"+voluntario.getFechaDENacimiento().toString()+"','"+voluntario.getPassword();
+        String sql = "INSERT INTO voluntario (NIF,Password) VALUES ('"+voluntario.getNIF()+"','"+voluntario.getPassword()+"')";
+        
+        String sql2 = "INSERT INTO persona (NIF,Nombre,Apellidos,CP,TelefonoFijo,TelefonoMovil,Domicilio,Localidad,FechaNacimiento) VALUES ('"+voluntario.getNIF()+"','"+voluntario.getNombre()+"','"+voluntario.getApellidos()+"','"+Cp_cadena+"','"+telefono_fijo_cadena+"','"+telefono_movil_cadena+"','"+voluntario.getDomicilio()+"','"+voluntario.getLocalidad()+"','"+voluntario.getFechaDENacimiento().toString()+"')";
         
         boolean exito=driver.insertar(sql);
+         boolean exito2=driver.insertar(sql2);
         
         return exito;
         
@@ -89,10 +93,12 @@ public class VoluntarioJDBC {
             String telefono_movil_cadena = telefono_movil.toString();
             
             
+            String sql2 = "UPDATE persona SET NIF='"+voluntario.getNIF()+"',Nombre='"+voluntario.getNombre()+"',Apellidos='"+voluntario.getApellidos()+"',FechaNacimiento='"+voluntario.getFechaDENacimiento().toString()+"',CP='"+Cp_cadena+"',TelefonoFijo='"+telefono_fijo_cadena+"',TelefonoMovil='"+telefono_movil_cadena+"',Domicilio='"+voluntario.getDomicilio()+"',Localidad='"+voluntario.getLocalidad()+"' WHERE NIF ="+voluntario.getNIF()+"'";
             
-            String sql = "UPDATE beneficiario SET NIF='"+voluntario.getNIF()+"',Nombre='"+voluntario.getNombre()+"',Apellidos='"+voluntario.getApellidos()+"',FechaNacimiento='"+voluntario.getFechaDENacimiento().toString()+"',CP='"+Cp_cadena+"',TelefonoFijo='"+telefono_fijo_cadena+"',TelefonoMovil='"+telefono_movil_cadena+"',Domicilio='"+voluntario.getDomicilio()+"',Localidad='"+voluntario.getLocalidad()+"',Password='"+voluntario.getPassword()+"' WHERE NIF ="+voluntario.getNIF();
+            String sql = "UPDATE voluntario SET Password='"+voluntario.getPassword()+"' WHERE NIF ="+voluntario.getNIF()+"'";
             
             boolean exito = driver.actualizar(sql);
+            boolean exito2 = driver.actualizar(sql2);
             
             return exito;
         }
@@ -102,27 +108,34 @@ public class VoluntarioJDBC {
             DriverJDBC driver = DriverJDBC.getInstance() ;
            
             String sql = "SELECT * FROM voluntario WHERE "+tipoDato+"="+dato;
+            String sql2 = "SELECT * FROM persona WHERE "+tipoDato+"="+dato;
             
             ResultSet resultados = driver.seleccionar(sql);
+            
+            ResultSet resultado2 = driver.seleccionar(sql2);
             ArrayList<Voluntario> listadoVoluntarios = new ArrayList<Voluntario>();
             Voluntario temp = null;
             
             if(resultados.next()){
                 temp = new Voluntario();
-                temp.setNIF(resultados.getString("NIF"));
-                temp.setNombre(resultados.getString("Nombre"));
-                temp.setApellidos(resultados.getString("Apellidos"));
-                temp.setFechaDENacimiento(resultados.getDate("FechaNacimiento"));
-                temp.setCP(resultados.getInt("CP"));
-                temp.setTelefonoFijo(resultados.getInt("TelefonoFijo"));
-                temp.setTelefonoMovil(resultados.getInt("TelefonoMovil"));
-                temp.setDomicilio(resultados.getString("Domicilio"));
-                temp.setLocalidad(resultados.getString("Localidad"));
                 temp.setPassword(resultados.getString("Password"));
+                
+            }
+            
+            if(resultado2.next()){
+                
+                temp.setNIF(resultado2.getString("NIF"));
+                temp.setNombre(resultado2.getString("Nombre"));
+                temp.setApellidos(resultado2.getString("Apellidos"));
+                temp.setFechaDENacimiento(resultado2.getDate("FechaNacimiento"));
+                temp.setCP(resultado2.getInt("CP"));
+                temp.setTelefonoFijo(resultado2.getInt("TelefonoFijo"));
+                temp.setTelefonoMovil(resultado2.getInt("TelefonoMovil"));
+                temp.setDomicilio(resultado2.getString("Domicilio"));
+                temp.setLocalidad(resultado2.getString("Localidad"));
                 
                 listadoVoluntarios.add(temp);
             }
-            
             return listadoVoluntarios;
         } 
     
@@ -131,12 +144,19 @@ public class VoluntarioJDBC {
         DriverJDBC driver = DriverJDBC.getInstance() ;
            
         String sql = "SELECT * FROM voluntario WHERE (NIF='"+DNI+"')";
+        String sql2 = "SELECT * FROM persona WHERE (NIF='"+DNI+"')";
             
         ResultSet resultado = driver.seleccionar(sql);
+            
+        ResultSet resultado2 = driver.seleccionar(sql2);
         Voluntario voluntario = null ;
            
         if(resultado.next()){
             voluntario = new Voluntario();
+            voluntario.setPassword(resultado.getString("Password"));
+        }
+         
+        if(resultado2.next()){
             voluntario.setNIF(resultado.getString("NIF"));
             voluntario.setNombre(resultado.getString("Nombre"));
             voluntario.setApellidos(resultado.getString("Apellidos"));
@@ -146,9 +166,7 @@ public class VoluntarioJDBC {
             voluntario.setDomicilio(resultado.getString("Domicilio"));
             voluntario.setLocalidad(resultado.getString("Localidad"));
             voluntario.setFechaDENacimiento(resultado.getDate("FechaNacimiento"));
-            voluntario.setPassword(resultado.getString("Password"));
         }
-               
         return voluntario;
         
     }

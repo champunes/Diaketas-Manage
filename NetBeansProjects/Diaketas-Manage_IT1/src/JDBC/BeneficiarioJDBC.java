@@ -206,7 +206,6 @@ import java.util.ArrayList;
                 temp.setViviendaAlquiler(resultados.getFloat("ViviendaAlquiler"));
                 temp.setViviendaObservaciones(resultados.getString("ViviendaObservaciones"));
                 temp.setNacionalidad(resultados.getString("Nacionalidad"));
-                listadoBeneficiarios.add(temp);
             }
             
             ResultSet resultados2 = driver.seleccionar(sql2);
