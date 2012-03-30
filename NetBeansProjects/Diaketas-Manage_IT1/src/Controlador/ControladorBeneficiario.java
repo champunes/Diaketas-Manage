@@ -33,7 +33,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControladorBeneficiario{
+public class ControladorBeneficiario implements Controlador{
 
 	/** PATRON DE DISEÑO SINGLETON */
     
@@ -68,6 +68,19 @@ public class ControladorBeneficiario{
 		vista.anadirListenerNavToBeneficiariosFromBuscarBeneficiario(new ListenerNavToBeneficiarios());
 		vista.anadirListenerNavToBeneficiariosFromBeneficiarioDatos(new ListenerNavToBeneficiarios());
     }
+
+	@Override
+	public boolean comprobarDatos(String[] datos) {
+		//Comprobar DNI
+		if(datos[2].length() < 9 || datos[2].length() > 9)
+			return false;		
+		return true;
+	}
+
+	@Override
+	public boolean comprobarContrasena(String contrasena) {
+		return true;
+	}
 	
 	/**
 	 * Clase interna para manejar los eventos de btBuscarBeneficiario

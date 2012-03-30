@@ -28,19 +28,21 @@
 
 package Controlador;
 
-import Vista.VentanaPrincipal;
+import JDBC.VoluntarioJDBC;
 import Modelo.Voluntario;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Date;
+import Vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
 
 
-public class ControladorVoluntarios{
+public class ControladorVoluntarios implements Controlador{
 
 	/** PATRON DE DISEÑO SINGLETON */
 	private static ControladorVoluntarios instancia = null;
+	private static final String baseContrasena = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	public static ControladorVoluntarios getInstance(VentanaPrincipal pvista){
 		
@@ -50,7 +52,24 @@ public class ControladorVoluntarios{
 		
 	}
 	
+	public static String genContrasena(){
+		
+		String contrasena="";
+		int longitud = baseContrasena.length();
+		int largoContrasena = 6;
+		
+		for(int i=0;i<largoContrasena;i++){
+			int numero = (int)(Math.random()*(longitud));
+			String caracter = baseContrasena.substring(numero,numero+1);
+			contrasena = contrasena+caracter;
+		}
+		System.out.println(contrasena);
+		return contrasena;						
+		
+	}
+	
 	private VentanaPrincipal vista;
+	private VoluntarioJDBC vol;
 
     /**
      * Constructor de la clase
@@ -61,6 +80,9 @@ public class ControladorVoluntarios{
      * Establece como ventana padre la pasada como parámetro
      */
 		vista = pvista;
+		
+		vol = VoluntarioJDBC.getInstance();
+		
 	/** 
      * Conecta el controlador con las distintas interfaces de la vista
      */
@@ -81,7 +103,7 @@ public class ControladorVoluntarios{
 	
 	private boolean insertarVoluntario(String[] datos,String password){
 		
-		if (Utilidades.comprobarDatos(datos) == false ||Utilidades.comprobarContrasena(password) == false)
+		if (this.comprobarDatos(datos) == false ||this.comprobarContrasena(password) == false)
 			return false;
 		
 		Voluntario temp = new Voluntario();
@@ -110,8 +132,29 @@ public class ControladorVoluntarios{
 		temp.setTelefonoFijo(Integer.parseInt(datos[11]));
 		//temp.setObservaciones();
 		temp.setPassword(password);
+		
+		try{
+		vol.añadirVoluntario(temp);
+		}
+		catch(SQLException se){
+			System.err.print(se.getMessage());
+		}
+		
 		return true;	
 			
+	}
+
+	@Override
+	public boolean comprobarDatos(String[] datos) {
+		//Comprobar DNI
+		if(datos[2].length() < 9 || datos[2].length() > 9)
+			return false;		
+		return true;
+	}
+
+	@Override
+	public boolean comprobarContrasena(String contrasena) {
+		return true;
 	}
 	
 	/**
@@ -237,7 +280,7 @@ public class ControladorVoluntarios{
 			datos[11] = vista.obtenerTelefonoVoluntario();
 			datos[12] = vista.obtenerObservacionesVoluntario();
 			
-			insertarVoluntario(datos,"pass");
+			insertarVoluntario(datos,ControladorVoluntarios.genContrasena());
 					
 		}
 		
