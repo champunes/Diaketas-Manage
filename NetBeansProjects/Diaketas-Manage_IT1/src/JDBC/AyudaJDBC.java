@@ -11,11 +11,12 @@
  *	   
  **        
  ** SUPERVISADO POR:
- **          
+ **       Adolfo Arcoya Nieto (AAN)
  **
  ** HISTORIA:
  ** 	000 - Mar 24, 2012 - FBR - Creacion 
  **     001 - Mar 26, 2012 - FBR - Implementacion de los metodos
+ **     002 - Mar 29, 2012 - AAN - Correccion consultas SQL
  *      
  **   
  *      
@@ -217,7 +218,7 @@ public class AyudaJDBC {
         else
             monetaria=0;
         
-        String sql = "UPDATE tipoayuda SET Titulo="+t.getTitulo()+",Descripcion="+t.getDescripcion()+",Monetaria="+monetaria+"WHERE OID="+t.getOID();
+        String sql = "UPDATE tipoayuda SET Titulo='"+t.getTitulo()+"',Descripcion='"+t.getDescripcion()+"',Monetaria='"+monetaria+"'WHERE OID='"+t.getOID()+"'";
         
         boolean exito= driver.actualizar(sql);
         
