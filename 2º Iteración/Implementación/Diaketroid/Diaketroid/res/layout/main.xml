@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" 
+        android:background="@drawable/fondo"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+        
+  <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textoNombre"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+       	
+       	android:layout_marginTop="-90dip"
+        android:src="@drawable/logo" />
+   
+    <TextView android:id="@+id/textoNombre"
+        	android:layout_width="fill_parent"
+        	android:layout_centerInParent="true"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="40dip"
+        	android:layout_marginBottom="5dip"
+        	android:layout_marginLeft="35dip"
+        	android:textColor="#FFFFFF"
+        	android:text="@string/nombredeusuario" 
+        	android:layout_above="@+id/campoNombre"/>
+    
+    <EditText android:id="@+id/campoNombre" 
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_centerInParent="true"
+        	android:inputType="text"
+        	android:layout_marginRight="20dip"
+        	android:singleLine="true"
+        	android:layout_above="@+id/textoPassword" />
+    
+    <TextView android:id="@+id/textoPassword"
+        	android:layout_width="fill_parent"
+        	android:layout_centerInParent="true"
+        	android:layout_height="wrap_content"
+        	android:textColor="#FFFFFF"
+        	android:layout_marginTop="20dip"
+        	android:layout_marginBottom="5dip"
+        	android:layout_marginLeft="35dip"
+        	android:text="@string/password" 
+        	android:layout_above="@+id/campoPassword" />
+    
+    <EditText android:id="@+id/campoPassword" 
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_centerInParent="true"
+        	android:layout_marginRight="20dip"
+        	android:inputType="textPassword"
+        	android:layout_above="@+id/botonIdentificarse"
+        	android:singleLine="true" />
+    
+    <Button android:id="@+id/botonIdentificarse"
+        	android:text="@string/login"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="20dip"
+        	android:onClick="identificarse"
+        	android:layout_centerInParent="true" />
+
+    
+        
+</RelativeLayout>
